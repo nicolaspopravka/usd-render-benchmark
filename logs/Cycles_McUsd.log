@@ -1,0 +1,7 @@
+Running: rez env cycles -- usdrecord --camera /McUsd/Camera --renderer "Cycles" --purposes render   assets/full_assets/McUsd/McUsd.usda "renderers/Cycles/McUsd.jpg"
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-nico'
+Camera: /McUsd/Camera
+Renderer plugin: HdCyclesPlugin
+Recording time code: EARLIEST
+Time: 0:52.15
+Memory: 1148748 KB

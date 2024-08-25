@@ -1,0 +1,55 @@
+Running: rez env htoa -- usdrecord --camera /McUsd/Camera --renderer "Arnold" --purposes render   assets/full_assets/McUsd/McUsd.usda "renderers/Arnold/McUsd.jpg"
+00:00:00   396MB         | log started Mon Aug 26 20:12:40 2024
+00:00:00   396MB         | Arnold 7.3.3.0 [087035cc] linux x86_64 clang-15.0.7 oiio-2.4.1 osl-1.13.0 vdb-11.0.0 adlsdk-8.0.7.50 clmhub-3.1.1.43 rlm-14.2.5 optix-8.0.0 2024/07/24 15:44:34
+00:00:00   396MB         | running on rmt-yard127, pid=33109
+00:00:00   396MB         |  2 x Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz (36 cores, 72 logical) with 64125MB
+00:00:00   396MB         |  NVIDIA driver version 535.113
+00:00:00   396MB         |  GPU 0: NVIDIA RTX A4000 @ 1560MHz (compute 8.6) with 16108MB (13705MB available) (NVLink:0)
+00:00:00   396MB         |  CentOS Linux 7 (Core), Linux kernel 3.10.0-1160.99.1.el7.x86_64
+00:00:00   396MB         |  soft limit for open files changed from 8192 to 8190
+00:00:00   396MB         |  
+00:00:00   415MB         | loading plugins from /opt/htoa/htoa-6.3.3.0_re71e193_houdini-20.0.751.py39_gcc9/htoa-6.3.3.0_re71e193_houdini-20.0.751.py39_gcc9/dso/../scripts/bin/../plugins ...
+00:00:00   415MB         |  alembic_proc.so: alembic uses Arnold 7.3.3.0
+00:00:00   416MB         |  htoa_mandelbulb_proc.so: mandelbulb uses Arnold 7.3.3.0
+00:00:00   431MB         |  usd_proc.so: usd uses Arnold 7.3.3.0
+00:00:00   431MB         |  cryptomatte.so: cryptomatte uses Arnold 7.3.3.0
+00:00:00   431MB         |  cryptomatte.so: cryptomatte_filter uses Arnold 7.3.3.0
+00:00:00   431MB         |  cryptomatte.so: cryptomatte_manifest_driver uses Arnold 7.3.3.0
+00:00:00   431MB         | loaded 6 plugins from 4 lib(s) in 0:00.24
+00:00:00   462MB         | [htoa_op] Begin registration ...
+00:00:00   452MB         | [obj_procedurals] Registering procedurals ...
+00:00:00   452MB         | [obj_procedurals] procedural registration done.
+00:00:00   607MB         | [rop_operators] Registering operators ...
+00:00:00   607MB         | [rop_operators] operator registration done.
+00:00:01   641MB         | [vop_shaders] Registering shaders ...
+00:00:01   642MB         | [vop_shaders] shader registration done.
+00:00:01   642MB         | [vop_imagers] Registering imagers ...
+00:00:01   642MB         | [vop_imagers] imager registration done.
+00:00:01   642MB         | [htoa_op] USD shader translation registration
+00:00:02   684MB         | [htoa_op] End registration.
+00:00:02   684MB         |  
+00:00:02   684MB         | releasing resources
+00:00:02   684MB         | Arnold shutdown
+libai.so already loaded
+Camera: /McUsd/Camera
+Renderer plugin: HdArnoldRendererPlugin
+Recording time code: EARLIEST
+WARNING | /McUsd/Geom/dirt.subdiv_iterations: use type BYTE, not INT (converted automatically)
+WARNING | /McUsd/Geom/iron_block.subdiv_iterations: use type BYTE, not INT (converted automatically)
+WARNING | /McUsd/Geom/purple_stained_glass.subdiv_iterations: use type BYTE, not INT (converted automatically)
+WARNING | /McUsd/Geom/chiseled_quartz_block.subdiv_iterations: use type BYTE, not INT (converted automatically)
+WARNING | /McUsd/Geom/rail.subdiv_iterations: use type BYTE, not INT (converted automatically)
+00:00:01   918MB WARNING | rendering with watermarks because of failed authorization:
+00:00:01   918MB         |  [rlm] error initializing license system:
+00:00:01   918MB         |  [rlm]  * Can't read license data (-102)
+00:00:01   918MB         |  [clm.v1] license server was not set (51)
+00:00:01   918MB         |  [clm.v2] SERVICE (4): this product has not been registered with the licensing service yet
+00:00:01   918MB         |  environment variables:
+00:00:01   918MB         |         ARNOLD_LICENSE_ORDER   = (not set)
+00:00:01   918MB         |         ARNOLD_LICENSE_MANAGER = (not set)
+00:00:01   918MB         |  [rlm]  solidangle_LICENSE     = (not set)
+00:00:01   918MB         |  [rlm]  RLM_LICENSE            = (not set)
+00:00:01   918MB         |  [clm]  ADSKFLEX_LICENSE_FILE  = (not set)
+00:00:01   918MB         |  [clm]  LM_LICENSE_FILE        = (not set)
+Time: 0:25.62
+Memory: 1485568 KB

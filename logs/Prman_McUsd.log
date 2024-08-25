@@ -1,0 +1,130 @@
+Running: rez env usd-24.08 -- usdrecord --camera /McUsd/Camera --renderer "Prman" --purposes render   assets/full_assets/McUsd/McUsd.usda "renderers/Prman/McUsd.jpg"
+Warning: in _ConvertNodes at line 563 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/material.cpp -- Unknown downstream property displacementbound:sphere
+Warning (secondary thread): in _ConvertNodes at line 563 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/material.cpp -- Unknown downstream property displacementbound:sphere
+Warning (secondary thread): in _ConvertNodes at line 563 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/material.cpp -- Unknown downstream property displacementbound:sphere
+Warning (secondary thread): in _ConvertNodes at line 563 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/material.cpp -- Unknown downstream property displacementbound:sphere
+Warning (secondary thread): in _ConvertNodes at line 563 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/material.cpp -- Unknown downstream property displacementbound:sphere
+Warning (secondary thread): in _ConvertNodes at line 563 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/material.cpp -- Unknown downstream property displacementbound:sphere
+Warning (secondary thread): in _ConvertNodes at line 563 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/material.cpp -- Unknown downstream property displacementbound:sphere
+Warning (secondary thread): in _ConvertNodes at line 563 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/material.cpp -- Unknown downstream property displacementbound:sphere
+Warning (secondary thread): in _ConvertNodes at line 563 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/material.cpp -- Unknown downstream property displacementbound:sphere
+Warning (secondary thread): in _ConvertNodes at line 563 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/material.cpp -- Unknown downstream property displacementbound:sphere
+Warning (secondary thread): in _ConvertNodes at line 563 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/material.cpp -- Unknown downstream property displacementbound:sphere
+Warning (secondary thread): in _ConvertNodes at line 563 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/material.cpp -- Unknown downstream property displacementbound:sphere
+Warning (secondary thread): in _ConvertNodes at line 563 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/material.cpp -- Unknown downstream property displacementbound:sphere
+Warning (secondary thread): in _ConvertNodes at line 563 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/material.cpp -- Unknown downstream property displacementbound:sphere
+Warning (secondary thread): in _ConvertNodes at line 563 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/material.cpp -- Unknown downstream property displacementbound:sphere
+Warning (secondary thread): in _ConvertNodes at line 563 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/material.cpp -- Unknown downstream property displacementbound:sphere
+Warning (secondary thread): in _ConvertNodes at line 563 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/material.cpp -- Unknown downstream property displacementbound:sphere
+Warning (secondary thread): in _ConvertNodes at line 563 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/material.cpp -- Unknown downstream property displacementbound:sphere
+Warning (secondary thread): in _ConvertNodes at line 563 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/material.cpp -- Unknown downstream property displacementbound:sphere
+Warning (secondary thread): in _ConvertNodes at line 563 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/material.cpp -- Unknown downstream property displacementbound:sphere
+Warning (secondary thread): in _ConvertNodes at line 563 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/material.cpp -- Unknown downstream property displacementbound:sphere
+Warning (secondary thread): in _ConvertNodes at line 563 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/material.cpp -- Unknown downstream property displacementbound:sphere
+Warning (secondary thread): in _ConvertNodes at line 563 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/material.cpp -- Unknown downstream property displacementbound:sphere
+R90000    0%
+R90000    1%
+R90000    2%
+R90000    3%
+R90000    4%
+R90000    5%
+R90000    6%
+R90000    7%
+R90000    8%
+R90000    9%
+R90000   10%
+R90000   11%
+R90000   12%
+R90000   13%
+R90000   14%
+R90000   15%
+R90000   16%
+R90000   17%
+R90000   18%
+R90000   19%
+R90000   20%
+R90000   21%
+R90000   22%
+R90000   23%
+R90000   24%
+R90000   25%
+R90000   26%
+R90000   27%
+R90000   28%
+R90000   29%
+R90000   30%
+R90000   31%
+R90000   32%
+R90000   33%
+R90000   34%
+R90000   35%
+R90000   36%
+R90000   37%
+R90000   38%
+R90000   39%
+R90000   40%
+R90000   41%
+R90000   42%
+R90000   43%
+R90000   44%
+R90000   45%
+R90000   46%
+R90000   47%
+R90000   48%
+R90000   49%
+R90000   50%
+R90000   51%
+R90000   52%
+R90000   53%
+R90000   54%
+R90000   55%
+R90000   56%
+R90000   57%
+R90000   58%
+R90000   59%
+R90000   60%
+R90000   61%
+R90000   62%
+R90000   63%
+R90000   64%
+R90000   65%
+R90000   66%
+R90000   67%
+R90000   68%
+R90000   69%
+R90000   70%
+R90000   71%
+R90000   72%
+R90000   73%
+R90000   74%
+R90000   75%
+R90000   76%
+R90000   77%
+R90000   78%
+R90000   79%
+R90000   80%
+R90000   81%
+R90000   82%
+R90000   83%
+R90000   84%
+R90000   85%
+R90000   86%
+R90000   87%
+R90000   88%
+R90000   89%
+R90000   90%
+R90000   91%
+R90000   92%
+R90000   93%
+R90000   94%
+R90000   95%
+R90000   96%
+R90000   97%
+R90000   98%
+R90000   99%
+R90000  100%
+Camera: /McUsd/Camera
+Renderer plugin: HdPrmanLoaderRendererPlugin
+Recording time code: 0.000000
+Time: 0:29.82
+Memory: 1717528 KB

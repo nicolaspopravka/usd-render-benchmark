@@ -1,0 +1,10 @@
+Running: rez env usd-24.08 -- usdrecord --camera /McUsd/Camera --renderer "Embree" --purposes render   assets/full_assets/McUsd/McUsd.usda "renderers/Embree/McUsd.jpg"
+Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'DistantLight'
+Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'LightAPI'
+Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'DomeLight'
+Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'Material'
+Camera: /McUsd/Camera
+Renderer plugin: HdEmbreeRendererPlugin
+Recording time code: 0.000000
+Time: 0:07.60
+Memory: 291452 KB

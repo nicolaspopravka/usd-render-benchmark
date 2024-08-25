@@ -1,0 +1,6 @@
+Running: rez env usd-24.08 -- usdrecord --camera /McUsd/Camera --renderer "GL" --purposes render   assets/full_assets/McUsd/McUsd.usda "renderers/GL/McUsd.jpg"
+Camera: /McUsd/Camera
+Renderer plugin: HdStormRendererPlugin
+Recording time code: 0.000000
+Time: 0:04.04
+Memory: 423972 KB

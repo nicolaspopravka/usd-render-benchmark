@@ -1,0 +1,7 @@
+Running: rez env cycles -- usdrecord --camera main_cam --renderer "Cycles" --purposes render   assets/full_assets/OpenChessSet/chess_set.usda "renderers/Cycles/chess_set.jpg"
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-nico'
+Camera: 
+Renderer plugin: HdCyclesPlugin
+Recording time code: EARLIEST
+Time: 0:10.46
+Memory: 951836 KB

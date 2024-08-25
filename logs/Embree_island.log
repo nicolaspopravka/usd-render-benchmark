@@ -1,0 +1,13 @@
+Running: rez env usd-24.08 -- usdrecord --camera /island/cam/shotCam --renderer "Embree" --purposes render   scenes/MoanaIsland/usd/island.usda "renderers/Embree/island.jpg"
+Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'BasisCurves'
+Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'RectLight'
+Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'LightAPI'
+Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'DomeLight'
+Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'Material'
+Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'Volume'
+Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'OpenVDBAsset'
+Camera: /island/cam/shotCam
+Renderer plugin: HdEmbreeRendererPlugin
+Recording time code: 0.000000
+Time: 3:37.19
+Memory: 41786964 KB

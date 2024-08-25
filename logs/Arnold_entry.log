@@ -1,0 +1,65 @@
+Running: rez env htoa -- usdrecord --camera /root/camera01/GEO/renderCam_hrc/renderCam_buffer/renderCam_srt/renderCam --renderer "Arnold" --purposes render   scenes/ALab/ALab/entry.usda "renderers/Arnold/entry.jpg"
+00:00:00   244MB         | log started Tue Aug 27 08:41:53 2024
+00:00:00   244MB         | Arnold 7.3.3.0 [087035cc] linux x86_64 clang-15.0.7 oiio-2.4.1 osl-1.13.0 vdb-11.0.0 adlsdk-8.0.7.50 clmhub-3.1.1.43 rlm-14.2.5 optix-8.0.0 2024/07/24 15:44:34
+00:00:00   244MB         | running on rmt-yard127, pid=30534
+00:00:00   244MB         |  2 x Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz (36 cores, 72 logical) with 64125MB
+00:00:00   244MB         |  NVIDIA driver version 535.113
+00:00:00   244MB         |  GPU 0: NVIDIA RTX A4000 @ 1560MHz (compute 8.6) with 16108MB (13410MB available) (NVLink:0)
+00:00:00   244MB         |  CentOS Linux 7 (Core), Linux kernel 3.10.0-1160.99.1.el7.x86_64
+00:00:00   244MB         |  soft limit for open files changed from 8192 to 8190
+00:00:00   244MB         |  
+00:00:00   263MB         | loading plugins from /opt/htoa/htoa-6.3.3.0_re71e193_houdini-20.0.751.py39_gcc9/htoa-6.3.3.0_re71e193_houdini-20.0.751.py39_gcc9/dso/../scripts/bin/../plugins ...
+00:00:00   263MB         |  alembic_proc.so: alembic uses Arnold 7.3.3.0
+00:00:00   263MB         |  htoa_mandelbulb_proc.so: mandelbulb uses Arnold 7.3.3.0
+00:00:00   279MB         |  usd_proc.so: usd uses Arnold 7.3.3.0
+00:00:00   279MB         |  cryptomatte.so: cryptomatte uses Arnold 7.3.3.0
+00:00:00   279MB         |  cryptomatte.so: cryptomatte_filter uses Arnold 7.3.3.0
+00:00:00   279MB         |  cryptomatte.so: cryptomatte_manifest_driver uses Arnold 7.3.3.0
+00:00:00   279MB         | loaded 6 plugins from 4 lib(s) in 0:00.24
+00:00:00   299MB         | [htoa_op] Begin registration ...
+00:00:00   299MB         | [obj_procedurals] Registering procedurals ...
+00:00:00   300MB         | [obj_procedurals] procedural registration done.
+00:00:03   405MB         | [rop_operators] Registering operators ...
+00:00:03   405MB         | [rop_operators] operator registration done.
+00:00:05   446MB         | [vop_shaders] Registering shaders ...
+00:00:05   447MB         | [vop_shaders] shader registration done.
+00:00:05   447MB         | [vop_imagers] Registering imagers ...
+00:00:05   447MB         | [vop_imagers] imager registration done.
+00:00:05   447MB         | [htoa_op] USD shader translation registration
+00:00:07   490MB         | [htoa_op] End registration.
+00:00:07   490MB         |  
+00:00:07   490MB         | releasing resources
+00:00:07   490MB         | Arnold shutdown
+libai.so already loaded
+Camera: /root/camera01/GEO/renderCam_hrc/renderCam_buffer/renderCam_srt/renderCam
+Renderer plugin: HdArnoldRendererPlugin
+Recording time code: EARLIEST
+WARNING | /root/camera01/GEO/GEO/projectionPlane_M_geo.subdiv_iterations: use type BYTE, not INT (converted automatically)
+WARNING | /root/alab_set01/lab_electronics01_0001/bench01/shelf01/electronics_tape_recorder01_0001.proto_casing5_M_geo_id6.subdiv_iterations: use type BYTE, not INT (converted automatically)
+WARNING | /root/alab_set01/lab_structure01_0001/wall04/structure_window_louvered02_0001.proto_nail06_M_geo_id2.subdiv_iterations: use type BYTE, not INT (converted automatically)
+WARNING | /root/alab_set01/lab_workbench01_0001/workbench01/workbench_shelf04/electronics_ham_microphone01_0002.proto_button1_M_geo_id5.subdiv_iterations: use type BYTE, not INT (converted automatically)
+WARNING | /root/alab_set01/lab_electronics01_0001/shelf_unit01/shelf02/furniture_organizer_drawers01_0001.proto_slidingRack04_M_geo_id15.subdiv_iterations: use type BYTE, not INT (converted automatically)
+WARNING | /root/stoat/body_M_hrc/GEO/whiskers_M_hrc/whiskers_R_hrc/whiskers002_R_crv : Orientations not supported on linear curves
+WARNING | /root/stoat/body_M_hrc/GEO/whiskers_M_hrc/whiskers_R_hrc/whiskers006_R_crv : Orientations not supported on linear curves
+WARNING | /root/stoat/body_M_hrc/GEO/whiskers_M_hrc/whiskers_R_hrc/whiskers003_R_crv : Orientations not supported on linear curves
+WARNING | /root/stoat/body_M_hrc/GEO/whiskers_M_hrc/whiskers_R_hrc/whiskers007_R_crv : Orientations not supported on linear curves
+WARNING | /root/stoat/body_M_hrc/GEO/whiskers_M_hrc/whiskers_R_hrc/whiskers008_R_crv : Orientations not supported on linear curves
+00:00:26  2954MB WARNING | rendering with watermarks because of failed authorization:
+00:00:26  2954MB         |  [rlm] error initializing license system:
+00:00:26  2954MB         |  [rlm]  * Can't read license data (-102)
+00:00:26  2954MB         |  [clm.v1] license server was not set (51)
+00:00:26  2954MB         |  [clm.v2] SERVICE (4): this product has not been registered with the licensing service yet
+00:00:26  2954MB         |  environment variables:
+00:00:26  2954MB         |         ARNOLD_LICENSE_ORDER   = (not set)
+00:00:26  2954MB         |         ARNOLD_LICENSE_MANAGER = (not set)
+00:00:26  2954MB         |  [rlm]  solidangle_LICENSE     = (not set)
+00:00:26  2954MB         |  [rlm]  RLM_LICENSE            = (not set)
+00:00:26  2954MB         |  [clm]  ADSKFLEX_LICENSE_FILE  = (not set)
+00:00:26  2954MB         |  [clm]  LM_LICENSE_FILE        = (not set)
+00:00:28  3261MB WARNING |  /root/stoat/body_M_hrc/GEO/nose_M_geo: uniform user-data count wrong! (found 5 expected 668) -- disabling user-data 'displayOpacity'
+00:00:28  3261MB WARNING |  /root/stoat/body_M_hrc/GEO/eyeRight_M_hrc/eyeOuterShell_R_geo: uniform user-data count wrong! (found 2 expected 468) -- disabling user-data 'displayColor'
+00:00:28  3261MB WARNING |  /root/stoat/body_M_hrc/GEO/eyeLeft_M_hrc/eyeOuterShell_L_geo: uniform user-data count wrong! (found 2 expected 468) -- disabling user-data 'displayColor'
+00:00:28  3263MB WARNING |  /root/alab_set01/lab_workbench01_0001/workbench01/benchtop03/electronics_oscilloscope01_0001/GEO/screws_M_geo: uniform user-data count wrong! (found 3 expected 4603) -- disabling user-data 'displayColor'
+00:00:28  3264MB WARNING |  /root/stoat/body_M_hrc/GEO/eyeLeft_M_hrc/eyeOuterShell_L_geo: uniform user-data count wrong! (found 2 expected 468) -- disabling user-data 'displayOpacity'
+Time: 7:01.83
+Memory: 8005408 KB

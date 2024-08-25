@@ -1,0 +1,42 @@
+Running: rez env rfh -- usdrecord --camera /McUsd/Camera --renderer "RenderMan XPU" --purposes render   assets/full_assets/McUsd/McUsd.usda "renderers/RenderMan XPU/McUsd.jpg"
+Camera: /McUsd/Camera
+Renderer plugin: HdPrmanXpuLoaderRendererPlugin
+Recording time code: EARLIEST
+W15006 {WARNING} Failed to obtain a modification time for light texture : rtxplugin:RtxHioImage.so?filename=/home/nico/usd-render-benchmark/assets/full_assets/McUsd/McUsd_materials/tex/_domelight.png&flipped=false.
+rendering at 0.03 fps, 28929 ms, 2.272 Mrays/sec
+Traced 62.888 Mrays at 2.272 Mrays/sec
+
+Render time statistics (hh:mm:ss.mil)
+Load:    00:00'01"312
+Update:  00:00'01"252
+Render:  00:00'27"676
+Total:   00:00'30"241
+17072: Fatal error: Segmentation fault (sent by pid 1121476808)
+-- TRACEBACK BEGIN --
+Traceback from hython 20.0.751 (Compiled on linux-x86_64-gcc9.3):
+stackTrace(UTsignalHandlerArg) <libHoudiniUT.so>
+signalCallback(UTsignalHandlerArg) <libHoudiniUT.so>
+UT_Signal::UT_ComboSignalHandler::operator()(int, siginfo_t*, void*) const <libHoudiniUT.so>
+UT_Signal::processSignal(int, siginfo_t*, void*) <libHoudiniUT.so>
+free (tcache.h:375)
+free (tcache.h:375)
+SWIG_Python_DestroyModule <_hou.so>
+capsule_dealloc.cold <libpython3.9.so.1.0>
+dict_dealloc <libpython3.9.so.1.0>
+module_dealloc (object.h:430)
+PyDict_SetItem <libpython3.9.so.1.0>
+_PyImport_Cleanup <libpython3.9.so.1.0>
+Py_FinalizeEx <libpython3.9.so.1.0>
+Py_Exit (pylifecycle.c:2433)
+handle_system_exit.cold <libpython3.9.so.1.0>
+PyErr_PrintEx (pythonrun.c:733)
+PyRun_SimpleFileExFlags (pythonrun.c:456)
+Py_RunMain <libpython3.9.so.1.0>
+_init <hython-bin>
+_init <hython-bin>
+__libc_start_main <libc.so.6>
+_init <hython-bin>
+-- TRACEBACK END --
+Time: 0:59.08
+Memory: 1766564 KB
+ERROR: usdrecord returned non-zero exit status

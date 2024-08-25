@@ -1,0 +1,6 @@
+Running: rez env usd-24.08 -- usdrecord --camera main_cam --renderer "GL" --purposes render   assets/full_assets/OpenChessSet/chess_set.usda "renderers/GL/chess_set.jpg"
+Camera: 
+Renderer plugin: HdStormRendererPlugin
+Recording time code: 0.000000
+Time: 0:05.13
+Memory: 1424428 KB

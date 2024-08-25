@@ -1,0 +1,7 @@
+Running: rez env houdini -- usdrecord --camera /island/cam/shotCam --renderer "Karma XPU" --purposes render   scenes/MoanaIsland/usd/island.usda "renderers/Karma XPU/island.jpg"
+Camera: /island/cam/shotCam
+Renderer plugin: BRAY_HdKarmaXPU
+Recording time code: EARLIEST
+[20:06:12] KarmaXPU: device Type:Optix ID:0 has registered a critical error [cudaErrorMemoryAllocation], so will now stop functioning.  Future error messages will be suppressed
+Time: 5:10.12
+Memory: 49066136 KB

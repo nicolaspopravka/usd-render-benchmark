@@ -1,0 +1,77 @@
+Running: rez env rfh -- usdrecord --camera /island/cam/shotCam --renderer "RenderMan XPU - CPU" --purposes render   scenes/MoanaIsland/usd/island.usda "renderers/RenderMan XPU - CPU/island.jpg"
+Camera: /island/cam/shotCam
+Renderer plugin: HdPrmanXpuCpuLoaderRendererPlugin
+Recording time code: EARLIEST
+W15006 {WARNING} Failed to obtain a modification time for light texture : rtxplugin:RtxHioImage.so?filename=/home/nico/usd-render-benchmark/scenes/MoanaIsland/textures/islandsunVIS.png&flipped=false.
+W15006 {WARNING} Failed to obtain a modification time for light texture : rtxplugin:RtxHioImage.so?filename=/home/nico/usd-render-benchmark/scenes/MoanaIsland/textures/islandsun.exr&flipped=false.
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Unable to allocate section memory!
+32811 ThreadId=0x7fa8ab362700: 
+-- TRACEBACK BEGIN --
+Traceback from hython 20.0.751 (Compiled on linux-x86_64-gcc9.3):
+stackTrace(UTsignalHandlerArg) <libHoudiniUT.so>
+signalCallback(UTsignalHandlerArg) <libHoudiniUT.so>
+UT_Signal::UT_ComboSignalHandler::operator()(int, siginfo_t*, void*) const <libHoudiniUT.so>
+UT_Signal::processSignal(int, siginfo_t*, void*) <libHoudiniUT.so>
+__GI_raise <libc.so.6>
+__GI_raise <libc.so.6>
+__GI_abort <libc.so.6>
+__gnu_cxx::__verbose_terminate_handler() [clone .cold] <libstdc++.so.6>
+__cxxabiv1::__terminate(void (*)()) <libstdc++.so.6>
+std::terminate() (eh_terminate.cc:57)
+__cxa_rethrow (eh_throw.cc:133)
+_init <libxpu.so>
+XpuCreateRiley <libxpu.so>
+_ZN32pxrInternal_v0_23__pxrReserved__19HdPrman_RenderParam21_RenderThreadCallbackEv.P <hdPrman.so>
+pxrInternal_v0_23__pxrReserved__::HdRenderThread::_RenderLoop() <libpxr_hd.so>
+execute_native_thread_routine <libpxr_work.so>
+start_thread <libpthread.so.0>
+__clone <libc.so.6>
+-- TRACEBACK END --
+32811:  (sent by pid 32811)
+-- TRACEBACK BEGIN --
+Traceback from hython 20.0.751 (Compiled on linux-x86_64-gcc9.3):
+stackTrace(UTsignalHandlerArg) <libHoudiniUT.so>
+signalCallback(UTsignalHandlerArg) <libHoudiniUT.so>
+UT_Signal::UT_ComboSignalHandler::operator()(int, siginfo_t*, void*) const <libHoudiniUT.so>
+UT_Signal::processSignal(int, siginfo_t*, void*) <libHoudiniUT.so>
+__nanosleep_nocancel <libpthread.so.0>
+__nanosleep_nocancel <libpthread.so.0>
+pxrInternal_v0_23__pxrReserved__::UsdAppUtilsFrameRecorder::Record(pxrInternal_v0_23__pxrReserved__::TfWeakPtr<pxrInternal_v0_23__pxrReserved__::UsdStage> const&, pxrInternal_v0_23__pxrReserved__::UsdGeomCamera const&, pxrInternal_v0_23__pxrReserved__::UsdTimeCode, std::string const&) <libpxr_usdAppUtils.so>
+wrapFrameRecorder() <_usdAppUtils.so>
+hboost::python::objects::function::call(_object*, _object*) const <libhboost_python39-mt-x64.so.1.72.0>
+hboost::detail::function::void_function_ref_invoker0<hboost::python::objects::(anonymous namespace)::bind_return, void>::invoke(hboost::detail::function::function_buffer&) <libhboost_python39-mt-x64.so.1.72.0>
+hboost::python::detail::exception_handler::operator()(hboost::function0<void> const&) const <libhboost_python39-mt-x64.so.1.72.0>
+Translate(pxrInternal_v0_23__pxrReserved__::TfBaseException const&) <_tf.so>
+hboost::python::handle_exception_impl(hboost::function0<void>) <libhboost_python39-mt-x64.so.1.72.0>
+function_call <libhboost_python39-mt-x64.so.1.72.0>
+_PyObject_Call (call.c:281)
+pxrInternal_v0_23__pxrReserved__::Tf_PyInitWrapModule(void (*)(), char const*, char const*, char const*, char const*) <libpxr_tf.so>
+hboost::python::objects::function::call(_object*, _object*) const <libhboost_python39-mt-x64.so.1.72.0>
+hboost::detail::function::void_function_ref_invoker0<hboost::python::objects::(anonymous namespace)::bind_return, void>::invoke(hboost::detail::function::function_buffer&) <libhboost_python39-mt-x64.so.1.72.0>
+hboost::python::detail::exception_handler::operator()(hboost::function0<void> const&) const <libhboost_python39-mt-x64.so.1.72.0>
+Translate(pxrInternal_v0_23__pxrReserved__::TfBaseException const&) <_tf.so>
+hboost::python::handle_exception_impl(hboost::function0<void>) <libhboost_python39-mt-x64.so.1.72.0>
+function_call <libhboost_python39-mt-x64.so.1.72.0>
+_PyObject_MakeTpCall <libpython3.9.so.1.0>
+method_vectorcall <libpython3.9.so.1.0>
+_PyEval_EvalFrameDefault <libpython3.9.so.1.0>
+_PyFunction_Vectorcall.localalias <libpython3.9.so.1.0>
+_PyEval_EvalFrameDefault <libpython3.9.so.1.0>
+_PyEval_EvalCode <libpython3.9.so.1.0>
+_PyEval_EvalCodeWithName (ceval.c:4361)
+PyEval_EvalCodeEx <libpython3.9.so.1.0>
+PyEval_EvalCode (ceval.c:828)
+run_eval_code_obj <libpython3.9.so.1.0>
+run_mod <libpython3.9.so.1.0>
+pyrun_file (pythonrun.c:1140)
+PyRun_SimpleFileExFlags (pythonrun.c:450)
+Py_RunMain <libpython3.9.so.1.0>
+_init <hython-bin>
+_init <hython-bin>
+__libc_start_main <libc.so.6>
+_init <hython-bin>
+-- TRACEBACK END --
+Time: 8:09.06
+Memory: 62165672 KB
+ERROR: usdrecord returned non-zero exit status

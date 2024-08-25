@@ -1,0 +1,6 @@
+Running: rez env houdini -- usdrecord --camera /McUsd/Camera --renderer "Karma XPU" --purposes render   assets/full_assets/McUsd/McUsd.usda "renderers/Karma XPU/McUsd.jpg"
+Camera: /McUsd/Camera
+Renderer plugin: BRAY_HdKarmaXPU
+Recording time code: EARLIEST
+Time: 0:30.50
+Memory: 1885180 KB

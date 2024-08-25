@@ -1,0 +1,6 @@
+Running: rez env houdini -- usdrecord --camera /root/camera01/GEO/renderCam_hrc/renderCam_buffer/renderCam_srt/renderCam --renderer "Karma CPU" --purposes render   scenes/ALab/ALab/entry.usda "renderers/Karma CPU/entry.jpg"
+Camera: /root/camera01/GEO/renderCam_hrc/renderCam_buffer/renderCam_srt/renderCam
+Renderer plugin: BRAY_HdKarma
+Recording time code: EARLIEST
+Time: 3:37.48
+Memory: 17390112 KB

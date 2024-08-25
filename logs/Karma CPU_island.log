@@ -1,0 +1,6 @@
+Running: rez env houdini -- usdrecord --camera /island/cam/shotCam --renderer "Karma CPU" --purposes render   scenes/MoanaIsland/usd/island.usda "renderers/Karma CPU/island.jpg"
+Camera: /island/cam/shotCam
+Renderer plugin: BRAY_HdKarma
+Recording time code: EARLIEST
+Time: 5:39.35
+Memory: 38774460 KB

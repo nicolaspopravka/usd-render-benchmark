@@ -10,3 +10,4 @@
 2 x Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz (36 cores, 72 logical) with 64125MB
 NVIDIA driver version 535.113
 GPU 0: NVIDIA RTX A4000 @ 1560MHz (compute 8.6) with 16108MB (13922MB available) (NVLink:0)
+CentOS Linux 7 (Core), Linux kernel 3.10.0-1160.99.1.el7.x86_64
