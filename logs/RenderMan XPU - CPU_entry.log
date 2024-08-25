@@ -1,0 +1,43 @@
+Running: rez env rfh -- usdrecord --camera /root/camera01/GEO/renderCam_hrc/renderCam_buffer/renderCam_srt/renderCam --renderer "RenderMan XPU - CPU" --purposes render   scenes/ALab/ALab/entry.usda "renderers/RenderMan XPU - CPU/entry.jpg"
+Camera: /root/camera01/GEO/renderCam_hrc/renderCam_buffer/renderCam_srt/renderCam
+Renderer plugin: HdPrmanXpuCpuLoaderRendererPlugin
+Recording time code: EARLIEST
+W15006 {WARNING} Failed to obtain a modification time for light texture : rtxplugin:RtxHioImage.so?filename=/home/nico/usd-render-benchmark/scenes/ALab/ALab/fragment/lightrig/lighting/mk020_0281_export/base/texture/dmp_skydome_alab01_std01_render_high_texture/nuke_texture_export.exr&flipped=false.
+W03006 {WARNING} Primvar isScraggled is of type integer, but not constant or uniform on curve geometry WeaveOrKnit.
+rendering at 0.03 fps, 35123 ms, 3.783 Mrays/sec
+Traced 14.575 Mrays at 3.783 Mrays/sec
+
+Render time statistics (hh:mm:ss.mil)
+Load:    00:00'13"333
+Update:  00:00'31"270
+Render:  00:00'03"852
+Total:   00:00'48"456
+34012: Fatal error: Segmentation fault (sent by pid 1681920960)
+-- TRACEBACK BEGIN --
+Traceback from hython 20.0.751 (Compiled on linux-x86_64-gcc9.3):
+stackTrace(UTsignalHandlerArg) <libHoudiniUT.so>
+signalCallback(UTsignalHandlerArg) <libHoudiniUT.so>
+UT_Signal::UT_ComboSignalHandler::operator()(int, siginfo_t*, void*) const <libHoudiniUT.so>
+UT_Signal::processSignal(int, siginfo_t*, void*) <libHoudiniUT.so>
+free (arena.h:525)
+free (arena.h:525)
+SWIG_Python_DestroyModule <_hou.so>
+capsule_dealloc.cold <libpython3.9.so.1.0>
+dict_dealloc <libpython3.9.so.1.0>
+module_dealloc (object.h:430)
+PyDict_SetItem <libpython3.9.so.1.0>
+_PyImport_Cleanup <libpython3.9.so.1.0>
+Py_FinalizeEx <libpython3.9.so.1.0>
+Py_Exit (pylifecycle.c:2433)
+handle_system_exit.cold <libpython3.9.so.1.0>
+PyErr_PrintEx (pythonrun.c:733)
+PyRun_SimpleFileExFlags (pythonrun.c:456)
+Py_RunMain <libpython3.9.so.1.0>
+_init <hython-bin>
+_init <hython-bin>
+__libc_start_main <libc.so.6>
+_init <hython-bin>
+-- TRACEBACK END --
+Time: 1:15.57
+Memory: 10894680 KB
+ERROR: usdrecord returned non-zero exit status

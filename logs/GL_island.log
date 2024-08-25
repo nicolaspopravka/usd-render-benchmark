@@ -1,0 +1,38 @@
+Running: rez env usd-24.08 -- usdrecord --camera /island/cam/shotCam --renderer "GL" --purposes render   scenes/MoanaIsland/usd/island.usda "renderers/GL/island.jpg"
+Warning: in Sync at line 164 of /home/nico/USD/pxr/imaging/hdx/simpleLightTask.cpp -- Hydra Storm supports up to 16 lights, truncating the 24 found lights to this max.
+Coding Error (secondary thread): in GetFactory at line 56 of /home/nico/USD/pxr/imaging/hio/fieldTextureData.cpp -- [PluginLoad] Unknown field data type 'vdb' for file '/home/nico/usd-render-benchmark/scenes/MoanaIsland/usd/elements/osOcean/deepWaterVolume.vdb'
+
+Warning: In image "/home/nico/usd-render-benchmark/scenes/MoanaIsland/textures/islandsun.exr" mip level 1 does not exist [python3.6]
+Warning: in Link at line 421 of /home/nico/USD/pxr/imaging/hdSt/glslProgram.cpp -- Failed to link shader: Fragment info
+-------------
+0(1276) : error C3002: call to undefined function "vec4 GetPatchCoord(int);"
+
+Warning: in Link at line 421 of /home/nico/USD/pxr/imaging/hdSt/glslProgram.cpp -- Failed to link shader: Fragment info
+-------------
+0(1397) : error C3002: call to undefined function "vec4 GetPatchCoord(int);"
+
+Warning: in Link at line 421 of /home/nico/USD/pxr/imaging/hdSt/glslProgram.cpp -- Failed to link shader: Fragment info
+-------------
+0(1330) : error C3002: call to undefined function "vec4 GetPatchCoord(int);"
+
+Warning: in Link at line 421 of /home/nico/USD/pxr/imaging/hdSt/glslProgram.cpp -- Failed to link shader: Fragment info
+-------------
+0(1324) : error C3002: call to undefined function "vec4 GetPatchCoord(int);"
+
+Coding Error: in _DestroyDescriptorCacheItem at line 213 of /home/nico/USD/pxr/imaging/hgiGL/contextArena.cpp -- _DestroyDescriptorCacheItem: Found invalid framebuffer 3 in cache.
+
+Coding Error: in _DestroyDescriptorCacheItem at line 213 of /home/nico/USD/pxr/imaging/hgiGL/contextArena.cpp -- _DestroyDescriptorCacheItem: Found invalid framebuffer 1 in cache.
+
+Coding Error: in _DestroyDescriptorCacheItem at line 213 of /home/nico/USD/pxr/imaging/hgiGL/contextArena.cpp -- _DestroyDescriptorCacheItem: Found invalid framebuffer 2 in cache.
+
+Recording aborted due to the following failure at time code 0.0: 
+	Error in 'pxrInternal_v0_24__pxrReserved__::HdSt_DrawBatch::_GetDrawingProgram' at line 390 in file /home/nico/USD/pxr/imaging/hdSt/drawBatch.cpp : 'Failed to compile shader for prim /island/isPalmRig/isPalmRig27/geometry/xgFrondsA.'
+	Error in 'pxrInternal_v0_24__pxrReserved__::HdSt_DrawBatch::_GetDrawingProgram' at line 390 in file /home/nico/USD/pxr/imaging/hdSt/drawBatch.cpp : 'Failed to compile shader for prim /__Prototype_5/geometry/xgTreeSkyLine/instancer/proto0_isIronwoodA_variantA_lo_hBranch1_id17.'
+	Error in 'pxrInternal_v0_24__pxrReserved__::HdSt_DrawBatch::_GetDrawingProgram' at line 390 in file /home/nico/USD/pxr/imaging/hdSt/drawBatch.cpp : 'Failed to compile shader for prim /island/isBeach/proto_xgGrass_id10.'
+	Error in 'pxrInternal_v0_24__pxrReserved__::HdSt_DrawBatch::_GetDrawingProgram' at line 390 in file /home/nico/USD/pxr/imaging/hdSt/drawBatch.cpp : 'Failed to compile shader for prim /island/isMountainB/proto_mountainb0001_geo_xgLowGrowth_id17.'
+Camera: /island/cam/shotCam
+Renderer plugin: HdStormRendererPlugin
+Recording time code: 0.000000
+Time: 1:26.30
+Memory: 16152528 KB
+ERROR: usdrecord returned non-zero exit status

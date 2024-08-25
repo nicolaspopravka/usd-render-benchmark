@@ -1,0 +1,155 @@
+Running: rez env usd-24.08 -- usdrecord --camera /island/cam/shotCam --renderer "Prman" --purposes render   scenes/MoanaIsland/usd/island.usda "renderers/Prman/island.jpg"
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '95').
+Warning: in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '223').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '227').
+Warning: in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '16635').
+Warning: in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '23994').
+Warning: in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '25606').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '28076').
+Warning: in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '34902').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '40285').
+Warning: in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '43649').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '46089').
+Warning: in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '53228').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '95655').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '97431').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '98055').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '100488').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '101597').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '102260').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '103058').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '103229').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '104009').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '104264').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '104523').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '104974').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '107167').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '110367').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '110899').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '116136').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '117854').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '117860').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '117866').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '118008').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '118080').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '118091').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '118097').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '118124').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '118966').
+Warning: in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '119234').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '119502').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '119522').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '119558').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '119571').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '119573').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '119592').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '119608').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- J01012 Attribute grouping:membership isn't supported inside Groups or Procedurals (group prototype id: '119614').
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- N06013 Minlength dicing may be underdicing '(null)' by 2 orders of magnitude.
+Warning (secondary thread): in HandleXcpt at line 23 of /home/nico/USD/third_party/renderman-26/plugin/hdPrman/xcpt.cpp -- N06013 Minlength dicing may be underdicing '(null)' by 1 order of magnitude.
+R90000    0%
+R90000    1%
+R90000    2%
+R90000    3%
+R90000    4%
+R90000    5%
+R90000    6%
+R90000    7%
+R90000    8%
+R90000    9%
+R90000   10%
+R90000   11%
+R90000   12%
+R90000   13%
+R90000   14%
+R90000   15%
+R90000   16%
+R90000   17%
+R90000   18%
+R90000   19%
+R90000   20%
+R90000   21%
+R90000   22%
+R90000   23%
+R90000   24%
+R90000   25%
+R90000   26%
+R90000   27%
+R90000   28%
+R90000   29%
+R90000   30%
+R90000   31%
+R90000   32%
+R90000   33%
+R90000   34%
+R90000   35%
+R90000   36%
+R90000   37%
+R90000   38%
+R90000   39%
+R90000   40%
+R90000   41%
+R90000   42%
+R90000   43%
+R90000   44%
+R90000   45%
+R90000   46%
+R90000   47%
+R90000   48%
+R90000   49%
+R90000   50%
+R90000   51%
+R90000   52%
+R90000   53%
+R90000   54%
+R90000   55%
+R90000   56%
+R90000   57%
+R90000   58%
+R90000   59%
+R90000   60%
+R90000   61%
+R90000   62%
+R90000   63%
+R90000   64%
+R90000   65%
+R90000   66%
+R90000   67%
+R90000   68%
+R90000   69%
+R90000   70%
+R90000   71%
+R90000   72%
+R90000   73%
+R90000   74%
+R90000   75%
+R90000   76%
+R90000   77%
+R90000   78%
+R90000   79%
+R90000   80%
+R90000   81%
+R90000   82%
+R90000   83%
+R90000   84%
+R90000   85%
+R90000   86%
+R90000   87%
+R90000   88%
+R90000   89%
+R90000   90%
+R90000   91%
+R90000   92%
+R90000   93%
+R90000   94%
+R90000   95%
+R90000   96%
+R90000   97%
+R90000   98%
+R90000   99%
+R90000  100%
+Camera: /island/cam/shotCam
+Renderer plugin: HdPrmanLoaderRendererPlugin
+Recording time code: 0.000000
+Time: 18:04.98
+Memory: 62175844 KB

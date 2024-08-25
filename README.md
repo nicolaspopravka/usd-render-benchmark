@@ -44,7 +44,7 @@
 Clone this repository and its submodules:
 
 ```
-git clone --recurse-submodules https://github.com/TheYardVFX/usd-render-benchmark.git
+git clone --recurse-submodules https://github.com/nicolaspopravka/usd-render-benchmark.git
 cd usd-render-benchmark
 ```
 

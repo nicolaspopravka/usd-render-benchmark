@@ -1,0 +1,16 @@
+Running: rez env usd-24.08 -- usdrecord --camera /root/camera01/GEO/renderCam_hrc/renderCam_buffer/renderCam_srt/renderCam --renderer "Embree" --purposes render   scenes/ALab/ALab/entry.usda "renderers/Embree/entry.jpg"
+Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'SphereLight'
+Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'LightAPI'
+Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'CylinderLight'
+Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'RectLight'
+Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'DiskLight'
+Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'DomeLight'
+Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'BasisCurves'
+Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'NurbsCurves'
+Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'DistantLight'
+Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'Material'
+Camera: /root/camera01/GEO/renderCam_hrc/renderCam_buffer/renderCam_srt/renderCam
+Renderer plugin: HdEmbreeRendererPlugin
+Recording time code: 1004.000000
+Time: 0:18.26
+Memory: 3482756 KB

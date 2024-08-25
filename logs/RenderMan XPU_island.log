@@ -1,0 +1,10 @@
+Running: rez env rfh -- usdrecord --camera /island/cam/shotCam --renderer "RenderMan XPU" --purposes render   scenes/MoanaIsland/usd/island.usda "renderers/RenderMan XPU/island.jpg"
+Camera: /island/cam/shotCam
+Renderer plugin: HdPrmanXpuLoaderRendererPlugin
+Recording time code: EARLIEST
+W15006 {WARNING} Failed to obtain a modification time for light texture : rtxplugin:RtxHioImage.so?filename=/home/nico/usd-render-benchmark/scenes/MoanaIsland/textures/islandsunVIS.png&flipped=false.
+W15006 {WARNING} Failed to obtain a modification time for light texture : rtxplugin:RtxHioImage.so?filename=/home/nico/usd-render-benchmark/scenes/MoanaIsland/textures/islandsun.exr&flipped=false.
+/tmp/rez_context_O6Q3rq/rez-shell.sh: line 8: 18248 Killed                  usdrecord --camera /island/cam/shotCam --renderer "RenderMan XPU" --purposes render scenes/MoanaIsland/usd/island.usda "renderers/RenderMan XPU/island.jpg"
+Time: 21:33.45
+Memory: 61858560 KB
+ERROR: usdrecord returned non-zero exit status

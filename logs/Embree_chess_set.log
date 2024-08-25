@@ -1,0 +1,7 @@
+Running: rez env usd-24.08 -- usdrecord --camera main_cam --renderer "Embree" --purposes render   assets/full_assets/OpenChessSet/chess_set.usda "renderers/Embree/chess_set.jpg"
+Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'Material'
+Camera: 
+Renderer plugin: HdEmbreeRendererPlugin
+Recording time code: 0.000000
+Time: 0:04.02
+Memory: 465436 KB

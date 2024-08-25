@@ -1,0 +1,6 @@
+Running: rez env houdini -- usdrecord --camera main_cam --renderer "Karma XPU" --purposes render   assets/full_assets/OpenChessSet/chess_set.usda "renderers/Karma XPU/chess_set.jpg"
+Camera: 
+Renderer plugin: BRAY_HdKarmaXPU
+Recording time code: EARLIEST
+Time: 0:22.62
+Memory: 2230916 KB

@@ -1,0 +1,11 @@
+Running: rez env rfh -- usdrecord --camera /island/cam/shotCam --renderer "RenderMan RIS" --purposes render   scenes/MoanaIsland/usd/island.usda "renderers/RenderMan RIS/island.jpg"
+Camera: /island/cam/shotCam
+Renderer plugin: HdPrmanLoaderRendererPlugin
+Recording time code: EARLIEST
+N06013 {WARNING} Minlength dicing may be underdicing 'proto_deepWaterVolume_id2' by 2 orders of magnitude.
+N06013 {WARNING} Minlength dicing may be underdicing 'proto_deepWaterVolume_id2' by 1 order of magnitude.
+28092: Fatal error: Segmentation fault (sent by pid 332)
+/tmp/rez_context_23_rMa/rez-shell.sh: line 8: 28092 Segmentation fault      (core dumped) usdrecord --camera /island/cam/shotCam --renderer "RenderMan RIS" --purposes render scenes/MoanaIsland/usd/island.usda "renderers/RenderMan RIS/island.jpg"
+Time: 16:33.72
+Memory: 61906312 KB
+ERROR: usdrecord returned non-zero exit status
