@@ -1,0 +1,6 @@
+[submodule "assets"]
+	path = assets
+	url = https://github.com/usd-wg/assets.git
+[submodule "scenes/ALab"]
+	path = scenes/ALab
+	url = https://github.com/DigitalProductionExampleLibrary/ALab.git
