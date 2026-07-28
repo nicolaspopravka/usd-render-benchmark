@@ -1,6 +1,11 @@
-Running: rez env usd-24.08 -- usdrecord --camera main_cam --renderer "GL" --purposes render   assets/full_assets/OpenChessSet/chess_set.usda "renderers/GL/chess_set.jpg"
+Running: rez env usd -- usdrecord --camera main_cam --renderer "GL" --purposes render   assets/full_assets/OpenChessSet/chess_set.usda "renderers/GL/chess_set.jpg"
+Pip-based rez installation detected. Please be aware that rez command line tools are not guaranteed to function correctly in this case. See https://rez.readthedocs.io/en/stable/installation.html#why-not-pip-for-production  for futher details.
+[OpenColorIO Info]: Color management disabled. (Specify the $OCIO environment variable to enable.)
+EGL 1.5
+GL_VERSION: 4.6.0 NVIDIA 580.167.08
+GL_RENDERER: NVIDIA RTX PRO 4000 Blackwell/PCIe/SSE2
 Camera: 
 Renderer plugin: HdStormRendererPlugin
-Recording time code: 0.000000
-Time: 0:05.13
-Memory: 1424428 KB
+Recording time code: EARLIEST
+Time: 0:02.15
+Memory: 360336 KB
