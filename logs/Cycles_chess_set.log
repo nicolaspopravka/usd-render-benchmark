@@ -1,7 +1,15 @@
 Running: rez env cycles -- usdrecord --camera main_cam --renderer "Cycles" --purposes render   assets/full_assets/OpenChessSet/chess_set.usda "renderers/Cycles/chess_set.jpg"
-QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-nico'
+Pip-based rez installation detected. Please be aware that rez command line tools are not guaranteed to function correctly in this case. See https://rez.readthedocs.io/en/stable/installation.html#why-not-pip-for-production  for futher details.
+Warning: in SdfPath at line 144 of /opt/build/OpenUSD/pxr/usd/sdf/path.cpp -- Ill-formed SdfPath <>: :1:0(0): parse error matching pxrInternal_v0_24__pxrReserved__::Sdf_PathParser::Path
+[OpenColorIO Info]: Color management disabled. (Specify the $OCIO environment variable to enable.)
+Coding Error (secondary thread): in _FailGet at line 521 of /opt/build/OpenUSD/pxr/base/vt/value.cpp -- Attempted to get value of type 'VtArray<GfVec4f>' from VtValue holding 'VtArray<GfQuath>'
+Coding Error (secondary thread): in _FailGet at line 521 of /opt/build/OpenUSD/pxr/base/vt/value.cpp -- Attempted to get value of type 'VtArray<GfVec4f>' from VtValue holding 'VtArray<GfQuath>'
+Warning: in SyncAovBindings at line 151 of /opt/build/cycles/src/hydra/session.cpp -- Unknown pass elementId
+EGL 1.5
+GL_VERSION: 4.6.0 NVIDIA 570.172.08
+GL_RENDERER: NVIDIA RTX 2000 Ada Generation/PCIe/SSE2
 Camera: 
 Renderer plugin: HdCyclesPlugin
 Recording time code: EARLIEST
-Time: 0:10.46
-Memory: 951836 KB
+Time: 0:28.30
+Memory: 595500 KB
