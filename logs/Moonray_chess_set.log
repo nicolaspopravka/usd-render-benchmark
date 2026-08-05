@@ -1,37 +1,64 @@
 Running: rez env moonray -- usdrecord --camera main_cam --renderer "Moonray" --purposes render   assets/full_assets/OpenChessSet/chess_set.usda "renderers/Moonray/chess_set.jpg"
-Warning: in _ReportErrors at line 2873 of /home/nico/packages/moonray/1.5.0.0/build/USD-prefix/src/USD/pxr/usd/usd/stage.cpp -- Could not open asset @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Queen/Queen_mat.mtlx@ for reference on prim @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Queen/Queen_payload.usd@</Queen/Materials> -- Cannot determine file format for @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Queen/Queen_mat.mtlx:SDF_FORMAT_ARGS:target=usd@. (instantiating stage on stage @assets/full_assets/OpenChessSet/chess_set.usda@ <0x18339d0>)
-Warning: in _ReportErrors at line 2873 of /home/nico/packages/moonray/1.5.0.0/build/USD-prefix/src/USD/pxr/usd/usd/stage.cpp -- Could not open asset @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Rook/Rook_mat.mtlx@ for reference on prim @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Rook/Rook_payload.usd@</Rook/Materials> -- Cannot determine file format for @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Rook/Rook_mat.mtlx:SDF_FORMAT_ARGS:target=usd@. (instantiating stage on stage @assets/full_assets/OpenChessSet/chess_set.usda@ <0x18339d0>)
-Warning: in _ReportErrors at line 2873 of /home/nico/packages/moonray/1.5.0.0/build/USD-prefix/src/USD/pxr/usd/usd/stage.cpp -- Could not open asset @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/King/King_mat.mtlx@ for reference on prim @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/King/King_payload.usd@</King/Materials> -- Cannot determine file format for @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/King/King_mat.mtlx:SDF_FORMAT_ARGS:target=usd@. (instantiating stage on stage @assets/full_assets/OpenChessSet/chess_set.usda@ <0x18339d0>)
-Warning: in _ReportErrors at line 2873 of /home/nico/packages/moonray/1.5.0.0/build/USD-prefix/src/USD/pxr/usd/usd/stage.cpp -- Could not open asset @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/King/King_mat.mtlx@ for reference on prim @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/King/King_payload.usd@</King/Materials> -- Cannot determine file format for @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/King/King_mat.mtlx:SDF_FORMAT_ARGS:target=usd@. (instantiating stage on stage @assets/full_assets/OpenChessSet/chess_set.usda@ <0x18339d0>)
-Warning: in _ReportErrors at line 2873 of /home/nico/packages/moonray/1.5.0.0/build/USD-prefix/src/USD/pxr/usd/usd/stage.cpp -- Could not open asset @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Queen/Queen_mat.mtlx@ for reference on prim @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Queen/Queen_payload.usd@</Queen/Materials> -- Cannot determine file format for @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Queen/Queen_mat.mtlx:SDF_FORMAT_ARGS:target=usd@. (instantiating stage on stage @assets/full_assets/OpenChessSet/chess_set.usda@ <0x18339d0>)
-Warning: in _ReportErrors at line 2873 of /home/nico/packages/moonray/1.5.0.0/build/USD-prefix/src/USD/pxr/usd/usd/stage.cpp -- Could not open asset @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Rook/Rook_mat.mtlx@ for reference on prim @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Rook/Rook_payload.usd@</Rook/Materials> -- Cannot determine file format for @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Rook/Rook_mat.mtlx:SDF_FORMAT_ARGS:target=usd@. (instantiating stage on stage @assets/full_assets/OpenChessSet/chess_set.usda@ <0x18339d0>)
-Warning: in _ReportErrors at line 2873 of /home/nico/packages/moonray/1.5.0.0/build/USD-prefix/src/USD/pxr/usd/usd/stage.cpp -- Could not open asset @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Rook/Rook_mat.mtlx@ for reference on prim @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Rook/Rook_payload.usd@</Rook/Materials> -- Cannot determine file format for @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Rook/Rook_mat.mtlx:SDF_FORMAT_ARGS:target=usd@. (instantiating stage on stage @assets/full_assets/OpenChessSet/chess_set.usda@ <0x18339d0>)
-Warning: in _ReportErrors at line 2873 of /home/nico/packages/moonray/1.5.0.0/build/USD-prefix/src/USD/pxr/usd/usd/stage.cpp -- Could not open asset @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Rook/Rook_mat.mtlx@ for reference on prim @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Rook/Rook_payload.usd@</Rook/Materials> -- Cannot determine file format for @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Rook/Rook_mat.mtlx:SDF_FORMAT_ARGS:target=usd@. (instantiating stage on stage @assets/full_assets/OpenChessSet/chess_set.usda@ <0x18339d0>)
-Warning: in _ReportErrors at line 2873 of /home/nico/packages/moonray/1.5.0.0/build/USD-prefix/src/USD/pxr/usd/usd/stage.cpp -- Could not open asset @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Chessboard/Chessboard_mat.mtlx@ for reference on prim @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Chessboard/Chessboard_payload.usd@</Chessboard/Materials> -- Cannot determine file format for @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Chessboard/Chessboard_mat.mtlx:SDF_FORMAT_ARGS:target=usd@. (instantiating stage on stage @assets/full_assets/OpenChessSet/chess_set.usda@ <0x18339d0>)
-Warning: in _ReportErrors at line 2873 of /home/nico/packages/moonray/1.5.0.0/build/USD-prefix/src/USD/pxr/usd/usd/stage.cpp -- Could not open asset @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Bishop/Bishop_mat.mtlx@ for reference on prim @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Bishop/Bishop_payload.usd@</Bishop/Materials> -- Cannot determine file format for @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Bishop/Bishop_mat.mtlx:SDF_FORMAT_ARGS:target=usd@. (instantiating stage on stage @assets/full_assets/OpenChessSet/chess_set.usda@ <0x18339d0>)
-Warning: in _ReportErrors at line 2873 of /home/nico/packages/moonray/1.5.0.0/build/USD-prefix/src/USD/pxr/usd/usd/stage.cpp -- Could not open asset @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Bishop/Bishop_mat.mtlx@ for reference on prim @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Bishop/Bishop_payload.usd@</Bishop/Materials> -- Cannot determine file format for @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Bishop/Bishop_mat.mtlx:SDF_FORMAT_ARGS:target=usd@. (instantiating stage on stage @assets/full_assets/OpenChessSet/chess_set.usda@ <0x18339d0>)
-Warning: in _ReportErrors at line 2873 of /home/nico/packages/moonray/1.5.0.0/build/USD-prefix/src/USD/pxr/usd/usd/stage.cpp -- Could not open asset @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Bishop/Bishop_mat.mtlx@ for reference on prim @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Bishop/Bishop_payload.usd@</Bishop/Materials> -- Cannot determine file format for @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Bishop/Bishop_mat.mtlx:SDF_FORMAT_ARGS:target=usd@. (instantiating stage on stage @assets/full_assets/OpenChessSet/chess_set.usda@ <0x18339d0>)
-Warning: in _ReportErrors at line 2873 of /home/nico/packages/moonray/1.5.0.0/build/USD-prefix/src/USD/pxr/usd/usd/stage.cpp -- Could not open asset @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Bishop/Bishop_mat.mtlx@ for reference on prim @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Bishop/Bishop_payload.usd@</Bishop/Materials> -- Cannot determine file format for @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Bishop/Bishop_mat.mtlx:SDF_FORMAT_ARGS:target=usd@. (instantiating stage on stage @assets/full_assets/OpenChessSet/chess_set.usda@ <0x18339d0>)
-Warning: in _ReportErrors at line 2873 of /home/nico/packages/moonray/1.5.0.0/build/USD-prefix/src/USD/pxr/usd/usd/stage.cpp -- Could not open asset @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Pawn/Pawn_mat.mtlx@ for reference on prim @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Pawn/Pawn_payload.usd@</Pawn/Materials> -- Cannot determine file format for @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Pawn/Pawn_mat.mtlx:SDF_FORMAT_ARGS:target=usd@. (instantiating stage on stage @assets/full_assets/OpenChessSet/chess_set.usda@ <0x18339d0>)
-Warning: in _ReportErrors at line 2873 of /home/nico/packages/moonray/1.5.0.0/build/USD-prefix/src/USD/pxr/usd/usd/stage.cpp -- Could not open asset @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Pawn/Pawn_mat.mtlx@ for reference on prim @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Pawn/Pawn_payload.usd@</Pawn/Materials> -- Cannot determine file format for @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Pawn/Pawn_mat.mtlx:SDF_FORMAT_ARGS:target=usd@. (instantiating stage on stage @assets/full_assets/OpenChessSet/chess_set.usda@ <0x18339d0>)
-Warning: in _ReportErrors at line 2873 of /home/nico/packages/moonray/1.5.0.0/build/USD-prefix/src/USD/pxr/usd/usd/stage.cpp -- Could not open asset @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Knight/Knight_mat.mtlx@ for reference on prim @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Knight/Knight_payload.usd@</Knight/Materials> -- Cannot determine file format for @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Knight/Knight_mat.mtlx:SDF_FORMAT_ARGS:target=usd@. (instantiating stage on stage @assets/full_assets/OpenChessSet/chess_set.usda@ <0x18339d0>)
-Warning: in _ReportErrors at line 2873 of /home/nico/packages/moonray/1.5.0.0/build/USD-prefix/src/USD/pxr/usd/usd/stage.cpp -- Could not open asset @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Knight/Knight_mat.mtlx@ for reference on prim @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Knight/Knight_payload.usd@</Knight/Materials> -- Cannot determine file format for @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Knight/Knight_mat.mtlx:SDF_FORMAT_ARGS:target=usd@. (instantiating stage on stage @assets/full_assets/OpenChessSet/chess_set.usda@ <0x18339d0>)
-Warning: in _ReportErrors at line 2873 of /home/nico/packages/moonray/1.5.0.0/build/USD-prefix/src/USD/pxr/usd/usd/stage.cpp -- Could not open asset @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Knight/Knight_mat.mtlx@ for reference on prim @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Knight/Knight_payload.usd@</Knight/Materials> -- Cannot determine file format for @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Knight/Knight_mat.mtlx:SDF_FORMAT_ARGS:target=usd@. (instantiating stage on stage @assets/full_assets/OpenChessSet/chess_set.usda@ <0x18339d0>)
-Warning: in _ReportErrors at line 2873 of /home/nico/packages/moonray/1.5.0.0/build/USD-prefix/src/USD/pxr/usd/usd/stage.cpp -- Could not open asset @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Knight/Knight_mat.mtlx@ for reference on prim @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Knight/Knight_payload.usd@</Knight/Materials> -- Cannot determine file format for @/home/nico/usd-render-benchmark/assets/full_assets/OpenChessSet/assets/Knight/Knight_mat.mtlx:SDF_FORMAT_ARGS:target=usd@. (instantiating stage on stage @assets/full_assets/OpenChessSet/chess_set.usda@ <0x18339d0>)
-Hydra setup time = 00:00:00.124
-Starting render prep...[31mError: GPU: GPU mode not enabled in this build   ...falling back to CPU vectorized mode
-[0mRender prep time = 00:00:00.474
-MOONRAY MCRT thread pool
-MOONRAY MCRT thread pool
-00:00:03    1.6 GB | ---------- Time ------------------------------------------
-00:00:03    1.6 GB | Render time                      = 00:00:02.629000
-00:00:03    1.6 GB | Total time                       = 00:00:03.135000
-Hydra total time = 00:00:03.194
-Recording aborted due to the following failure at time code EARLIEST: 
-	Error in 'pxrInternal_v0_22__pxrReserved__::VtValue::_FailGet' at line 561 in file /home/nico/packages/moonray/1.5.0.0/build/USD-prefix/src/USD/pxr/base/vt/value.cpp : 'Attempted to get value of type 'TfToken' from empty VtValue.'
-	Error in 'pxrInternal_v0_22__pxrReserved__::VtValue::_FailGet' at line 561 in file /home/nico/packages/moonray/1.5.0.0/build/USD-prefix/src/USD/pxr/base/vt/value.cpp : 'Attempted to get value of type 'TfToken' from empty VtValue.'
+Pip-based rez installation detected. Please be aware that rez command line tools are not guaranteed to function correctly in this case. See https://rez.readthedocs.io/en/stable/installation.html#why-not-pip-for-production  for futher details.
+[OpenColorIO Info]: Color management disabled. (Specify the $OCIO environment variable to enable.)
+log4cplus:ERROR No appenders could be found for logger (lib.render).
+log4cplus:ERROR Please initialize the log4cplus system properly.
+[31mError: /ChessSet/Black/Pawns/proto0_Render_id0.material: /ChessSet/Black/Pawns/Pawn/Materials/M_Pawn_Top_B has no moonray or fallback shaders
+[0m[31mError: /ChessSet/White/KnightL/Geom/Render.material: /ChessSet/White/KnightL/Materials/M_Knight_W has no moonray or fallback shaders
+[0m[31mError: /ChessSet/White/KnightR/Geom/Render.material: /ChessSet/White/KnightR/Materials/M_Knight_W has no moonray or fallback shaders
+[0m[31mError: /ChessSet/Black/KnightL/Geom/Render.material: /ChessSet/Black/KnightL/Materials/M_Knight_B has no moonray or fallback shaders
+[0m[31mError: /ChessSet/Black/KnightR/Geom/Render.material: /ChessSet/Black/KnightR/Materials/M_Knight_B has no moonray or fallback shaders
+[0m[31mError: /ChessSet/White/RookR/Geom/Render.material: /ChessSet/White/RookR/Materials/M_Rook_W has no moonray or fallback shaders
+[0m[31mError: /ChessSet/White/RookL/Geom/Render.material: /ChessSet/White/RookL/Materials/M_Rook_W has no moonray or fallback shaders
+[0m[31mError: /ChessSet/Black/RookL/Geom/Render.material: /ChessSet/Black/RookL/Materials/M_Rook_B has no moonray or fallback shaders
+[0m[31mError: /ChessSet/Black/RookR/Geom/Render.material: /ChessSet/Black/RookR/Materials/M_Rook_B has no moonray or fallback shaders
+[0m[31mError: /ChessSet/Black/Pawns/proto0_Render_id1.material: /ChessSet/Black/Pawns/Pawn/Materials/M_Pawn_Body_B has no moonray or fallback shaders
+[0m[31mError: /ChessSet/White/Pawns/proto0_Render_id1.material: /ChessSet/White/Pawns/Pawn/Materials/M_Pawn_Body_W has no moonray or fallback shaders
+[0m[31mError: /ChessSet/Black/King/Geom/Render.material: /ChessSet/Black/King/Materials/M_King_B has no moonray or fallback shaders
+[0m[31mError: /ChessSet/White/King/Geom/Render.material: /ChessSet/White/King/Materials/M_King_W has no moonray or fallback shaders
+[0m[31mError: /ChessSet/White/BishopR/Geom/Render.material: /ChessSet/White/BishopR/Materials/M_Bishop_W has no moonray or fallback shaders
+[0m[31mError: /ChessSet/Black/BishopL/Geom/Render.material: /ChessSet/Black/BishopL/Materials/M_Bishop_B has no moonray or fallback shaders
+[0m[31mError: /ChessSet/Black/BishopR/Geom/Render.material: /ChessSet/Black/BishopR/Materials/M_Bishop_B has no moonray or fallback shaders
+[0m[31mError: /ChessSet/White/BishopL/Geom/Render.material: /ChessSet/White/BishopL/Materials/M_Bishop_W has no moonray or fallback shaders
+[0m[31mError: /ChessSet/White/Queen/Geom/Render.material: /ChessSet/White/Queen/Materials/M_Queen_W has no moonray or fallback shaders
+[0m[31mError: /ChessSet/Black/Queen/Geom/Render.material: /ChessSet/Black/Queen/Materials/M_Queen_B has no moonray or fallback shaders
+[0m[31mError: /ChessSet/Chessboard/Geom/Render.material: /ChessSet/Chessboard/Materials/M_Chessboard has no moonray or fallback shaders
+[0m[32m2026-08-16T14:32:19.188637 D client[337135]:131869735017344: [7f3e3e96-0890-4b07-a4cc-4d007cf9fa48]: {trace:comp} launch 0d84e2f4-927a-4ff2-b8a2-16e6bb838350 mcrt[0m
+sh: lsb_release: command not found
+[32m{trace:mcrt} version mcrt_computation-(unknown) host 4705a4f52774[0m
+[32m{trace:comp} ready 0d84e2f4-927a-4ff2-b8a2-16e6bb838350[0m
+[32m2026-08-16T14:32:19.757551 D client[337135]:131869735017344: [7f3e3e96-0890-4b07-a4cc-4d007cf9fa48]: {trace:session} clientConnect 7f3e3e96-0890-4b07-a4cc-4d007cf9fa48 local arras4_client-???;arras4_core_impl-???;arras4_network-???[0m
+[32m{trace:mcrt} stage ready start 0d84e2f4-927a-4ff2-b8a2-16e6bb838350[0m
+[32m{trace:comp} start 0d84e2f4-927a-4ff2-b8a2-16e6bb838350[0m
+GlobalNodeInfo HostName {
+  mClientHostName:4705a4f52774
+  mDispatchHostName:
+  mMergeHostName: mMergeCpuTotal:0
+  mcrt (totalMcrt:1 totalCpu:48) {
+    mMachineId:0 mCpuTotal:48 mHostName:4705a4f52774
+  }
+}
+[36mStarting Rendering (syncId:1)[0m
+[32m{trace:mcrt} stage renderPrep start 0d84e2f4-927a-4ff2-b8a2-16e6bb838350 ba06740b-048f-4776-829c-2ff58df59bbc[0m
+[36mstdout Starting render prep...Render prep time = 00:00:01.054[0m
+[32m{trace:mcrt} stage shading start 0.00936307 0d84e2f4-927a-4ff2-b8a2-16e6bb838350 ba06740b-048f-4776-829c-2ff58df59bbc[0m
+[32m{trace:mcrt} stage shading complete 1 0d84e2f4-927a-4ff2-b8a2-16e6bb838350 ba06740b-048f-4776-829c-2ff58df59bbc[0m
+[36mstdout 00:01:02    1.3 GB | ---------- Time ------------------------------------------[0m
+[36mstdout 00:01:02    1.3 GB | Render time                      = 00:01:01.161000[0m
+[36mstdout 00:01:02    1.3 GB | Total time                       = 00:01:02.338000[0m
+Recording aborted due to the following failure at time code 0.0: 
+	Error in 'pxrInternal_v0_25_5__pxrReserved__::VtValue::_FailGet' at line 501 in file /opt/conan_home/d/b/openud0ef511541d7a/b/src/pxr/base/vt/value.cpp : 'Attempted to get value of type 'TfToken' from empty VtValue.'
+	Error in 'pxrInternal_v0_25_5__pxrReserved__::VtValue::_FailGet' at line 501 in file /opt/conan_home/d/b/openud0ef511541d7a/b/src/pxr/base/vt/value.cpp : 'Attempted to get value of type 'TfToken' from empty VtValue.'
+[33m{dispatcherExit} Message Dispatcher  [libcomputation_progmcrt.so] : exiting : reason is 'socket was disconnected'[0m
+[32m{trace:comp} stop 0d84e2f4-927a-4ff2-b8a2-16e6bb838350[0m
+[33mstderr ===>>> oldRenderContextCleanup thread shutdown <<<===[0m
+EGL 1.5
+GL_VERSION: 4.6.0 NVIDIA 570.172.08
+GL_RENDERER: NVIDIA RTX 2000 Ada Generation/PCIe/SSE2
 Camera: 
 Renderer plugin: HdMoonrayRendererPlugin
-Recording time code: EARLIEST
-Time: 0:07.50
-Memory: 1746384 KB
+Recording time code: 0.000000
+Command exited with non-zero status 1
+Time: 1:05.74
+Memory: 574760 KB
+ERROR: usdrecord returned non-zero exit status

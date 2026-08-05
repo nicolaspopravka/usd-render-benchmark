@@ -1,9 +1,9 @@
 name = "moonray"
 
-version = "1.5.0.0"
+version = "2026.29.1"
 
 variants = [
-    ["usd-22.05"]
+    ["usd-25.05.01"]
 ]
 
 def commands():
@@ -16,6 +16,7 @@ def commands():
     env.PATH.append(path + "/bin")
 
     # tell moonray where to find dsos
+    env.RDL2_DSO_PATH.append(path + "/rdl2dso.proxy")
     env.RDL2_DSO_PATH.append(path + "/rdl2dso")
 
     # tell Arras where to find session files
@@ -25,13 +26,9 @@ def commands():
     env.MOONRAY_CLASS_PATH.append(path + "/shader_json")
 
     # add Hydra plugins to path
-    env.PXR_PLUGINPATH_NAME.append(path + "/plugin/usd")
+    env.PXR_PLUGINPATH_NAME.append(path + "/plugin/pxr")
 
-    if True:
-        # in-process render (if MoonRay crashes usdrecord crashes)
-        env.HDMOONRAY_DEBUG_MODE = 1 
-    else:
-        unsetenv("REZ_MOONRAY_VERSION") # XXX usdrecord hangs otherwise with :
-                                        # Error: Failed to create an Arras session: 
-                                        # Failed to create local session :
-                                        # Environment variable REZ2_DEFAULT_VERSION is not set
+    unsetenv("REZ_MOONRAY_VERSION") # XXX usdrecord hangs otherwise with :
+                                    # Error: Failed to create an Arras session: 
+                                    # Failed to create local session :
+                                    # Environment variable REZ2_DEFAULT_VERSION is not set
