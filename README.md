@@ -3,13 +3,13 @@
 This branch records a partial GL run using the ASWF CY2024
 environment and OpenUSD 24.08. It is not a complete CY2024 rerun of the original benchmark.
 
-![Yard 2024 / GL compared with ASWF CY2024 / GL](render_sheet.jpg)
+![ASWF CY2024 / GL compared with Pixar USD 24.08 / GL](render_sheet.jpg)
 
 ## Run configuration
 
 - Renderer: Hydra GL
-- USD: OpenUSD 24.08
-- Container: `aswf/ci-vfxall:2024`
+- USD: OpenUSD 24.08, Pixar [build script](https://github.com/PixarAnimationStudios/OpenUSD/blob/v24.08/build_scripts/build_usd.py).
+- Container: `ghcr.io/nicolaspopravka/openusd-build-paths:pixar-cy2024-runtime-d97e11fc668c35d8418d446da2ce8cadcd48f0df@sha256:7c00a1fa0bf35cf57a5486340febdc505a099c97f9653cc54a32929433088470`
 - GPU: NVIDIA RTX PRO 4000 Blackwell, 24 GB
 - Driver: NVIDIA 580.159.04
 - OS: Rocky Linux 8.10
