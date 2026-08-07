@@ -3,15 +3,15 @@
 This branch records a partial GL run using the ASWF CY2024
 environment and OpenUSD 24.08. It is not a complete CY2024 rerun of the original benchmark.
 
-![Yard 2024 / GL compared with ASWF CY2024 / GL](render_sheet.jpg)
+![ASWF CY2024 / GL compared with ASWF USD 24.08 / GL](render_sheet.jpg)
 
 ## Run configuration
 
 - Renderer: Hydra GL
-- USD: OpenUSD 24.08
-- Container: `aswf/ci-vfxall:2024`
+- USD: OpenUSD 24.08, ASWF [build script](https://github.com/AcademySoftwareFoundation/aswf-docker/blob/2c8484137a2f056a0abfd504dd5ad166240ab47e/scripts/vfx/build_usd.sh).
+- Container: `ghcr.io/nicolaspopravka/openusd-build-paths:aswf-cy2024-d6b710a0b02eea4cd3f06d19387c0d1d71f937c4@sha256:e3a37cb3edb9ce6b7ba8ed01102410f963036588cc411eb46416202669632987`
 - GPU: NVIDIA RTX PRO 4000 Blackwell, 24 GB
-- Driver: NVIDIA 580.159.04
+- Driver: NVIDIA 580.167.08
 - OS: Rocky Linux 8.10
 
 Stock `usdrecord` creates a GL context via Qt/PySide, which requires a display
