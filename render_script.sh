@@ -3,18 +3,7 @@
 # Define arrays for renderers and their corresponding packages
 declare -A renderers
 renderers=(
-    ["GL"]="usd"                                # 4.6.0 (24.08)
-    ["Karma CPU"]="houdini"                     # 20.0.751 (23.08)
-    ["Karma XPU"]="houdini"
-    ["Prman"]="usd"                             # 26.1 (24.08)
-    ["RenderMan RIS"]="rfh"                     # 26.1 (23.08)
-    ["RenderMan XPU - CPU"]="rfh"
-    ["RenderMan XPU - GPU"]="rfh"
-    ["RenderMan XPU"]="rfh"
-    ["Arnold"]="htoa"                           # 7.3.3.0 (23.08)
-    ["Moonray"]="moonray"                       # 1.5 (22.05)
-    ["Cycles"]="cycles"                         # 3.6.0 (23.08)
-    ["Embree"]="usd"                            # 3.2.2 (24.08)
+    ["Cycles"]="cycles"                         # 5.2.0 + OpenUSD 26.05
 )
 
 # Define arrays for scenes, cameras and optional frame specifications
@@ -28,10 +17,8 @@ scenes_and_cameras=(
 # Define problematic combinations of renderer and scene
 declare -A problematic_combinations
 problematic_combinations=(
-    ["Arnold,scenes/MoanaIsland/usd/island.usda"]=1 # 00:13:16 65579MB WARNING |  signal caught: SIGSEGV -- Invalid memory reference
-    ["Moonray,scenes/MoanaIsland/usd/island.usda"]=1 # Segmentation fault (core dumped)
-    ["Cycles,scenes/ALab/ALab/entry.usda"]=1 # 49784 ThreadId=0x7f34597fe700: Fatal error: Segmentation fault
-    ["Cycles,scenes/MoanaIsland/usd/island.usda"]=1 # 48444 ThreadId=0x7f78c4b52700: Fatal error: Segmentation fault
+    ["Cycles,assets/full_assets/OpenChessSet/chess_set.usda"]=1 # /tmp/rez_context_sxpoxuoi/context.sh: line 48: 383 Segmentation fault (core dumped)
+    ["Cycles,scenes/MoanaIsland/usd/island.usda"]=1 # /tmp/rez_context_ksn5qef2/context.sh: line 48: 425 Segmentation fault (core dumped) /workspace/usd-render-benchmark/tools/usdrecord_egl.py "$@"
 )
 
 # Loop over each renderer
