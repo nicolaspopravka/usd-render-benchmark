@@ -13,23 +13,19 @@ This is an independent community project. It is not ASWF or OpenUSD
 certification, and it is not a renderer performance ranking.
 
 > [!NOTE]
-> **Snapshot — 2026-08-04**
+> **Snapshot — 2026-08-09**
 >
-> - **Published:** 15/15 OpenUSD delivery-path results; partial Cycles CY2024,
->   Cycles CY2025, and MoonRay CY2025 CPU results.
-> - **Investigating:** Cycles 5.2 with OpenUSD 26.03 renders tiles but produces
->   transparent-black output. The next unmodified-source cross-version control is
->   defined; no job is currently running.
+> - **Published:** 15/15 OpenUSD delivery-path results; five annual Cycles
+>   results covering CY2023-CY2027; and the MoonRay CY2025 CPU result.
 > - **Waiting upstream:** ASWF image/package findings and OpenUSD Ptex review.
 > - **Paused:** MoonRay XPU is not built. It will not proceed until build review
 >   and authorized NVIDIA validation are done.
 > - **Not scheduled:** modern commercial-delegate coverage.
 
 **Published** means a pinned snapshot of the run's outputs exists; it does not
-mean the result was clean. **Investigating** has a concrete next control.
-**Waiting upstream** is blocked on an external tracker, review, or release.
-**Paused** needs a scope, cost, or build review decision. **Not scheduled** has
-no current plan.
+mean the result was clean. **Waiting upstream** is blocked on an external
+tracker, review, or release. **Paused** needs a scope, cost, or build review
+decision. **Not scheduled** has no current plan.
 
 ## OpenUSD delivery paths
 
@@ -49,7 +45,7 @@ followed by the observed OpenChessSet appearance. `Textured`, `black`, and
 
 | Delegate | Published results | Current state |
 | --- | --- | --- |
-| Cycles | **Published partial:** [CY2024 — 2/4 images](https://github.com/nicolaspopravka/usd-render-benchmark/tree/fbb3ea60e0f8ed691c1002354097741302f9ba93) · [CY2025 — 2/4 images](https://github.com/nicolaspopravka/usd-render-benchmark/tree/fc634112bd3212071f983080c781d3dc122c2b34) | **Investigating:** Cycles 5.2 / OpenUSD 26.03 renders tiles but produces transparent-black output. Follow [issue #16](https://github.com/nicolaspopravka/usd-render-benchmark/issues/16) and the [work branch](https://github.com/nicolaspopravka/aswf-docker/tree/codex/delegates/cycles-5.2-ghcr). |
+| Cycles | **Published partial:** [CY2023](https://github.com/nicolaspopravka/usd-render-benchmark/tree/f6d2b5ec8c13add663a0e95219c1c9d81328de29) · [CY2024](https://github.com/nicolaspopravka/usd-render-benchmark/tree/fbb3ea60e0f8ed691c1002354097741302f9ba93) · [CY2025](https://github.com/nicolaspopravka/usd-render-benchmark/tree/fc634112bd3212071f983080c781d3dc122c2b34) · [CY2026](https://github.com/nicolaspopravka/usd-render-benchmark/tree/d3ed81b39eeed6b86bb1c5c74f5176c22ea27d2b) · [CY2027](https://github.com/nicolaspopravka/usd-render-benchmark/tree/c13b502a7cf3f5669ecc7392937d26640532494c) — two of four scenes produce images on each stack. | **Published findings:** McUsd produces an image on all five stacks; OpenChessSet does through CY2025; ALab does with a nonzero exit on CY2026-CY2027; Moana produces none. Follow [#7](https://github.com/nicolaspopravka/usd-render-benchmark/issues/7), [#9](https://github.com/nicolaspopravka/usd-render-benchmark/issues/9), [#20](https://github.com/nicolaspopravka/usd-render-benchmark/issues/20), [#21](https://github.com/nicolaspopravka/usd-render-benchmark/issues/21), and [#25](https://github.com/nicolaspopravka/usd-render-benchmark/issues/25). |
 | MoonRay | **Published partial:** [CY2025 CPU — three benchmark images, zero clean exits; Moana not run](https://github.com/nicolaspopravka/usd-render-benchmark/tree/1cc28d9710815a9e5f1f85b708e093fafafdb240) | **Paused:** XPU is not built. The reviewed [MoonRay build](https://github.com/nicolaspopravka/aswf-docker/tree/10bffd7af10e6b2760ec43888d62f5cddd1f34c8) is CPU-only; an XPU rebuild and NVIDIA validation require separate review and authorization. |
 
 Modern Karma, RenderMan, and Arnold coverage is **not scheduled**. The
@@ -79,11 +75,6 @@ licensed-renderer interest, scenes, upstream relevance, and priorities.
 Failures are valid results, and ASWF reference, Pixar control, and delegate
 diagnostic runs remain separate.
 
-Two maintainer-run issues track the next defined work:
-
-- [Audit reproduction guidance for the 18 published result refs](https://github.com/nicolaspopravka/usd-render-benchmark/issues/17)
-- [Pin down the Cycles 5.2 / OpenUSD 26.03 transparent-black result](https://github.com/nicolaspopravka/usd-render-benchmark/issues/16)
-
 This phase accepts feedback and coordination only. External code and benchmark
 artifact submissions will wait until the MIT license and contribution terms
 are restored on `main`.
@@ -95,7 +86,6 @@ link points to a pinned snapshot of the run's outputs whose README describes
 the branch and whose `render_summary.md`, `logs/`, and `renderers/`
 directories preserve the observed result.
 
-A result README is a starting point, not a guarantee of exact replay. Container
-digests, asset revisions, commands, graphics setup, hardware, drivers, and
-known gaps in the build and asset origin are being checked in the
-[reproduction audit](https://github.com/nicolaspopravka/usd-render-benchmark/issues/17).
+A result README is a starting point, not a guarantee of exact replay. Unknown
+or historically unrecorded inputs remain limitations rather than being
+inferred.
