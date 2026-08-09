@@ -4,7 +4,7 @@ This branch records a partial MoonRay 2026.29.1 run using the ASWF CY2025
 environment and OpenUSD 25.05.01. It is not a complete CY2025 rerun of the
 original benchmark.
 
-![Yard 2024 / MoonRay compared with ASWF CY2025 / MoonRay](render_sheet.jpg)
+![ASWF CY2025 / MoonRay compared with ASWF CY2025 / MoonRay Patched](render_sheet.jpg)
 
 ## Run configuration
 
