@@ -1,5 +1,4 @@
-Running: rez env moonray -- usdrecord --camera /McUsd/Camera --renderer "Moonray" --purposes render   assets/full_assets/McUsd/McUsd.usda "renderers/Moonray/McUsd.jpg"
-Pip-based rez installation detected. Please be aware that rez command line tools are not guaranteed to function correctly in this case. See https://rez.readthedocs.io/en/stable/installation.html#why-not-pip-for-production  for futher details.
+Running: rez env moonray -- usdrecord --camera /McUsd/Camera --renderer "Moonray" --purposes render   tests/full_assets/McUsd/McUsd.usda "renderers/Moonray/McUsd.jpg"
 Warning: in _LoadLibModules at line 329 of /opt/conan_home/d/b/openud0ef511541d7a/b/src/pxr/base/tf/scriptModuleLoader.cpp -- Error loading lib moonrayShaderParser's module 'pxr.MoonrayShaderParser':
 ModuleNotFoundError: No module named 'pxr.MoonrayShaderParser'
 
@@ -7,128 +6,44 @@ Warning: in _LoadLibModules at line 329 of /opt/conan_home/d/b/openud0ef511541d7
 ModuleNotFoundError: No module named 'pxr.MoonrayShaderDiscovery'
 
 [OpenColorIO Info]: Color management disabled. (Specify the $OCIO environment variable to enable.)
-[32m2026-08-16T14:13:35.935788 D client[336603]:124340551326592: [19189949-ee4e-4f84-bb6d-f7ef5536a824]: {trace:comp} launch 86338714-8960-47ea-986e-61b8b6d6b953 mcrt[0m
+[32m2026-08-08T11:47:34.997359 D client[4037]:130831248309120: [29b16ab9-8e1a-4fef-9be4-a6a3559186ba]: {trace:comp} launch 640868a9-4b9e-4f60-a83a-4c3753b97081 mcrt[0m
 sh: lsb_release: command not found
-[32m{trace:mcrt} version mcrt_computation-(unknown) host 4705a4f52774[0m
-[32m{trace:comp} ready 86338714-8960-47ea-986e-61b8b6d6b953[0m
-[32m2026-08-16T14:13:36.495433 D client[336603]:124340551326592: [19189949-ee4e-4f84-bb6d-f7ef5536a824]: {trace:session} clientConnect 19189949-ee4e-4f84-bb6d-f7ef5536a824 local arras4_client-???;arras4_core_impl-???;arras4_network-???[0m
-[32m{trace:mcrt} stage ready start 86338714-8960-47ea-986e-61b8b6d6b953[0m
-[32m{trace:comp} start 86338714-8960-47ea-986e-61b8b6d6b953[0m
+[32m{trace:mcrt} version mcrt_computation-(unknown) host 673529f44852[0m
+[32m{trace:comp} ready 640868a9-4b9e-4f60-a83a-4c3753b97081[0m
+[32m2026-08-08T11:47:35.395562 D client[4037]:130831248309120: [29b16ab9-8e1a-4fef-9be4-a6a3559186ba]: {trace:session} clientConnect 29b16ab9-8e1a-4fef-9be4-a6a3559186ba local arras4_client-???;arras4_core_impl-???;arras4_network-???[0m
+[32m{trace:mcrt} stage ready start 640868a9-4b9e-4f60-a83a-4c3753b97081[0m
+[32m{trace:comp} start 640868a9-4b9e-4f60-a83a-4c3753b97081[0m
 GlobalNodeInfo HostName {
-  mClientHostName:4705a4f52774
+  mClientHostName:673529f44852
   mDispatchHostName:
   mMergeHostName: mMergeCpuTotal:0
   mcrt (totalMcrt:1 totalCpu:48) {
-    mMachineId:0 mCpuTotal:48 mHostName:4705a4f52774
+    mMachineId:0 mCpuTotal:48 mHostName:673529f44852
   }
 }
 [36mStarting Rendering (syncId:1)[0m
-[32m{trace:mcrt} stage renderPrep start 86338714-8960-47ea-986e-61b8b6d6b953 0e6226b5-7bb9-454f-9a9f-e51c3bffcd97[0m
-[33mstderr [31mFatal: UsdUVTexture("/McUsd/Looks/sunflower_top/diffuse_texture.a"): FATAL: failed to open texture file "/workspace/usd-render-benchmark/assets/full_assets/McUsd/McUsd_materials/tex/sunflower_top.png" (Invalid image file "/workspace/usd-render-benchmark/assets/full_assets/McUsd/McUsd_materials/tex/powered_rail_m.png": image was untiled[0m
-[33mstderr Invalid image file "/workspace/usd-render-benchmark/assets/full_assets/McUsd/McUsd_materials/tex/powered_rail_m.png": image was untiled[0m
-[33mstderr Invalid image file "/workspace/usd-render-benchmark/assets/full_assets/McUsd/McUsd_materials/tex/powered_rail_m.png": image was untiled)[0m
-[33mstderr [0m[31mFatal: UsdUVTexture("/McUsd/Looks/powered_rail/diffuse_texture.rgb"): FATAL: failed to open texture file "/workspace/usd-render-benchmark/assets/full_assets/McUsd/McUsd_materials/tex/powered_rail.png" (Invalid image file "/workspace/usd-render-benchmark/assets/full_assets/McUsd/McUsd_materials/tex/quartz_pillar_n.png": image was untiled[0m
-[33mstderr Invalid image file "/workspace/usd-render-benchmark/assets/full_assets/McUsd/McUsd_materials/tex/quartz_pillar_n.png": image was untiled[0m
-[33mstderr Invalid image file "/workspace/usd-render-benchmark/assets/full_assets/McUsd/McUsd_materials/tex/quartz_pillar_n.png": image was untiled)[0m
-[33mstderr [0m[31mFatal: UsdUVTexture("/McUsd/Looks/rail/diffuse_texture.a"): FATAL: failed to open texture file "/workspace/usd-render-benchmark/assets/full_assets/McUsd/McUsd_materials/tex/rail.png" (Invalid image file "/workspace/usd-render-benchmark/assets/full_assets/McUsd/McUsd_materials/tex/sunflower_bottom.png": image was untiled[0m
-[33mstderr Invalid image file "/workspace/usd-render-benchmark/assets/full_assets/McUsd/McUsd_materials/tex/sunflower_bottom.png": image was untiled[0m
-[33mstderr Invalid image file "/workspace/usd-render-benchmark/assets/full_assets/McUsd/McUsd_materials/tex/sunflower_bottom.png": image was untiled)[0m
-[36mstdout Starting render prep...Render prep time = 00:00:00.423[0m
-[32m{trace:mcrt} stage shading start 0.000896484 86338714-8960-47ea-986e-61b8b6d6b953 0e6226b5-7bb9-454f-9a9f-e51c3bffcd97[0m
-[32m{trace:mcrt} stage shading complete 1 86338714-8960-47ea-986e-61b8b6d6b953 0e6226b5-7bb9-454f-9a9f-e51c3bffcd97[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/rail_corner/metallic_texture.r"): (802048 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/powered_rail/roughness_texture.r"): (434592 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/piston_top/diffuse_texture.rgb"): (225792 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/rail_corner/diffuse_texture.a"): (801961 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/chiseled_quartz_block_top/roughness_texture.r"): (309216 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/rail/roughness_texture.r"): (793504 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/lava_flow/diffuse_texture.rgb"): (2355496 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/powered_rail/metallic_texture.r"): (434592 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/powered_rail/diffuse_texture.a"): (434529 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/rail/diffuse_texture.rgb"): (793504 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/chiseled_quartz_block_top/normal_texture.rgb"): (309216 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/lava_flow/normal_texture.rgb"): (2355496 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/piston_top/roughness_texture.r"): (225792 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/rail/normal_texture.rgb"): (793504 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/lava_still/diffuse_texture.rgb"): (545696 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/sunflower_back/roughness_texture.r"): (1173520 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/sunflower_back/diffuse_texture.rgb"): (1173520 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/gold_block/metallic_texture.r"): (2538448 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/sunflower_back/diffuse_texture.a"): (1173486 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/diamond_block/metallic_texture.r"): (1003176 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/gold_block/roughness_texture.r"): (2538448 times) unknown oiio sample failure[0m
-[36mstdout 00:18:40    1.2 GB | ---------- Time ------------------------------------------[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/diamond_block/roughness_texture.r"): (1003176 times) unknown oiio sample failure[0m
-[36mstdout 00:18:40    1.2 GB | Render time                      = 00:18:38.944000[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/gold_block/diffuse_texture.rgb"): (2538448 times) unknown oiio sample failure[0m
-[36mstdout 00:18:40    1.2 GB | Total time                       = 00:18:39.502000[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/piston_top/normal_texture.rgb"): (225792 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/lava_still/emissive_texture.rgb"): (545696 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/chiseled_quartz_block/roughness_texture.r"): (1371480 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/diamond_block/normal_texture.rgb"): (1003176 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/iron_block/metallic_texture.r"): (1406344 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/grass_block_top/normal_texture.rgb"): (39636904 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/diamond_block/diffuse_texture.rgb"): (1003176 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/purple_stained_glass/diffuse_texture.rgb"): (15299040 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/purple_stained_glass/normal_texture.rgb"): (15299040 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/quartz_pillar/diffuse_texture.rgb"): (1580136 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/sunflower_bottom/diffuse_texture.rgb"): (5852848 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/grass_block_top/diffuse_texture.rgb"): (39636904 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/quartz_pillar/normal_texture.rgb"): (1580136 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/rail_corner/roughness_texture.r"): (802048 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/fern/diffuse_texture.a"): (3562106 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/rail_corner/diffuse_texture.rgb"): (802048 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/rail_corner/normal_texture.rgb"): (802048 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/chiseled_quartz_block/metallic_texture.r"): (1371480 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/sunflower_bottom/diffuse_texture.a"): (5852681 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/purple_stained_glass/diffuse_texture.a"): (30597893 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/piston_side/normal_texture.rgb"): (2021488 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/powered_rail/normal_texture.rgb"): (434592 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/iron_block/roughness_texture.r"): (1406344 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/sunflower_bottom/roughness_texture.r"): (5852848 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/sunflower_back/normal_texture.rgb"): (1173520 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/sunflower_bottom/normal_texture.rgb"): (5852848 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/rail/metallic_texture.r"): (793504 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/purple_stained_glass/roughness_texture.r"): (15299040 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/sunflower_front/normal_texture.rgb"): (1181392 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/quartz_pillar/roughness_texture.r"): (1580136 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/sunflower_top/normal_texture.rgb"): (2186976 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/sunflower_front/diffuse_texture.rgb"): (1181392 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/prismarine/diffuse_texture.rgb"): (4679984 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/chiseled_quartz_block_top/diffuse_texture.rgb"): (309216 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/purple_stained_glass/metallic_texture.r"): (15299040 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/piston_side/roughness_texture.r"): (2021488 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/sunflower_front/diffuse_texture.a"): (1181352 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/sunflower_front/roughness_texture.r"): (1181392 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/piston_side/diffuse_texture.rgb"): (2021488 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/iron_block/normal_texture.rgb"): (1406344 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/sunflower_top/roughness_texture.r"): (2186976 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/chiseled_quartz_block/normal_texture.rgb"): (1371480 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/prismarine/normal_texture.rgb"): (4679984 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/lava_flow/emissive_texture.rgb"): (2355496 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/gold_block/normal_texture.rgb"): (2538448 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/prismarine/roughness_texture.r"): (4679984 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/grass_block_top/roughness_texture.r"): (39636904 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/sunflower_top/diffuse_texture.rgb"): (2186976 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/chiseled_quartz_block/diffuse_texture.rgb"): (1371480 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/piston_top/metallic_texture.r"): (225792 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/fern/diffuse_texture.rgb"): (3562328 times) unknown oiio sample failure[0m
-[33mstderr [0m[31mError: UsdUVTexture("/McUsd/Looks/iron_block/diffuse_texture.rgb"): (1406344 times) unknown oiio sample failure[0m
+[32m{trace:mcrt} stage renderPrep start 640868a9-4b9e-4f60-a83a-4c3753b97081 366e30ac-8e87-4c8f-ad0c-540ee5503bb6[0m
+[36mstdout Starting render prep...
+[33mWarning (lib.render): 1x1 mip level not supported at present[0m
+[36mstdout [0mRender prep time = 00:00:00.421[0m
+[32m{trace:mcrt} stage shading start 0.00175453 640868a9-4b9e-4f60-a83a-4c3753b97081 366e30ac-8e87-4c8f-ad0c-540ee5503bb6[0m
+[32m{trace:mcrt} stage shading complete 1 640868a9-4b9e-4f60-a83a-4c3753b97081 366e30ac-8e87-4c8f-ad0c-540ee5503bb6[0m
+[36mstdout 00:05:08    1.2 GB | ---------- Time ------------------------------------------[0m
+[36mstdout 00:05:08    1.2 GB | Render time                      = 00:05:07.232000[0m
+[36mstdout 00:05:08    1.2 GB | Total time                       = 00:05:07.766000[0m
 Recording aborted due to the following failure at time code 0.0: 
 	Error in 'pxrInternal_v0_25_5__pxrReserved__::PlugPlugin::_Load' at line 243 in file /opt/conan_home/d/b/openud0ef511541d7a/b/src/pxr/base/plug/plugin.cpp : 'Failed to load plugin 'sdrOsl': /usr/local/plugin/usd/sdrOsl.so: undefined symbol: _ZN11OpenImageIO4v3_17ustring16empty_std_stringB5cxx11E in '/usr/local/plugin/usd/sdrOsl.so''
 	Error in 'pxrInternal_v0_25_5__pxrReserved__::NdrRegistry::_InstantiateParserPlugins' at line 1020 in file /opt/conan_home/d/b/openud0ef511541d7a/b/src/pxr/usd/ndr/registry.cpp : 'Failed verification: ' pluginFactory ''
 	Error in 'pxrInternal_v0_25_5__pxrReserved__::VtValue::_FailGet' at line 501 in file /opt/conan_home/d/b/openud0ef511541d7a/b/src/pxr/base/vt/value.cpp : 'Attempted to get value of type 'TfToken' from empty VtValue.'
 	Error in 'pxrInternal_v0_25_5__pxrReserved__::VtValue::_FailGet' at line 501 in file /opt/conan_home/d/b/openud0ef511541d7a/b/src/pxr/base/vt/value.cpp : 'Attempted to get value of type 'TfToken' from empty VtValue.'
 [33m{dispatcherExit} Message Dispatcher  [libcomputation_progmcrt.so] : exiting : reason is 'socket was disconnected'[0m
-[32m{trace:comp} stop 86338714-8960-47ea-986e-61b8b6d6b953[0m
 EGL 1.5
-GL_VERSION: 4.6.0 NVIDIA 570.172.08
+GL_VERSION: 4.6.0 NVIDIA 550.127.05
 GL_RENDERER: NVIDIA RTX 2000 Ada Generation/PCIe/SSE2
 Camera: /McUsd/Camera
 Renderer plugin: HdMoonrayRendererPlugin
 Recording time code: 0.000000
-[32m2026-08-16T14:32:16.539612 D client[336603]:process exit monitor: [19189949-ee4e-4f84-bb6d-f7ef5536a824]: {trace:comp} signal 86338714-8960-47ea-986e-61b8b6d6b953 15[0m
 Command exited with non-zero status 1
-Time: 18:44.19
-Memory: 1222264 KB
+Time: 5:10.56
+Memory: 522312 KB
 ERROR: usdrecord returned non-zero exit status

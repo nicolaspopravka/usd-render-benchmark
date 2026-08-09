@@ -8,7 +8,7 @@ renderers=(
 
 # Define arrays for scenes, cameras and optional frame specifications
 scenes_and_cameras=(
-    "assets/full_assets/McUsd/McUsd.usda /McUsd/Camera"
+    "tests/full_assets/McUsd/McUsd.usda /McUsd/Camera"
     "assets/full_assets/OpenChessSet/chess_set.usda main_cam"
     "scenes/MoanaIsland/usd/island.usda /island/cam/shotCam"
     "scenes/ALab/ALab/entry.usda /root/camera01/GEO/renderCam_hrc/renderCam_buffer/renderCam_srt/renderCam"
