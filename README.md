@@ -17,9 +17,11 @@ certification, and it is not a renderer performance ranking.
 >
 > - **Published:** 15/15 OpenUSD delivery-path results; five annual Cycles
 >   results covering CY2023-CY2027; and the MoonRay CY2025 CPU result.
-> - **Waiting upstream:** ASWF image/package findings and OpenUSD Ptex review.
-> - **Paused:** MoonRay XPU is not built. It will not proceed until build review
->   and authorized NVIDIA validation are done.
+> - **Waiting upstream:** ASWF image/package findings, clarification of the
+>   MoonRay image contract, forthcoming hdMoonRay/OpenUSD integration, and
+>   OpenUSD Ptex review.
+> - **Paused:** MoonRay XPU is a separate unbuilt item. Any XPU build and
+>   NVIDIA validation require review and authorization.
 > - **Not scheduled:** modern commercial-delegate coverage.
 
 **Published** means a pinned snapshot of the run's outputs exists; it does not
@@ -46,7 +48,7 @@ followed by the observed OpenChessSet appearance. `Textured`, `black`, and
 | Delegate | Published results | Current state |
 | --- | --- | --- |
 | Cycles | **Published partial:** [CY2023](https://github.com/nicolaspopravka/usd-render-benchmark/tree/f6d2b5ec8c13add663a0e95219c1c9d81328de29) · [CY2024](https://github.com/nicolaspopravka/usd-render-benchmark/tree/fbb3ea60e0f8ed691c1002354097741302f9ba93) · [CY2025](https://github.com/nicolaspopravka/usd-render-benchmark/tree/fc634112bd3212071f983080c781d3dc122c2b34) · [CY2026](https://github.com/nicolaspopravka/usd-render-benchmark/tree/d3ed81b39eeed6b86bb1c5c74f5176c22ea27d2b) · [CY2027](https://github.com/nicolaspopravka/usd-render-benchmark/tree/c13b502a7cf3f5669ecc7392937d26640532494c) — two of four scenes produce images on each stack. | **Published findings:** McUsd produces an image on all five stacks; OpenChessSet does through CY2025; ALab does with a nonzero exit on CY2026-CY2027; Moana produces none. Follow [#7](https://github.com/nicolaspopravka/usd-render-benchmark/issues/7), [#9](https://github.com/nicolaspopravka/usd-render-benchmark/issues/9), [#20](https://github.com/nicolaspopravka/usd-render-benchmark/issues/20), [#21](https://github.com/nicolaspopravka/usd-render-benchmark/issues/21), and [#25](https://github.com/nicolaspopravka/usd-render-benchmark/issues/25). |
-| MoonRay | **Published partial:** [CY2025 CPU — three benchmark images, zero clean exits; Moana not run](https://github.com/nicolaspopravka/usd-render-benchmark/tree/1cc28d9710815a9e5f1f85b708e093fafafdb240) | **Paused:** XPU is not built. The reviewed [MoonRay build](https://github.com/nicolaspopravka/aswf-docker/tree/10bffd7af10e6b2760ec43888d62f5cddd1f34c8) is CPU-only; an XPU rebuild and NVIDIA validation require separate review and authorization. |
+| MoonRay | **Published partial:** [CY2025 CPU — three benchmark images, zero clean exits; Moana not run](https://github.com/nicolaspopravka/usd-render-benchmark/tree/1cc28d9710815a9e5f1f85b708e093fafafdb240) | **Waiting upstream:** further CPU-stack work waits on clarification of the ASWF image contract and forthcoming hdMoonRay/OpenUSD integration. **Unbuilt:** XPU remains separate and requires a new build plus authorized NVIDIA validation. |
 
 Modern Karma, RenderMan, and Arnold coverage is **not scheduled**. The
 [original Yard baseline](https://github.com/TheYardVFX/usd-render-benchmark)
