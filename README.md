@@ -10,9 +10,9 @@ original benchmark.
 
 - Renderers: Cycles 5.2.0
 - OpenUSD: 26.03
-- Container: `ghcr.io/nicolaspopravka/usd-render-benchmark-cycles@sha256:5c1359c29c619c72afdcb39aab50b73c630f2dafa6e9a1fdc44d8b7bd9b30311`
-- GPU: NVIDIA RTX 2000 Ada Generation, 16 GB
-- Driver: NVIDIA 570.172.08
+- Container: `ghcr.io/nicolaspopravka/usd-render-benchmark-cycles@sha256:bad67a76cbfa5e342ee06049864555b8280630258a446a1db6d8f6fcba7c8d50`
+- GPU: NVIDIA RTX PRO 4000 Blackwell, 24 GB
+- Driver: NVIDIA 580.159.04
 - OS: Rocky Linux 8.10
 
 ## Results
