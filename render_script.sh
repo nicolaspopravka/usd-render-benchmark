@@ -17,7 +17,6 @@ scenes_and_cameras=(
 # Define problematic combinations of renderer and scene
 declare -A problematic_combinations
 problematic_combinations=(
-    ["Cycles,assets/full_assets/OpenChessSet/chess_set.usda"]='Segmentation fault (core dumped)'
     ["Cycles,scenes/MoanaIsland/usd/island.usda"]='Segmentation fault (core dumped)'
 )
 
