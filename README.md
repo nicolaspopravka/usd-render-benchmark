@@ -10,9 +10,9 @@ original benchmark.
 
 - Renderer: Hydra Cycles
 - USD: OpenUSD 26.03
-- Container: `ghcr.io/nicolaspopravka/usd-render-benchmark-cycles@sha256:5c1359c29c619c72afdcb39aab50b73c630f2dafa6e9a1fdc44d8b7bd9b30311`
-- GPU: NVIDIA RTX 2000 Ada Generation, 16 GB
-- Driver: NVIDIA 570.172.08
+- Container: `ghcr.io/nicolaspopravka/usd-render-benchmark-cycles@sha256:bad67a76cbfa5e342ee06049864555b8280630258a446a1db6d8f6fcba7c8d50`
+- GPU: NVIDIA RTX PRO 4000 Blackwell, 24 GB
+- Driver: NVIDIA 580.159.04
 - OS: Rocky Linux 8.10
 
 Stock `usdrecord` creates a GL context via Qt/PySide, which requires a display
@@ -25,11 +25,8 @@ rendering. The Rez USD package (`packages/usd/26.03/package.py`) redirects the
 
 The results are in [`render_summary.md`](render_summary.md).
 
-OpenChessSet is intentionally skipped by `render_script.sh` because this
-configuration previously segfaulted.
-
 Moana Island is intentionally skipped by `render_script.sh` because this
-configuration previously failed or exceeded the practical memory limit.
+configuration previously segfaulted.
 
 Rendered images are under [`renderers/Cycles/`](renderers/Cycles/). Complete
 logs are under [`logs/`](logs/).

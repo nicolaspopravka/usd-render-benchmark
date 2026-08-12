@@ -17,7 +17,6 @@ scenes_and_cameras=(
 # Define problematic combinations of renderer and scene
 declare -A problematic_combinations
 problematic_combinations=(
-    ["Cycles,assets/full_assets/OpenChessSet/chess_set.usda"]=1 # /tmp/rez_context_o22ihml0/context.sh: line 48: 1154 Segmentation fault (core dumped)
     ["Cycles,scenes/MoanaIsland/usd/island.usda"]=1 # /tmp/rez_context_dvyjhync/context.sh: line 48: 882 Segmentation fault (core dumped) /workspace/usd-render-benchmark/tools/usdrecord_egl.py "$@"
 )
 
