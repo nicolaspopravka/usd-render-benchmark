@@ -10,7 +10,7 @@ original benchmark.
 
 - Renderer: Hydra MoonRay
 - USD: OpenUSD 25.05.01
-- Container: `ghcr.io/nicolaspopravka/openmoonray-hydra@sha256:75945fa61e05ee39c46d9f82c6e2add7759ac242568f5a51127d76170e1661fc`
+- Container: `ghcr.io/nicolaspopravka/openmoonray-hydra@sha256:f8d7383a00423a2e51c7fed1be894504fe79deb5c8372e1432b4f4843405d3ff`
 - GPU: NVIDIA RTX 2000 Ada Generation, 16 GB
 - Driver: NVIDIA 570.172.08
 - OS: Rocky Linux 8.10
