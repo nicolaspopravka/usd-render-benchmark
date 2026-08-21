@@ -13,19 +13,21 @@ This is an independent community project. It is not ASWF or OpenUSD
 certification, and it is not a renderer performance ranking.
 
 > [!NOTE]
-> **Snapshot — 2026-08-16**
+> **Snapshot — 2026-08-21**
 >
 > - **Published:** 15/15 OpenUSD delivery-path results; five annual Cycles
->   results covering CY2023-CY2027; and the MoonRay CY2025 result.
-> - **Waiting upstream:** ASWF image/package findings, clarification of the
->   MoonRay image contract, forthcoming hdMoonRay/OpenUSD integration, and
->   OpenUSD Ptex review.
+>   results covering CY2023-CY2027 with patched CY2026/CY2027 follow-ups; and
+>   the MoonRay CY2025 result with focused texture and shading follow-ups.
+> - **Waiting upstream:** ASWF image/package findings, a tagged Cycles release
+>   with the merged Hydra fixes, hdMoonray integration, and OpenUSD Ptex
+>   review.
 > - **Not scheduled:** modern commercial-delegate coverage.
 
 **Published** means a pinned snapshot of the run's outputs exists; it does not
-mean the result was clean. **Waiting upstream** is blocked on an external
-tracker, review, or release. **Paused** needs a scope, cost, or build review
-decision. **Not scheduled** has no current plan.
+mean the result was clean. **Waiting release** has an upstream change but no
+tagged benchmark stack yet. **Waiting upstream** is blocked on an external
+tracker or review. **Paused** needs a scope, cost, or build review decision.
+**Not scheduled** has no current plan.
 
 ## OpenUSD delivery paths
 
@@ -45,8 +47,8 @@ followed by the observed OpenChessSet appearance. `Textured`, `black`, and
 
 | Delegate | Published results | Current state |
 | --- | --- | --- |
-| Cycles | **Published partial:** [CY2023](https://github.com/nicolaspopravka/usd-render-benchmark/tree/f6d2b5ec8c13add663a0e95219c1c9d81328de29) · [CY2024](https://github.com/nicolaspopravka/usd-render-benchmark/tree/fbb3ea60e0f8ed691c1002354097741302f9ba93) · [CY2025](https://github.com/nicolaspopravka/usd-render-benchmark/tree/fc634112bd3212071f983080c781d3dc122c2b34) · [CY2026](https://github.com/nicolaspopravka/usd-render-benchmark/tree/d3ed81b39eeed6b86bb1c5c74f5176c22ea27d2b) · [CY2027](https://github.com/nicolaspopravka/usd-render-benchmark/tree/c13b502a7cf3f5669ecc7392937d26640532494c) — two of four scenes produce images on each stack. | **Published findings:** McUsd produces an image on all five stacks; OpenChessSet does through CY2025; ALab does with a nonzero exit on CY2026-CY2027; Moana produces none. Follow [#7](https://github.com/nicolaspopravka/usd-render-benchmark/issues/7), [#9](https://github.com/nicolaspopravka/usd-render-benchmark/issues/9), [#20](https://github.com/nicolaspopravka/usd-render-benchmark/issues/20), [#21](https://github.com/nicolaspopravka/usd-render-benchmark/issues/21), and [#25](https://github.com/nicolaspopravka/usd-render-benchmark/issues/25). |
-| MoonRay | **Published partial:** [CY2025 — three benchmark images, zero clean exits; Moana not run](https://github.com/nicolaspopravka/usd-render-benchmark/tree/f04463d97dedb644d1a81cb63d7d9b871188f980) | **Waiting upstream:** further work waits on clarification of the ASWF image contract and forthcoming hdMoonRay/OpenUSD integration. |
+| Cycles | **Published partial:** [CY2023](https://github.com/nicolaspopravka/usd-render-benchmark/tree/f6d2b5ec8c13add663a0e95219c1c9d81328de29) · [CY2024](https://github.com/nicolaspopravka/usd-render-benchmark/tree/fbb3ea60e0f8ed691c1002354097741302f9ba93) · [CY2025](https://github.com/nicolaspopravka/usd-render-benchmark/tree/fc634112bd3212071f983080c781d3dc122c2b34) · [CY2026](https://github.com/nicolaspopravka/usd-render-benchmark/tree/d3ed81b39eeed6b86bb1c5c74f5176c22ea27d2b) · [CY2027](https://github.com/nicolaspopravka/usd-render-benchmark/tree/c13b502a7cf3f5669ecc7392937d26640532494c) — two of four scenes produce images on each released stack. | **Follow-up:** patched [CY2026](https://github.com/nicolaspopravka/usd-render-benchmark/tree/8a02b59fa6d40c20f78fe924ceb93678fb9c405a) and [CY2027](https://github.com/nicolaspopravka/usd-render-benchmark/tree/e0cd71561fc72e8a23176c8d07afd08faf9620d2) runs add OpenChessSet images after the merged empty-material fix. Current issues cover material translation [#21](https://github.com/nicolaspopravka/usd-render-benchmark/issues/21), OpenChessSet [#25](https://github.com/nicolaspopravka/usd-render-benchmark/issues/25), Moana completion [#30](https://github.com/nicolaspopravka/usd-render-benchmark/issues/30), and ALab textures and materials [#31](https://github.com/nicolaspopravka/usd-render-benchmark/issues/31) · [#32](https://github.com/nicolaspopravka/usd-render-benchmark/issues/32). OptiX-enabled [CY2026](https://github.com/nicolaspopravka/aswf-docker/actions/runs/32348492265) and [CY2027](https://github.com/nicolaspopravka/aswf-docker/actions/runs/32348492179) images are built, but GPU rendering is not yet established. |
+| MoonRay | **Published partial:** [CY2025 — three benchmark images, zero clean exits; Moana not run](https://github.com/nicolaspopravka/usd-render-benchmark/tree/f04463d97dedb644d1a81cb63d7d9b871188f980) · [tiled-texture and smooth-ALab follow-up](https://github.com/nicolaspopravka/usd-render-benchmark/tree/d11346507c18395ed91f5979de93a8afe0e6f361) | **Follow-up:** MaterialX BSDF support remains limited ([#24](https://github.com/nicolaspopravka/usd-render-benchmark/issues/24)); refinement-zero smoothing and missing light-link handling are in hdMoonray [#11](https://github.com/OpenMoonRay/hdMoonray/pull/11) and [#12](https://github.com/OpenMoonRay/hdMoonray/pull/12). An [XPU-capable image](https://github.com/nicolaspopravka/aswf-docker/commit/e49bf97aecc71b12ef7bb3eff7841b3acbf0b2b5) exists, but automatic mode used the vector path for these scenes; no XPU benchmark result is claimed. |
 
 Modern Karma, RenderMan, and Arnold coverage is **not scheduled**. The
 [original Yard baseline](https://github.com/TheYardVFX/usd-render-benchmark)
@@ -56,8 +58,12 @@ remains the historical mixed-result reference.
 
 | State | Finding | Public record |
 | --- | --- | --- |
-| **Published finding** | ASWF `build_usd.sh` CY2024 produced a solid-black OpenChessSet frame. | [Fork issue #1](https://github.com/nicolaspopravka/usd-render-benchmark/issues/1) · [pinned result](https://github.com/nicolaspopravka/usd-render-benchmark/tree/46729937133729068f279e464784959667f09ab9) |
-| **Published finding** | CY2024 and CY2025 ALab runs preserve `Usd_ClipSet` failures after producing images. | [Fork issue #4](https://github.com/nicolaspopravka/usd-render-benchmark/issues/4) · [benchmark table](#openusd-delivery-paths) |
+| **Published finding** | Material support is limited across delegates. Cycles does not support MaterialX material networks and supports only a subset of `UsdPreviewSurface`, falling back to its default surface when no supported network is available. MoonRay 2026.29.1 does not support the MaterialX BSDF nodes used by OpenChessSet. | [Cycles #21](https://github.com/nicolaspopravka/usd-render-benchmark/issues/21) · [Cycles #25](https://github.com/nicolaspopravka/usd-render-benchmark/issues/25) · [MoonRay #24](https://github.com/nicolaspopravka/usd-render-benchmark/issues/24) |
+| **Published finding** | The tested ASWF CI images do not provide the same working Storm/MaterialX stack as OpenUSD built with Pixar's `build_usd.py`. OpenChessSet renders textured with the Pixar build, while the corresponding ASWF Conan-based stacks produce fallback or black results with MaterialX errors. | [OpenUSD results](#openusd-delivery-paths) · [ASWF issues #454](https://github.com/AcademySoftwareFoundation/aswf-docker/issues/454) and [#455](https://github.com/AcademySoftwareFoundation/aswf-docker/issues/455) |
+| **Published finding** | Lighting is not consistent across delegates. The same scene can render with very different exposure and light contribution, so these are stack results rather than look-matched comparisons. | [delegate results](#delegate-coverage) · [Yard baseline](https://github.com/TheYardVFX/usd-render-benchmark) |
+| **Published finding** | Exit status does not describe the rendered result on its own. Some runs exit successfully with black or fallback output; others return nonzero after writing a coherent image. | [OpenUSD results](#openusd-delivery-paths) · [delegate results](#delegate-coverage) |
+| **Waiting release** | The Cycles empty-material fix is merged; comparable CY2026/CY2027 reruns wait for a tagged release containing it. | [Cycles #75](https://projects.blender.org/blender/cycles/pulls/75) · [patched CY2026](https://github.com/nicolaspopravka/usd-render-benchmark/tree/8a02b59fa6d40c20f78fe924ceb93678fb9c405a) · [patched CY2027](https://github.com/nicolaspopravka/usd-render-benchmark/tree/e0cd71561fc72e8a23176c8d07afd08faf9620d2) |
+| **Waiting upstream** | MoonRay refinement-zero smoothing and missing light-link handling are awaiting upstream integration. | hdMoonray [#11](https://github.com/OpenMoonRay/hdMoonray/pull/11) and [#12](https://github.com/OpenMoonRay/hdMoonray/pull/12) are open |
 | **Waiting upstream** | The ASWF OSL discovery plugin fails to load without `LD_PRELOAD`. | [Fork issue #3](https://github.com/nicolaspopravka/usd-render-benchmark/issues/3) · [aswf-docker #450](https://github.com/AcademySoftwareFoundation/aswf-docker/issues/450) is open |
 | **Waiting upstream** | Prebuilt CY2027 MaterialX resources resolve incorrectly and OpenChessSet uses fallback materials. | [Fork issue #10](https://github.com/nicolaspopravka/usd-render-benchmark/issues/10) · [aswf-docker #454](https://github.com/AcademySoftwareFoundation/aswf-docker/issues/454) is open. Related workaround-removal [PR #453](https://github.com/AcademySoftwareFoundation/aswf-docker/pull/453) merged; it is not the fix for #454. |
 | **Waiting upstream** | The ASWF-built CY2027 run reaches MaterialX GLSL compilation but fails on `AIRY_FRESNEL_ITERATIONS`. | [Fork issue #2](https://github.com/nicolaspopravka/usd-render-benchmark/issues/2) · [aswf-docker #455](https://github.com/AcademySoftwareFoundation/aswf-docker/issues/455) is open |
