@@ -3,7 +3,7 @@
 # Define arrays for renderers and their corresponding packages
 declare -A renderers
 renderers=(
-    ["Cycles"]="cycles"                         # 5.2.0 + OpenUSD 26.05
+    ["Cycles"]="cycles"                         # 5.2.0 (26.05)
 )
 
 # Define arrays for scenes, cameras and optional frame specifications
@@ -17,7 +17,6 @@ scenes_and_cameras=(
 # Define problematic combinations of renderer and scene
 declare -A problematic_combinations
 problematic_combinations=(
-    ["Cycles,scenes/MoanaIsland/usd/island.usda"]=1 # /tmp/rez_context_ksn5qef2/context.sh: line 48: 425 Segmentation fault (core dumped) /workspace/usd-render-benchmark/tools/usdrecord_egl.py "$@"
 )
 
 # Loop over each renderer
@@ -48,13 +47,13 @@ for renderer in "${!renderers[@]}"; do
             output_path="renderers/${renderer}/${scene_name}.#.jpg"
         fi
 
-	# Ensure the output directory exists
-	output_dir=$(dirname "$output_path")
-	mkdir -p "$output_dir"
+        # Ensure the output directory exists
+        output_dir=$(dirname "$output_path")
+        mkdir -p "$output_dir"
 
         # Create a log file for this run
         log_file="logs/${renderer}_${scene_name}.log"
-	mkdir -p logs  # Ensure the logs directory exists
+        mkdir -p logs  # Ensure the logs directory exists
         
         # Run the command and log the output
         echo "Running: rez env $package -- usdrecord --camera $camera --renderer \"$renderer\" --purposes render  $frames_option $scene \"$output_path\"" | tee "$log_file"

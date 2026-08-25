@@ -1,61 +1,60 @@
 Running: rez env cycles -- usdrecord --camera main_cam --renderer "Cycles" --purposes render   assets/full_assets/OpenChessSet/chess_set.usda "renderers/Cycles/chess_set.jpg"
 Pip-based rez installation detected. Please be aware that rez command line tools are not guaranteed to function correctly in this case. See https://rez.readthedocs.io/en/stable/installation.html#why-not-pip-for-production  for futher details.
 [OpenColorIO Info]: Color management disabled. (Specify the $OCIO environment variable to enable.)
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/Pawns/Pawn/ForInstancer77392c02ff4b8d77/Materials/M_Pawn_Top_B.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/Pawns/Pawn/ForInstancer77392c02ff4b8d77/Materials/M_Pawn_Body_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/Pawns/Pawn/ForInstancerfaee41c1405c2ff0/Materials/M_Pawn_Top_B.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/Pawns/Pawn/ForInstancerfaee41c1405c2ff0/Materials/M_Pawn_Body_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/Pawns/Pawn/Materials/M_Pawn_Body_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/Pawns/Pawn/Materials/M_Pawn_Body_B.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/RookR/Materials/M_Rook_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/RookR/Materials/M_Rook_B.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/RookL/Materials/M_Rook_B.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/KnightR/Materials/M_Knight_B.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/Pawns/Pawn/Materials/M_Pawn_Top_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/KnightL/Materials/M_Knight_B.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/Pawns/Pawn/ForInstancerfaee41c1405c2ff0/Materials/M_Pawn_Body_B.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/KnightL/Materials/M_Knight_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/KnightR/Materials/M_Knight_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/BishopR/Materials/M_Bishop_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/KnightL/Materials/M_Knight_B.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Chessboard/Materials/M_Chessboard.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/BishopR/Materials/M_Bishop_B.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/Pawns/Pawn/Materials/M_Pawn_Top_B.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/BishopL/Materials/M_Bishop_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/Pawns/Pawn/ForInstancer77392c02ff4b8d77/Materials/M_Pawn_Body_B.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/Queen/Materials/M_Queen_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/KnightR/Materials/M_Knight_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/King/Materials/M_King_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/Queen/Materials/M_Queen_B.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/RookR/Materials/M_Rook_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/King/Materials/M_King_B.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/King/Materials/M_King_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/Pawns/Pawn/ForInstancerfaee41c1405c2ff0/Materials/M_Pawn_Top_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/Pawns/Pawn/Materials/M_Pawn_Body_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/BishopL/Materials/M_Bishop_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/KnightR/Materials/M_Knight_B.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/BishopL/Materials/M_Bishop_B.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/BishopL/Materials/M_Bishop_B.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/RookL/Materials/M_Rook_B.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/RookL/Materials/M_Rook_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/RookL/Materials/M_Rook_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/KnightL/Materials/M_Knight_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/RookR/Materials/M_Rook_B.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/Pawns/Pawn/Materials/M_Pawn_Body_B.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/Pawns/Pawn/Materials/M_Pawn_Top_B.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/King/Materials/M_King_B.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/Pawns/Pawn/Materials/M_Pawn_Top_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/Queen/Materials/M_Queen_B.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/BishopR/Materials/M_Bishop_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/Pawns/Pawn/ForInstancer77392c02ff4b8d77/Materials/M_Pawn_Top_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/Queen/Materials/M_Queen_W.
-Warning: in Sync at line 260 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/BishopR/Materials/M_Bishop_B.
-Warning: in SyncAovBindings at line 154 of /opt/build/cycles/src/hydra/session.cpp -- Unknown pass elementId
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/Pawns/Pawn/ForInstancer77392c02ff4b8d77/Materials/M_Pawn_Top_W.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/Pawns/Pawn/ForInstancerfaee41c1405c2ff0/Materials/M_Pawn_Body_W.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/Pawns/Pawn/Materials/M_Pawn_Top_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/Pawns/Pawn/Materials/M_Pawn_Body_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/RookR/Materials/M_Rook_W.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/RookR/Materials/M_Rook_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/RookL/Materials/M_Rook_W.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/RookL/Materials/M_Rook_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/Pawns/Pawn/ForInstancerfaee41c1405c2ff0/Materials/M_Pawn_Top_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/KnightL/Materials/M_Knight_W.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/KnightL/Materials/M_Knight_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/KnightL/Materials/M_Knight_W.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/King/Materials/M_King_W.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/Pawns/Pawn/Materials/M_Pawn_Body_W.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/KnightR/Materials/M_Knight_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/BishopR/Materials/M_Bishop_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/KnightR/Materials/M_Knight_W.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/BishopL/Materials/M_Bishop_W.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/KnightR/Materials/M_Knight_W.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/BishopL/Materials/M_Bishop_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/King/Materials/M_King_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/KnightR/Materials/M_Knight_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/KnightL/Materials/M_Knight_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/Queen/Materials/M_Queen_W.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/Queen/Materials/M_Queen_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/Pawns/Pawn/Materials/M_Pawn_Top_W.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Chessboard/Materials/M_Chessboard.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/Pawns/Pawn/ForInstancer77392c02ff4b8d77/Materials/M_Pawn_Top_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/Queen/Materials/M_Queen_W.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/RookL/Materials/M_Rook_W.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/RookR/Materials/M_Rook_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/Pawns/Pawn/Materials/M_Pawn_Body_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/Pawns/Pawn/ForInstancerfaee41c1405c2ff0/Materials/M_Pawn_Top_W.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/King/Materials/M_King_W.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/Pawns/Pawn/ForInstancer77392c02ff4b8d77/Materials/M_Pawn_Body_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/Pawns/Pawn/Materials/M_Pawn_Top_W.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/Pawns/Pawn/ForInstancerfaee41c1405c2ff0/Materials/M_Pawn_Body_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/RookL/Materials/M_Rook_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/King/Materials/M_King_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/Pawns/Pawn/Materials/M_Pawn_Body_W.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/RookR/Materials/M_Rook_W.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/Pawns/Pawn/Materials/M_Pawn_Top_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/Queen/Materials/M_Queen_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/Pawns/Pawn/ForInstancer77392c02ff4b8d77/Materials/M_Pawn_Body_W.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/BishopL/Materials/M_Bishop_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/BishopL/Materials/M_Bishop_W.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/Black/BishopR/Materials/M_Bishop_W.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/BishopR/Materials/M_Bishop_B.
+Warning: in Sync at line 272 of /opt/build/cycles/src/hydra/material.cpp -- Could not get a material network for /ChessSet/White/BishopR/Materials/M_Bishop_W.
 EGL 1.5
-GL_VERSION: 4.6.0 NVIDIA 580.159.04
-GL_RENDERER: NVIDIA RTX PRO 4000 Blackwell/PCIe/SSE2
+GL_VERSION: 4.6.0 NVIDIA 595.91.07
+GL_RENDERER: NVIDIA RTX PRO 6000 Blackwell Server Edition/PCIe/SSE2
 Camera: 
 Renderer plugin: HdCyclesPlugin
 Recording time code: 0.000000
-Time: 0:04.88
-Memory: 577816 KB
+Time: 0:04.07
+Memory: 518408 KB
