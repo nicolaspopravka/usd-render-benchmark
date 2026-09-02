@@ -2,7 +2,7 @@
 
 declare -A renderers
 renderers=(
-    ["Storm"]="usd"                             # 26.05
+    ["Storm"]="usd"                             # 26.08
 )
 
 # Define arrays for scenes, cameras and optional frame specifications

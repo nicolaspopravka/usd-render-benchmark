@@ -1,9 +1,6 @@
 name = "usd"
 
-version = "26.05"
-
-requires = []
-
+version = "26.08"
 
 def commands():
     path = "/usr/local"
