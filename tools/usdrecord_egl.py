@@ -1,4 +1,4 @@
-#!/usr/bin/env hython
+#!/usr/bin/env python3
 #
 # Copyright 2019 Pixar
 #
@@ -39,59 +39,92 @@ def _Err(msg):
     sys.stderr.write(msg + '\n')
 
 def _SetupOpenGLContext(width=100, height=100):
-    try:
-        from PySide6.QtOpenGLWidgets import QOpenGLWidget
-        from PySide6.QtOpenGL import QOpenGLFramebufferObject
-        from PySide6.QtOpenGL import QOpenGLFramebufferObjectFormat
-        from PySide6.QtCore import QSize
-        from PySide6.QtGui import QOffscreenSurface
-        from PySide6.QtGui import QOpenGLContext
-        from PySide6.QtGui import QSurfaceFormat
-        from PySide6.QtWidgets import QApplication
-        PySideModule = 'PySide6'
-    except ImportError:
-        from PySide2 import QtOpenGL
-        from PySide2.QtWidgets import QApplication
-        PySideModule = 'PySide2'
+    # PATCHED: Use EGL via ctypes instead of Qt for GL context creation.
+    # Enables headless GPU rendering via EGL on systems where Qt's
+    # offscreen platform cannot create a GL context.
+    import ctypes
 
-    application = QApplication(sys.argv)
+    egl = ctypes.cdll.LoadLibrary("libEGL.so.1")
+    egl.eglGetDisplay.restype = ctypes.c_void_p
+    egl.eglGetDisplay.argtypes = [ctypes.c_void_p]
+    egl.eglInitialize.restype = ctypes.c_int
+    egl.eglInitialize.argtypes = [ctypes.c_void_p, ctypes.POINTER(ctypes.c_int), ctypes.POINTER(ctypes.c_int)]
+    egl.eglBindAPI.restype = ctypes.c_int
+    egl.eglBindAPI.argtypes = [ctypes.c_int]
+    egl.eglChooseConfig.restype = ctypes.c_int
+    egl.eglChooseConfig.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int, ctypes.c_void_p]
+    egl.eglCreateContext.restype = ctypes.c_void_p
+    egl.eglCreateContext.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
+    egl.eglCreatePbufferSurface.restype = ctypes.c_void_p
+    egl.eglCreatePbufferSurface.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
+    egl.eglMakeCurrent.restype = ctypes.c_int
+    egl.eglMakeCurrent.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p]
 
-    if PySideModule == 'PySide6':
-        glFormat = QSurfaceFormat()
-        glFormat.setSamples(4)
+    EGL_DEFAULT_DISPLAY = 0
+    EGL_OPENGL_API = 0x30A2
+    EGL_OPENGL_BIT = 0x0008
+    EGL_RENDERABLE_TYPE = 0x3040
+    EGL_SURFACE_TYPE = 0x3033
+    EGL_PBUFFER_BIT = 0x0001
+    EGL_RED_SIZE = 0x3024
+    EGL_GREEN_SIZE = 0x3023
+    EGL_BLUE_SIZE = 0x3022
+    EGL_DEPTH_SIZE = 0x3025
+    EGL_NONE = 0x3038
+    EGL_WIDTH = 0x3057
+    EGL_HEIGHT = 0x3056
 
-        # Create an off-screen surface and bind a gl context to it.
-        glWidget = QOffscreenSurface()
-        glWidget.setFormat(glFormat)
-        glWidget.create()
+    attrs = (ctypes.c_int * 13)(
+        EGL_RENDERABLE_TYPE, EGL_OPENGL_BIT,
+        EGL_SURFACE_TYPE, EGL_PBUFFER_BIT,
+        EGL_RED_SIZE, 8, EGL_GREEN_SIZE, 8, EGL_BLUE_SIZE, 8,
+        EGL_DEPTH_SIZE, 24,
+        EGL_NONE
+    )
 
-        glWidget._offscreenContext = QOpenGLContext()
-        glWidget._offscreenContext.setFormat(glFormat)
-        glWidget._offscreenContext.create()
+    config = ctypes.c_void_p()
+    n = ctypes.c_int()
 
-        glWidget._offscreenContext.makeCurrent(glWidget)
+    dpy = egl.eglGetDisplay(EGL_DEFAULT_DISPLAY)
+    if not dpy:
+        raise RuntimeError("EGL: no display")
+    major, minor = ctypes.c_int(), ctypes.c_int()
+    if not egl.eglInitialize(dpy, ctypes.byref(major), ctypes.byref(minor)):
+        raise RuntimeError("EGL: initialize failed")
+    _Msg("EGL %d.%d" % (major.value, minor.value))
+    if not egl.eglBindAPI(EGL_OPENGL_API):
+        raise RuntimeError("EGL: bindAPI failed")
+    if not egl.eglChooseConfig(dpy, attrs, ctypes.byref(config), 1, ctypes.byref(n)):
+        raise RuntimeError("EGL: chooseConfig failed")
 
-        # Create and bind a framebuffer for the frameRecorder's present task.
-        # Since the frameRecorder uses AOVs directly, this is just
-        # a 1x1 default format FBO.
-        glFBOFormat = QOpenGLFramebufferObjectFormat()
-        glWidget._fbo = QOpenGLFramebufferObject(QSize(1, 1), glFBOFormat)
-        glWidget._fbo.bind()
+    ctx = egl.eglCreateContext(dpy, config, None, None)
+    if not ctx:
+        raise RuntimeError("EGL: no context")
 
-    else:
-        glFormat = QtOpenGL.QGLFormat()
-        glFormat.setSampleBuffers(True)
-        glFormat.setSamples(4)
-        glWidget = QtOpenGL.QGLWidget(glFormat)
+    pbuf_attrs = (ctypes.c_int * 5)(EGL_WIDTH, width, EGL_HEIGHT, height, EGL_NONE)
+    surf = egl.eglCreatePbufferSurface(dpy, config, pbuf_attrs)
+    if not surf:
+        raise RuntimeError("EGL: no pbuffer")
 
-        glWidget.setFixedSize(width, height)
+    if not egl.eglMakeCurrent(dpy, surf, surf, ctx):
+        raise RuntimeError("EGL: makeCurrent failed")
 
-        # note that we need to bind the gl context here, instead of explicitly
-        # showing the glWidget. Binding the gl context will make sure
-        # framebuffer is ready for gl operations.
-        glWidget.makeCurrent()
+    libGL = ctypes.cdll.LoadLibrary("libGL.so.1")
+    glXGetProc = libGL.glXGetProcAddressARB
+    glXGetProc.restype = ctypes.c_void_p
+    glXGetProc.argtypes = [ctypes.c_char_p]
+    fp = glXGetProc(b"glGetString")
+    if fp:
+        glGetString = ctypes.CFUNCTYPE(ctypes.c_char_p, ctypes.c_int)(fp)
+        raw_version = glGetString(0x1F02)
+        raw_renderer = glGetString(0x1F01)
+        if raw_version:
+            _Msg("GL_VERSION: %s" % raw_version.decode())
+        if raw_renderer:
+            _Msg("GL_RENDERER: %s" % raw_renderer.decode())
 
-    return glWidget
+    return 
+
 
 def main():
     programName = os.path.basename(sys.argv[0])
@@ -185,14 +218,9 @@ def main():
         # the output image. We just pass it along for cleanliness.
         glWidget = _SetupOpenGLContext(args.imageWidth, args.imageWidth)
 
-    frameRecorder = UsdAppUtils.FrameRecorder('', args.gpuEnabled)
-    if args.rendererPlugin:
-        try:
-            frameRecorder.SetRendererPlugin(
-                UsdAppUtils.rendererArgs.GetPluginIdFromArgument(
-                    args.rendererPlugin))
-        except:
-            pass
+    rendererPluginId = UsdAppUtils.rendererArgs.GetPluginIdFromArgument(
+        args.rendererPlugin) or ''
+    frameRecorder = UsdAppUtils.FrameRecorder(rendererPluginId, args.gpuEnabled)
     frameRecorder.SetImageWidth(args.imageWidth)
     frameRecorder.SetComplexity(args.complexity.value)
     frameRecorder.SetColorCorrectionMode(args.colorCorrectionMode)
