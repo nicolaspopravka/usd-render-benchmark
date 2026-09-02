@@ -1,13 +1,18 @@
-Running: rez env usd-24.08 -- usdrecord --camera /island/cam/shotCam --renderer "Embree" --purposes render   scenes/MoanaIsland/usd/island.usda "renderers/Embree/island.jpg"
-Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'BasisCurves'
-Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'RectLight'
-Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'LightAPI'
-Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'DomeLight'
-Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'Material'
-Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'Volume'
-Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'OpenVDBAsset'
+Running: rez env usd -- usdrecord --camera /island/cam/shotCam --renderer "Embree" --purposes render   scenes/MoanaIsland/usd/island.usda "renderers/Embree/island.jpg"
+Pip-based rez installation detected. Please be aware that rez command line tools are not guaranteed to function correctly in this case. See https://rez.readthedocs.io/en/stable/installation.html#why-not-pip-for-production  for futher details.
+Warning: in _AdapterLookup at line 262 of /opt/conan_home/d/b/openu372081081c5e4/b/src/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'BasisCurves'
+Warning: in _AdapterLookup at line 262 of /opt/conan_home/d/b/openu372081081c5e4/b/src/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'RectLight'
+Warning: in _AdapterLookup at line 262 of /opt/conan_home/d/b/openu372081081c5e4/b/src/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'LightAPI'
+Warning: in _AdapterLookup at line 262 of /opt/conan_home/d/b/openu372081081c5e4/b/src/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'DomeLight'
+Warning: in _AdapterLookup at line 262 of /opt/conan_home/d/b/openu372081081c5e4/b/src/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'Material'
+Warning: in _AdapterLookup at line 262 of /opt/conan_home/d/b/openu372081081c5e4/b/src/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'Volume'
+Warning: in _AdapterLookup at line 262 of /opt/conan_home/d/b/openu372081081c5e4/b/src/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'OpenVDBAsset'
+[OpenColorIO Info]: Color management disabled. (Specify the $OCIO environment variable to enable.)
+EGL 1.5
+GL_VERSION: 4.6.0 NVIDIA 580.159.04
+GL_RENDERER: NVIDIA L4/PCIe/SSE2
 Camera: /island/cam/shotCam
 Renderer plugin: HdEmbreeRendererPlugin
 Recording time code: 0.000000
-Time: 3:37.19
-Memory: 41786964 KB
+Time: 5:24.42
+Memory: 41815776 KB
