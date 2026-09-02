@@ -1,16 +1,21 @@
-Running: rez env usd-24.08 -- usdrecord --camera /root/camera01/GEO/renderCam_hrc/renderCam_buffer/renderCam_srt/renderCam --renderer "Embree" --purposes render   scenes/ALab/ALab/entry.usda "renderers/Embree/entry.jpg"
-Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'SphereLight'
-Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'LightAPI'
-Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'CylinderLight'
-Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'RectLight'
-Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'DiskLight'
-Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'DomeLight'
-Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'BasisCurves'
-Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'NurbsCurves'
-Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'DistantLight'
-Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'Material'
+Running: rez env usd -- usdrecord --camera /root/camera01/GEO/renderCam_hrc/renderCam_buffer/renderCam_srt/renderCam --renderer "Embree" --purposes render   scenes/ALab/ALab/entry.usda "renderers/Embree/entry.jpg"
+Pip-based rez installation detected. Please be aware that rez command line tools are not guaranteed to function correctly in this case. See https://rez.readthedocs.io/en/stable/installation.html#why-not-pip-for-production  for futher details.
+Warning: in _AdapterLookup at line 262 of /opt/conan_home/d/b/openu372081081c5e4/b/src/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'SphereLight'
+Warning: in _AdapterLookup at line 262 of /opt/conan_home/d/b/openu372081081c5e4/b/src/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'LightAPI'
+Warning: in _AdapterLookup at line 262 of /opt/conan_home/d/b/openu372081081c5e4/b/src/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'CylinderLight'
+Warning: in _AdapterLookup at line 262 of /opt/conan_home/d/b/openu372081081c5e4/b/src/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'RectLight'
+Warning: in _AdapterLookup at line 262 of /opt/conan_home/d/b/openu372081081c5e4/b/src/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'DiskLight'
+Warning: in _AdapterLookup at line 262 of /opt/conan_home/d/b/openu372081081c5e4/b/src/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'DomeLight'
+Warning: in _AdapterLookup at line 262 of /opt/conan_home/d/b/openu372081081c5e4/b/src/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'BasisCurves'
+Warning: in _AdapterLookup at line 262 of /opt/conan_home/d/b/openu372081081c5e4/b/src/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'NurbsCurves'
+Warning: in _AdapterLookup at line 262 of /opt/conan_home/d/b/openu372081081c5e4/b/src/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'DistantLight'
+Warning: in _AdapterLookup at line 262 of /opt/conan_home/d/b/openu372081081c5e4/b/src/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'Material'
+[OpenColorIO Info]: Color management disabled. (Specify the $OCIO environment variable to enable.)
+EGL 1.5
+GL_VERSION: 4.6.0 NVIDIA 580.159.04
+GL_RENDERER: NVIDIA L4/PCIe/SSE2
 Camera: /root/camera01/GEO/renderCam_hrc/renderCam_buffer/renderCam_srt/renderCam
 Renderer plugin: HdEmbreeRendererPlugin
 Recording time code: 1004.000000
-Time: 0:18.26
-Memory: 3482756 KB
+Time: 1:06.52
+Memory: 3467420 KB
