@@ -1,10 +1,14 @@
-Running: rez env usd-24.08 -- usdrecord --camera /McUsd/Camera --renderer "Embree" --purposes render   assets/full_assets/McUsd/McUsd.usda "renderers/Embree/McUsd.jpg"
-Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'DistantLight'
-Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'LightAPI'
-Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'DomeLight'
-Warning: in _AdapterLookup at line 262 of /home/nico/USD/pxr/usdImaging/usdImaging/delegate.cpp -- Selected hydra renderer doesn't support prim type 'Material'
+Running: rez env usd -- usdrecord --camera /McUsd/Camera --renderer "Embree" --purposes render   assets/full_assets/McUsd/McUsd.usda "renderers/Embree/McUsd.jpg"
+Pip-based rez installation detected. Please be aware that rez command line tools are not guaranteed to function correctly in this case. See https://rez.readthedocs.io/en/stable/installation.html#why-not-pip-for-production  for futher details.
+Warning: in _LoadLightTexture at line 55 of /opt/build/openusd/pxr/imaging/plugin/hdEmbree/light.cpp -- Could not read image /workspace/usd-render-benchmark/assets/full_assets/McUsd/McUsd_materials/tex/_domelight.png
+[OpenColorIO Info]: Color management disabled. (Specify the $OCIO environment variable to enable.)
+EGL 1.5
+GL_VERSION: 4.6.0 NVIDIA 580.126.20
+GL_RENDERER: NVIDIA L4/PCIe/SSE2
 Camera: /McUsd/Camera
 Renderer plugin: HdEmbreeRendererPlugin
 Recording time code: 0.000000
-Time: 0:07.60
-Memory: 291452 KB
+Errors encountered at time code 0.0: 
+	Error in 'pxrInternal_v0_26_8__pxrReserved__::Hio_StbImage::ReadCropped' at line 413 in file /opt/conan_home/d/b/openuab96e49b8490b/b/src/pxr/imaging/hio/stbImage.cpp : 'Image format mismatch'
+Time: 0:19.37
+Memory: 426008 KB
