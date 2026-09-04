@@ -2,9 +2,9 @@
 
 | Scene \ Renderer | Embree |
 |---|---|
-| McUsd | Success<br>0:19.37<br>426008KB |
-| chess_set | Success<br>0:08.12<br>524364KB |
-| entry | Success<br>1:29.92<br>4684296KB |
-| island | Success<br>2:40.15<br>51770592KB |
+| McUsd | Success<br>0:03.05<br>418048KB |
+| chess_set | Success<br>0:02.09<br>519060KB |
+| entry | Success<br>0:31.63<br>4681040KB |
+| island | Success<br>1:59.18<br>51785624KB |
 ## System Specs
-RunPod Secure NVIDIA L4, 580.126.20, 23034 MiB; Rocky Linux 9.8 (Blue Onyx); Linux 6.8.0-107-generic
+RunPod Secure NVIDIA GeForce RTX 4090, 580.159.04, 24564 MiB; Rocky Linux 9.8 (Blue Onyx); Linux 6.8.0-124-generic

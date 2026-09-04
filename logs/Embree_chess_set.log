@@ -1,11 +1,14 @@
 Running: rez env usd -- usdrecord --camera main_cam --renderer "Embree" --purposes render   assets/full_assets/OpenChessSet/chess_set.usda "renderers/Embree/chess_set.jpg"
 Pip-based rez installation detected. Please be aware that rez command line tools are not guaranteed to function correctly in this case. See https://rez.readthedocs.io/en/stable/installation.html#why-not-pip-for-production  for futher details.
+################################################################################
+#  HDEMBREE_AMBIENT_OCCLUSION_SAMPLES is overridden to '0'.  Default is '16'.  #
+################################################################################
 [OpenColorIO Info]: Color management disabled. (Specify the $OCIO environment variable to enable.)
 EGL 1.5
-GL_VERSION: 4.6.0 NVIDIA 580.126.20
-GL_RENDERER: NVIDIA L4/PCIe/SSE2
+GL_VERSION: 4.6.0 NVIDIA 580.159.04
+GL_RENDERER: NVIDIA GeForce RTX 4090/PCIe/SSE2
 Camera: 
 Renderer plugin: HdEmbreeRendererPlugin
 Recording time code: 0.000000
-Time: 0:08.12
-Memory: 524364 KB
+Time: 0:02.09
+Memory: 519060 KB
