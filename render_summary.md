@@ -2,9 +2,9 @@
 
 | Scene \ Renderer | Embree |
 |---|---|
-| McUsd | Success<br>0:19.37<br>426008KB |
-| chess_set | Success<br>0:08.12<br>524364KB |
-| entry | Success<br>1:29.92<br>4684296KB |
-| island | Success<br>2:40.15<br>51770592KB |
+| McUsd | Success<br>0:03.05<br>418048KB |
+| chess_set | Success<br>0:02.09<br>519060KB |
+| entry | Success<br>0:31.63<br>4681040KB |
+| island | Success<br>1:59.18<br>51785624KB |
 ## System Specs
-NVIDIA driver version 580.126.20 GPU: NVIDIA L4 with 23034MB Rocky Linux 9.8 (Blue Onyx), Linux kernel 6.8.0-107-generic
+NVIDIA driver version 580.159.04 GPU: NVIDIA GeForce RTX 4090 with 24564MB Rocky Linux 9.8 (Blue Onyx), Linux kernel 6.8.0-124-generic
