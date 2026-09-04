@@ -13,4 +13,4 @@ def commands():
 
     env.PYTHONPATH.append(path + "/lib/python")
     env.PATH.append(path + "/bin")
-    env.HDEMBREE_AMBIENT_OCCLUSION_SAMPLES.set("0")
+    env.HDEMBREE_USE_LIGHTING.set("1")

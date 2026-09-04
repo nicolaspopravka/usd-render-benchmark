@@ -1,17 +1,17 @@
 Running: rez env usd -- usdrecord --camera /McUsd/Camera --renderer "Embree" --purposes render   assets/full_assets/McUsd/McUsd.usda "renderers/Embree/McUsd.jpg"
 Pip-based rez installation detected. Please be aware that rez command line tools are not guaranteed to function correctly in this case. See https://rez.readthedocs.io/en/stable/installation.html#why-not-pip-for-production  for futher details.
-################################################################################
-#  HDEMBREE_AMBIENT_OCCLUSION_SAMPLES is overridden to '0'.  Default is '16'.  #
-################################################################################
+#########################################################################
+#  HDEMBREE_USE_LIGHTING is overridden to 'true'.  Default is 'false'.  #
+#########################################################################
 Warning: in _LoadLightTexture at line 55 of /opt/build/openusd/pxr/imaging/plugin/hdEmbree/light.cpp -- Could not read image /workspace/usd-render-benchmark/assets/full_assets/McUsd/McUsd_materials/tex/_domelight.png
 [OpenColorIO Info]: Color management disabled. (Specify the $OCIO environment variable to enable.)
 EGL 1.5
-GL_VERSION: 4.6.0 NVIDIA 580.159.04
+GL_VERSION: 4.6.0 NVIDIA 580.126.20
 GL_RENDERER: NVIDIA GeForce RTX 4090/PCIe/SSE2
 Camera: /McUsd/Camera
 Renderer plugin: HdEmbreeRendererPlugin
 Recording time code: 0.000000
 Errors encountered at time code 0.0: 
 	Error in 'pxrInternal_v0_26_8__pxrReserved__::Hio_StbImage::ReadCropped' at line 413 in file /opt/conan_home/d/b/openuab96e49b8490b/b/src/pxr/imaging/hio/stbImage.cpp : 'Image format mismatch'
-Time: 0:03.05
-Memory: 418048 KB
+Time: 0:03.63
+Memory: 422620 KB
