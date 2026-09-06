@@ -39,7 +39,7 @@ jobs:
       - name: Derive year and pristine image from base_image
         run: |
           tag="$(printf '%s' '${{ inputs.base_image }}' | cut -d'@' -f1)"
-          year="$(printf '%s' "$tag" | sed -E 's#.*:([0-9]+)\..*#\1#')"
+          year="$(printf '%s' "$tag" | sed -E 's#.*:([0-9]+).*#\1#')"
           echo "YEAR=$year" >> "$GITHUB_ENV"
           echo "PRISTINE_IMAGE=ghcr.io/nicolaspopravka/usd-render-benchmark-stack:${year}" >> "$GITHUB_ENV"
 
