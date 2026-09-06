@@ -1,0 +1,61 @@
+name: build-pristine
+
+# Builds + publishes the pristine stack image:
+#   ghcr.io/nicolaspopravka/usd-render-benchmark-stack:<year>
+# A trivial retag of the ASWF base (base_image input). Dispatch-only; the year
+# is derived from base_image (aswf/ci-vfxall:<year>.<patch>...).
+
+on:
+  workflow_dispatch:
+    inputs:
+      base_image:
+        description: "ASWF base to retag, e.g. aswf/ci-vfxall:2025.1@sha256:..."
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  packages: write
+
+concurrency:
+  group: pristine-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Derive year and pristine image from base_image
+        run: |
+          tag="$(printf '%s' '${{ inputs.base_image }}' | cut -d'@' -f1)"
+          year="$(printf '%s' "$tag" | sed -E 's#.*:([0-9]+)\..*#\1#')"
+          echo "YEAR=$year" >> "$GITHUB_ENV"
+          echo "PRISTINE_IMAGE=ghcr.io/nicolaspopravka/usd-render-benchmark-stack:${year}" >> "$GITHUB_ENV"
+
+      - name: Build + push pristine
+        run: |
+          docker buildx build --provenance=false \
+            --file Dockerfile.pristine \
+            --build-arg BASE_IMAGE="${{ inputs.base_image }}" \
+            --tag "${{ env.PRISTINE_IMAGE }}" \
+            --push \
+            . 2>&1 | tee build-pristine.log
+
+      - name: Upload log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pristine-build-log
+          path: build-pristine.log
+          if-no-files-found: warn

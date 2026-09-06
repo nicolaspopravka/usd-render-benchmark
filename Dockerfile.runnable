@@ -1,0 +1,22 @@
+# syntax=docker/dockerfile:1.10
+
+# Runnable benchmark image: the pristine stack plus a plain (no-.git) copy of
+# this repository's tree at the dispatching branch — content-equivalent to
+# `git clone --recurse-submodules -b <branch>`.
+# publish -> ghcr.io/nicolaspopravka/usd-render-benchmark:<cy>
+
+ARG PRISTINE_IMAGE
+
+FROM ${PRISTINE_IMAGE}
+
+ARG RUN_BRANCH=main
+
+# Harness: the workflow fetches the dispatching branch of this repository with
+# --recurse-submodules, strips .git, stages it as usd-render-benchmark/; COPY it in.
+COPY usd-render-benchmark/ /usr/local/usd-render-benchmark/
+ENV REZ_PACKAGES_PATH=/usr/local/usd-render-benchmark/packages
+
+WORKDIR /usr/local/usd-render-benchmark
+
+ENTRYPOINT ["bash", "render_script.sh"]
+CMD []

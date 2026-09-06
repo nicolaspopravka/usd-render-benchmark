@@ -1,0 +1,79 @@
+name: build-runnable
+
+# Builds + publishes the runnable benchmark image:
+#   ghcr.io/nicolaspopravka/usd-render-benchmark:<year>
+# FROM the published pristine image (pristine_image input), embedding this very
+# repository's tree at the dispatching branch (${{ github.ref_name }}) as a
+# .git-free --recurse-submodules copy. Dispatch-only; the year is derived from
+# pristine_image (…:<year>).
+
+on:
+  workflow_dispatch:
+    inputs:
+      pristine_image:
+        description: "Published pristine image, e.g. ghcr.io/nicolaspopravka/usd-render-benchmark-stack:2025"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  packages: write
+
+concurrency:
+  group: runnable-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 90
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Derive year and runnable image from pristine_image
+        run: |
+          pristine='${{ inputs.pristine_image }}'
+          year="${pristine##*:}"
+          echo "YEAR=$year" >> "$GITHUB_ENV"
+          echo "RUNNABLE_IMAGE=ghcr.io/nicolaspopravka/usd-render-benchmark:${year}" >> "$GITHUB_ENV"
+
+      - name: Stage this repo at the dispatching branch (.git-free, submodules included)
+        run: |
+          branch="${{ github.ref_name }}"
+          echo "RUN_BRANCH=$branch" >> "$GITHUB_ENV"
+          git fetch origin "$branch"
+          git worktree add --force --detach usd-render-benchmark "origin/$branch"
+          (cd usd-render-benchmark \
+            && git rev-parse HEAD > ../usd-render-benchmark-rev.txt \
+            && git submodule update --init --recursive)
+          find usd-render-benchmark -name .git -prune -exec rm -rf {} +
+          du -sh usd-render-benchmark
+          cat usd-render-benchmark-rev.txt
+
+      - name: Build + push runnable
+        run: |
+          docker buildx build --provenance=false \
+            --file Dockerfile.runnable \
+            --build-arg PRISTINE_IMAGE="${{ inputs.pristine_image }}" \
+            --build-arg RUN_BRANCH="${{ env.RUN_BRANCH }}" \
+            --tag "${{ env.RUNNABLE_IMAGE }}" \
+            --push \
+            . 2>&1 | tee build-runnable.log
+
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: runnable-build-log
+          path: |
+            build-runnable.log
+            usd-render-benchmark-rev.txt
+          if-no-files-found: warn
