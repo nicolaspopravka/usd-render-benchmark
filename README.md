@@ -13,7 +13,7 @@ This is an independent community project. It is not ASWF or OpenUSD
 certification, and it is not a renderer performance ranking.
 
 > [!NOTE]
-> **Snapshot — 2026-09-04**
+> **Snapshot — 2026-09-07**
 >
 > - **Published:** 15/15 OpenUSD delivery-path results; five annual Cycles
 >   results covering CY2023-CY2027 with patched CY2026/CY2027 follow-ups,
@@ -22,6 +22,9 @@ certification, and it is not a renderer performance ranking.
 >   results covering CY2023–CY2027 on ASWF prebuilt stacks, plus two
 >   CY2027 variants demonstrating the AO-disabled and scene-lit paths. The
 >   refreshed CY2027 image also has an updated three-scene Storm result.
+> - **Run model demo:** [`demo/run1`](https://github.com/nicolaspopravka/usd-render-benchmark/tree/demo/run1)
+>   mounts a one-render Storm/Teapot branch into a published image on
+>   a GitHub-hosted runner. This demonstrates the branch/image split.
 > - **September refresh:** released ASWF images repair the tested OSL/OIIO
 >   plugin loading and CY2027 Storm/MaterialX failures. Findings from earlier
 >   VFX Platform years and focused open questions remain. A complete rerun on
@@ -35,6 +38,27 @@ mean the result was clean. **Waiting release** has an upstream change but no
 tagged benchmark stack yet. **Waiting upstream** is blocked on an external
 tracker or review. **Paused** needs a scope, cost, or build review decision.
 **Not scheduled** has no current plan.
+
+## Run branches and stack images
+
+A benchmark result has two separate inputs:
+
+- A run branch contains the harness, scene selection, Rez package definitions,
+  and the output directories that preserve the result.
+- A runnable image contains the OpenUSD and renderer environment used to
+  execute that branch.
+
+Image composition and publishing live in
+[`usd-render-benchmark-stack`](https://github.com/nicolaspopravka/usd-render-benchmark-stack).
+The run branch is mounted at `/usr/local/usd-render-benchmark`, so its
+`render_script.sh` executes without being copied into the image. Logs, renders,
+and the generated summary are written back into the mounted checkout.
+
+The [`demo/run1`](https://github.com/nicolaspopravka/usd-render-benchmark/tree/4d296c883a10fe66315e10bb599cb1e26a941d83)
+branch is the first published example of this model. Stack workflow
+[run 34144139279](https://github.com/nicolaspopravka/usd-render-benchmark-stack/actions/runs/34144139279)
+mounted the branch into the CY2027 runnable image and completed a Storm
+Teapot render on a headless GitHub runner.
 
 ## OpenUSD delivery paths
 
