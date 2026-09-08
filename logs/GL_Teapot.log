@@ -1,0 +1,7 @@
+Running: rez env usd -- usdrecord --camera main_cam --renderer "GL" --purposes render   assets/full_assets/Teapot/Teapot.usd "renderers/GL/Teapot.jpg"
+[OpenColorIO Info]: Color management disabled. (Specify the $OCIO environment variable to enable.)
+Camera: 
+Renderer plugin: HdStormRendererPlugin
+Recording time code: 1.000000
+Time: 0:02.04
+Memory: 409740 KB
