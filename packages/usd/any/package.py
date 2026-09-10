@@ -1,3 +1,0 @@
-name = "usd"
-
-version = "any"

@@ -3,7 +3,9 @@
 # Define arrays for renderers and their corresponding packages
 declare -A renderers
 renderers=(
-    ["GL"]="usd"
+    ["GL"]="aswf"
+    ["Embree"]="aswf"
+    ["Moonray"]="aswf"
 )
 
 # Define arrays for scenes, cameras and optional frame specifications
@@ -13,7 +15,8 @@ scenes_and_cameras=(
 
 # Define problematic combinations of renderer and scene
 declare -A problematic_combinations
-problematic_combinations=()
+problematic_combinations=(
+)
 
 # Loop over each renderer
 for renderer in "${!renderers[@]}"; do
