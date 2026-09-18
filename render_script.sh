@@ -6,6 +6,7 @@ renderers=(
     ["GL"]="aswf"
     ["Embree"]="aswf"
     ["Moonray"]="aswf"
+    ["Cycles"]="aswf"
 )
 
 # Define arrays for scenes, cameras and optional frame specifications
