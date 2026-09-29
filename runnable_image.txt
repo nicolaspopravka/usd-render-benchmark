@@ -1,0 +1,1 @@
+ghcr.io/nicolaspopravka/usd-render-benchmark@sha256:fdbf13c0007a0f5e623071a123f4af67d57632ba1ed6db46436790cee771f415
