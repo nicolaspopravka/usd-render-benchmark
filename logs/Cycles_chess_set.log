@@ -1,7 +1,13 @@
-Running: rez env cycles -- usdrecord --camera main_cam --renderer "Cycles" --purposes render   assets/full_assets/OpenChessSet/chess_set.usda "renderers/Cycles/chess_set.jpg"
-QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-nico'
+Running: rez env aswf -- usdrecord --camera main_cam --renderer "Cycles" --purposes render   assets/full_assets/OpenChessSet/chess_set.usda "renderers/Cycles/chess_set.jpg"
+[OpenColorIO Info]: Color management disabled. (Specify the $OCIO environment variable to enable.)
+Coding Error (secondary thread): in _FailGet at line 554 of /opt/conan_home/d/b/openu0a1f8544958cb/b/src/pxr/base/vt/value.cpp -- Attempted to get value of type 'VtArray<GfVec4f>' from VtValue holding 'VtArray<GfQuath>'
+Coding Error (secondary thread): in _FailGet at line 554 of /opt/conan_home/d/b/openu0a1f8544958cb/b/src/pxr/base/vt/value.cpp -- Attempted to get value of type 'VtArray<GfVec4f>' from VtValue holding 'VtArray<GfQuath>'
+Warning: in SyncAovBindings at line 151 of /opt/build-cycles/cycles/src/hydra/session.cpp -- Unknown pass elementId
+EGL 1.5
+GL_VERSION: 4.6.0 NVIDIA 580.159.04
+GL_RENDERER: NVIDIA RTX 2000 Ada Generation/PCIe/SSE2
 Camera: 
 Renderer plugin: HdCyclesPlugin
 Recording time code: EARLIEST
-Time: 0:10.46
-Memory: 951836 KB
+Time: 0:27.72
+Memory: 475380 KB
