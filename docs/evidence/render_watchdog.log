@@ -1,0 +1,30 @@
+[watchdog 2026-09-29T12:12:50Z] watching logs (stall=2700s poll=60s grace=20s dry_run=0)
+[watchdog 2026-09-29T12:14:51Z] delegate reported failure in logs/Storm_entry.log: Recording aborted due to the following failure at time code 1004.0: 
+ERROR: render_watchdog: delegate reported failure: [watchdog 2026-09-29T12:14:51Z] delegate reported failure in logs/Storm_entry.log: Recording aborted due to the following failure at time code 1004.0: 
+  the render client did not complete this cell; the image it wrote is not the render
+ERROR: usdrecord returned non-zero exit status (render_watchdog: delegate reported failure: usdrecord itself may have exited 0 -- 23.08 does, and 26.03+ needs --abortOnError)
+[watchdog 2026-09-29T12:15:57Z] delegate reported failure in logs/render_watchdog.log: [watchdog 2026-09-29T12:14:51Z] delegate reported failure in logs/Storm_entry.log: Recording aborted due to the following failure at time code 1004.0: 
+[watchdog 2026-09-29T12:16:02Z] new cell: logs/render_watchdog.log (previous logs/Storm_entry.log was 0s quiet)
+[watchdog 2026-09-29T12:17:05Z] new cell: logs/Moonray_McUsd.log (previous logs/render_watchdog.log was 0s quiet)
+[watchdog 2026-09-29T12:18:08Z] new cell: logs/render_watchdog.log (previous logs/Moonray_McUsd.log was 0s quiet)
+[watchdog 2026-09-29T12:20:14Z] cell logs/render_watchdog.log quiet 60s but a render worker is accumulating CPU - not stalled
+[watchdog 2026-09-29T12:22:20Z] cell logs/render_watchdog.log quiet 60s but a render worker is accumulating CPU - not stalled
+[watchdog 2026-09-29T12:24:26Z] cell logs/render_watchdog.log quiet 60s but a render worker is accumulating CPU - not stalled
+[watchdog 2026-09-29T12:25:26Z] delegate reported failure in logs/Moonray_chess_set.log: Recording aborted due to the following failure at time code 0.0: 
+[watchdog 2026-09-29T12:25:26Z] delegate reported failure in logs/Moonray_McUsd.log: Recording aborted due to the following failure at time code 0.0: 
+[watchdog 2026-09-29T12:25:27Z] new cell: logs/Moonray_McUsd.log (previous logs/render_watchdog.log was 0s quiet)
+[watchdog 2026-09-29T12:26:30Z] new cell: logs/Moonray_entry.log (previous logs/Moonray_McUsd.log was 0s quiet)
+[watchdog 2026-09-29T12:28:40Z] cell logs/Moonray_entry.log quiet 60s but a render worker is accumulating CPU - not stalled
+[watchdog 2026-09-29T12:29:48Z] new cell: logs/render_watchdog.log (previous logs/Moonray_entry.log was 0s quiet)
+[watchdog 2026-09-29T12:32:03Z] cell logs/render_watchdog.log quiet 60s but a render worker is accumulating CPU - not stalled
+[watchdog 2026-09-29T12:34:17Z] cell logs/render_watchdog.log quiet 60s but a render worker is accumulating CPU - not stalled
+[watchdog 2026-09-29T12:36:34Z] cell logs/render_watchdog.log quiet 60s but a render worker is accumulating CPU - not stalled
+[watchdog 2026-09-29T12:38:48Z] cell logs/render_watchdog.log quiet 60s but a render worker is accumulating CPU - not stalled
+[watchdog 2026-09-29T12:41:03Z] cell logs/render_watchdog.log quiet 60s but a render worker is accumulating CPU - not stalled
+[watchdog 2026-09-29T12:43:18Z] cell logs/render_watchdog.log quiet 60s but a render worker is accumulating CPU - not stalled
+[watchdog 2026-09-29T12:45:34Z] cell logs/render_watchdog.log quiet 60s but a render worker is accumulating CPU - not stalled
+[watchdog 2026-09-29T12:47:49Z] cell logs/render_watchdog.log quiet 60s but a render worker is accumulating CPU - not stalled
+[watchdog 2026-09-29T12:50:06Z] cell logs/render_watchdog.log quiet 60s but a render worker is accumulating CPU - not stalled
+[watchdog 2026-09-29T12:52:22Z] cell logs/render_watchdog.log quiet 60s but a render worker is accumulating CPU - not stalled
+[watchdog 2026-09-29T12:54:37Z] cell logs/render_watchdog.log quiet 60s but a render worker is accumulating CPU - not stalled
+[watchdog 2026-09-29T12:56:52Z] cell logs/render_watchdog.log quiet 60s but a render worker is accumulating CPU - not stalled
