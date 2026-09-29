@@ -1,0 +1,16 @@
+Running: rez env aswf -- usdrecord --camera /McUsd/Camera --renderer "Storm" --purposes render   assets/full_assets/McUsd/McUsd.usda "renderers/Storm/McUsd.jpg"
+Warning: in _LoadLibModules at line 329 of /opt/conan_home/d/b/openu18ded7ada3410/b/src/pxr/base/tf/scriptModuleLoader.cpp -- Error loading lib moonrayShaderParser's module 'pxr.MoonrayShaderParser':
+ModuleNotFoundError: No module named 'pxr.MoonrayShaderParser'
+
+Warning: in _LoadLibModules at line 329 of /opt/conan_home/d/b/openu18ded7ada3410/b/src/pxr/base/tf/scriptModuleLoader.cpp -- Error loading lib moonrayShaderDiscovery's module 'pxr.MoonrayShaderDiscovery':
+ModuleNotFoundError: No module named 'pxr.MoonrayShaderDiscovery'
+
+[OpenColorIO Info]: Color management disabled. (Specify the $OCIO environment variable to enable.)
+EGL 1.5
+GL_VERSION: 4.6.0 NVIDIA 580.126.20
+GL_RENDERER: NVIDIA GeForce RTX 4090/PCIe/SSE2
+Camera: /McUsd/Camera
+Renderer plugin: HdStormRendererPlugin
+Recording time code: 0.000000
+Time: 0:05.83
+Memory: 456456 KB

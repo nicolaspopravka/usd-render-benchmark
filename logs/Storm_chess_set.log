@@ -1,0 +1,10 @@
+Running: rez env aswf -- usdrecord --camera main_cam --renderer "Storm" --purposes render   assets/full_assets/OpenChessSet/chess_set.usda "renderers/Storm/chess_set.jpg"
+[OpenColorIO Info]: Color management disabled. (Specify the $OCIO environment variable to enable.)
+EGL 1.5
+GL_VERSION: 4.6.0 NVIDIA 580.126.20
+GL_RENDERER: NVIDIA GeForce RTX 4090/PCIe/SSE2
+Camera: 
+Renderer plugin: HdStormRendererPlugin
+Recording time code: 0.000000
+Time: 0:01.88
+Memory: 448336 KB
