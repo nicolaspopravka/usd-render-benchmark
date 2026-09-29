@@ -1,6 +1,14 @@
-Running: rez env usd-24.08 -- usdrecord --camera /McUsd/Camera --renderer "GL" --purposes render   assets/full_assets/McUsd/McUsd.usda "renderers/GL/McUsd.jpg"
+Running: rez env aswf -- usdrecord --camera /McUsd/Camera --renderer "GL" --purposes render   assets/full_assets/McUsd/McUsd.usda "renderers/GL/McUsd.jpg"
+Warning: in Tf_PyLoadScriptModule at line 100 of /opt/conan_home/d/b/openu9de9bef318f05/b/src/pxr/base/tf/pyUtils.cpp -- Import failed for module 'pxr.MoonrayShaderParser'!
+ModuleNotFoundError: No module named 'pxr.MoonrayShaderParser'
+Warning: in Tf_PyLoadScriptModule at line 100 of /opt/conan_home/d/b/openu9de9bef318f05/b/src/pxr/base/tf/pyUtils.cpp -- Import failed for module 'pxr.MoonrayShaderDiscovery'!
+ModuleNotFoundError: No module named 'pxr.MoonrayShaderDiscovery'
+[OpenColorIO Info]: Color management disabled. (Specify the $OCIO environment variable to enable.)
+EGL 1.5
+GL_VERSION: 4.6.0 NVIDIA 580.159.04
+GL_RENDERER: NVIDIA RTX 2000 Ada Generation/PCIe/SSE2
 Camera: /McUsd/Camera
 Renderer plugin: HdStormRendererPlugin
 Recording time code: 0.000000
-Time: 0:04.04
-Memory: 423972 KB
+Time: 0:08.34
+Memory: 461984 KB
