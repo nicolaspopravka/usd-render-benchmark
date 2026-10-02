@@ -13,7 +13,7 @@ This is an independent community project. It is not ASWF or OpenUSD
 certification, and it is not a renderer performance ranking.
 
 > [!NOTE]
-> **Snapshot — 2026-09-29**
+> **Results snapshot — 2026-09-29; build status updated 2026-10-02**
 >
 > - **New annual runs:** CY2023, CY2024 and CY2025 each run GL/Storm, MoonRay
 >   and Cycles against one OpenUSD installation in one runnable image. Each
@@ -54,11 +54,12 @@ A benchmark result has two separate inputs:
 
 Image composition and publishing live in
 [`usd-render-benchmark-stack`](https://github.com/nicolaspopravka/usd-render-benchmark-stack).
-The run branch is mounted at `/usr/local/usd-render-benchmark`, so its
-`render_script.sh` executes without being copied into the image. Logs, renders,
-and the generated summary are written back into the mounted checkout.
+The caller mounts the run branch and selects that directory as the container's
+working directory, so `render_script.sh` executes without being copied into
+the image. Logs and renders remain in the mounted checkout; summary generation
+is a separate runner step.
 
-The [`demo/run1`](https://github.com/nicolaspopravka/usd-render-benchmark/tree/4d296c883a10fe66315e10bb599cb1e26a941d83)
+The [`demo/run1`](https://github.com/nicolaspopravka/usd-render-benchmark/tree/513f2573608f7e3226ac5752ead431fa0a0ecfcc)
 branch is the first published example of this model. Stack workflow
 [run 34144139279](https://github.com/nicolaspopravka/usd-render-benchmark-stack/actions/runs/34144139279)
 mounted the branch into the CY2027 runnable image and completed a Storm
@@ -78,7 +79,7 @@ supplies the benchmark configuration and retains its outputs.
 | --- | --- | --- | --- |
 | [CY2023](https://github.com/nicolaspopravka/usd-render-benchmark/tree/7e356c4a62de7158e9176541f6528818d416e755) | 23.08 | GL, MoonRay 2026.29.1, Cycles 4.0.2 | 8 across McUsd, OpenChessSet and ALab |
 | [CY2024](https://github.com/nicolaspopravka/usd-render-benchmark/tree/dbc158766a2fc0a0a9153679883e9f6e21f13ce5) | 24.08 | GL, MoonRay 2026.29.1, Cycles 4.3.0 | 8 across McUsd, OpenChessSet and ALab |
-| [CY2025](https://github.com/nicolaspopravka/usd-render-benchmark/tree/a6d119c921e9dd3fa9cd04abc13eeede9db411f4) | 25.05.01 | Storm, MoonRay 2026.29.1, Cycles 4.5.0 | 8 across McUsd, OpenChessSet and ALab |
+| [CY2025](https://github.com/nicolaspopravka/usd-render-benchmark/tree/391bb4b200044bdb56d860b6ac14563c690635be) | 25.05.01 | Storm, MoonRay 2026.29.1, Cycles 4.5.0 | 8 across McUsd, OpenChessSet and ALab |
 
 Each README includes a render sheet, image and process outcomes, the pinned
 container digest, and Docker instructions for using the branch as a run input.
@@ -93,10 +94,19 @@ of the available dependencies; the result README records those exceptions.
 The annual benchmark leaves device selection unchanged. Its results are not
 an all-GPU benchmark.
 
-CY2023 and CY2024 retain the earlier images. Their rebuilds with the newer
-settings hit [Python/header discovery](https://github.com/nicolaspopravka/usd-render-benchmark/issues/53)
-and [oslc/libLTO loading](https://github.com/nicolaspopravka/usd-render-benchmark/issues/54),
-respectively. These are rebuild failures, not a withdrawal of the existing runs.
+The published CY2023 and CY2024 results retain their recorded image digests.
+The [Python discovery fix](https://github.com/nicolaspopravka/usd-render-benchmark/issues/53)
+is now integrated into the stack build script through
+[PR #14](https://github.com/nicolaspopravka/usd-render-benchmark-stack/pull/14).
+The tested default bases still have separate
+[OSL/LLVM runtime](https://github.com/nicolaspopravka/usd-render-benchmark/issues/54)
+and [older-Cycles/OpenVDB compatibility](https://github.com/nicolaspopravka/usd-render-benchmark/issues/56)
+problems. The build script supports disabling those Cycles features explicitly;
+ASWF's delayed-loading default is being discussed in
+[#488](https://github.com/AcademySoftwareFoundation/aswf-docker/issues/488).
+Full builds and benchmark renders with refreshed bases are deferred until new
+upstream images are released. These build updates do not change the published
+results or establish restored OSL or volume support.
 
 ### Remaining environment coverage
 
@@ -168,6 +178,15 @@ remains the historical mixed-result reference.
 Additional run-level findings are tracked in the
 [benchmark issues](https://github.com/nicolaspopravka/usd-render-benchmark/issues).
 
+The MoonRay client remaining alive after its Arras worker exits is tracked in
+[#51](https://github.com/nicolaspopravka/usd-render-benchmark/issues/51) and
+[OpenMoonRay #309](https://github.com/OpenMoonRay/openmoonray/issues/309).
+The proposed fix in [hdMoonray draft PR #19](https://github.com/OpenMoonRay/hdMoonray/pull/19)
+passed a full build and a test that killed the worker during rendering: the
+client reported the failure and exited two seconds later. That is failure-handling
+evidence, not a successful render or validation of reconnecting and repeated
+failures. The patch is not included in the published reference results.
+
 ## Community coordination
 
 Use the
@@ -180,7 +199,7 @@ diagnostic runs remain separate.
 Community benchmark attempts are welcome through
 [the Moana Island Scene / MoonRay discussion](https://github.com/nicolaspopravka/usd-render-benchmark/discussions/55).
 The initial request is the Moana Island Scene with MoonRay on the new CY2025 image; its
-[dedicated recipe](https://github.com/nicolaspopravka/usd-render-benchmark/blob/a6d119c921e9dd3fa9cd04abc13eeede9db411f4/docs/MOANA_MOONRAY.md)
+[dedicated recipe](https://github.com/nicolaspopravka/usd-render-benchmark/blob/391bb4b200044bdb56d860b6ac14563c690635be/docs/MOANA_MOONRAY.md)
 runs that combination separately and records a bounded attempt. Coordinate
 before starting, and share failures as well as images. Contributed results are
 reviewed with their hardware, configuration, attribution and sharing terms
