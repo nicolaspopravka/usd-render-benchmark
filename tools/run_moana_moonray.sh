@@ -13,6 +13,7 @@ scene=$(cd "$1" && pwd -P)
 [[ -f "$scene/usd/island.usda" ]] || { echo "Missing $scene/usd/island.usda" >&2; exit 2; }
 # Docker --mount uses commas as separators.
 [[ "$repo$scene" != *,* ]] || { echo 'Use paths without commas.' >&2; exit 2; }
+[[ -f "$repo/tools/moana_moonray_worker.sh" ]] || exit 2
 image=$(cat "$repo/runnable_image.txt")
 [[ "$image" =~ ^ghcr.io/nicolaspopravka/usd-render-benchmark@sha256:[0-9a-f]{64}$ ]] || exit 2
 seconds=$2
@@ -40,6 +41,7 @@ finish() {
 trap finish EXIT
 trap 'exit 130' INT
 trap 'exit 143' TERM
+printf '%s\n' docker > "$out/runtime.txt"
 printf '%s\n' "$image" > "$out/image.txt"
 printf '%s\n' "$mode" > "$out/moonray-mode.txt"
 printf '%s\n' "$seconds" > "$out/deadline-seconds.txt"
@@ -61,42 +63,9 @@ docker create --name "$container" --init --gpus all \
     --mount "type=bind,source=$repo,target=/benchmark,readonly" \
     --mount "type=bind,source=$scene,target=/moana,readonly" \
     --mount "type=bind,source=$out,target=/results" \
-    --workdir /benchmark --entrypoint bash "$image" -c '
-set -uo pipefail
-mkdir -p /results/tmp
-nvidia-smi > /results/nvidia-smi.txt 2>&1
-printf "nofile soft=%s hard=%s\n" "$(ulimit -Sn)" "$(ulimit -Hn)"
-rez env aswf -- python3 -c "from pxr import Usd; print(Usd.GetVersion())"
-resources() {
-    date -u +%FT%TZ
-    nvidia-smi --query-gpu=name,utilization.gpu,memory.used,memory.total --format=csv,noheader 2>&1
-    nvidia-smi --query-compute-apps=pid,process_name,used_gpu_memory --format=csv,noheader 2>&1
-    for f in /sys/fs/cgroup/memory.max /sys/fs/cgroup/memory.current \
-             /sys/fs/cgroup/memory.peak /sys/fs/cgroup/memory.events \
-             /sys/fs/cgroup/memory/memory.limit_in_bytes \
-             /sys/fs/cgroup/memory/memory.max_usage_in_bytes \
-             /sys/fs/cgroup/memory/memory.failcnt /sys/fs/cgroup/memory/memory.oom_control; do
-        if test -r "$f"; then printf "%s\n" "$f"; cat "$f"; fi
-    done
-}
-(while :; do resources >> /results/resources.txt; sleep 30; done) &
-sampler=$!
-render=(rez env aswf -- usdrecord)
-if [[ "$MOONRAY_MODE" == xpu ]]; then
-    # Apply after Rez resolves its packages, which otherwise replace this root.
-    render=(rez env aswf -- env HDMOONRAY_EXEC_MODE=xpu REZ_MOONRAY_ROOT=/usr/local ./tools/usdrecord_egl.py)
-fi
-printf "Requested MoonRay mode: %s\n" "$MOONRAY_MODE"
-/usr/bin/time -o /results/time.txt -f "Time: %E\nMemory: %M KiB\nProcess exit: %x" \
-    "${render[@]}" --camera /island/cam/shotCam --renderer Moonray \
-    --purposes render /moana/usd/island.usda /results/island.jpg
-status=$?
-printf "%s\n" "$status" > /results/render-exit.txt
-resources >> /results/resources.txt
-kill "$sampler" 2>/dev/null || true
-wait "$sampler" 2>/dev/null || true
-exit "$status"
-' > "$out/container-id.txt"
+    --env MOANA_RUNTIME=docker \
+    --workdir /benchmark --entrypoint bash "$image" \
+    tools/moana_moonray_worker.sh /moana /results "$mode" > "$out/container-id.txt"
 created=1
 docker start "$container" >/dev/null
 set +e

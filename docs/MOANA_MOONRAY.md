@@ -19,29 +19,32 @@ Two separate MoonRay attempts still have no image:
 
 | Attempt | Container RAM limit | Observed peak | Outcome |
 | --- | --- | --- | --- |
-| Earlier CPU configuration | 262.6 GiB | 105.9 GiB | Scene preparation completed in 8:27; deadline reached while rendering |
+| Earlier CPU configuration | 262.6 GiB | 106.0 GiB | Scene preparation completed in 8:27; subsequently timed out without an image |
 | September 29, XPU requested, A100 80 GB | 116.4 GiB | 83.1 GiB | Deadline reached during scene preparation after a 20-minute window |
+
+Historical evidence: [CPU log](https://github.com/nicolaspopravka/usd-render-benchmark/blob/e93c102dd788a718138b5464c354bf4574407383/logs/Moonray_island.log),
+[CPU resource record](https://github.com/nicolaspopravka/usd-render-benchmark/blob/e93c102dd788a718138b5464c354bf4574407383/logs/Moonray_island.resources.txt),
+[XPU log](https://github.com/nicolaspopravka/usd-render-benchmark/blob/43b4263c4f6364a01dcefd1b7e71a31d919c2c75/logs/Moonray_island.log),
+and [XPU resource record](https://github.com/nicolaspopravka/usd-render-benchmark/blob/43b4263c4f6364a01dcefd1b7e71a31d919c2c75/logs/Moonray_island.resources.txt).
 
 Neither recorded an OOM kill. The second attempt did not reach the point where
 GPU engagement could be established. These are failed, timed-out attempts;
-final memory demand and completion time remain unknown. The
-[CPU resource record](moonray-island-observed-resources.txt)
-retains the first attempt's observations; the figures in the table above are
-the record for both.
+final memory demand and completion time remain unknown.
 
-An isolated MoonRay Teapot probe reached shading with XPU requested and
-reported device memory use on the pod console, though that telemetry was not
-retained with the run notes. Its process still failed with status 1. The
-summary produced for that run also contains inherited Cycles and GL rows; only
-its MoonRay row belongs to the isolated attempt. The absence of MoonRay's CPU
-fallback message is not on its own proof of GPU engagement, because the run has
-to be shown reaching shading first.
+Both configurations were attempted again on October 3, 2026, with separate
+results shared through this recipe:
 
-A separate Cycles OptiX probe compiled the OptiX kernel and exited 0 on an
-earlier `2025.3-default` image.
-That is supporting evidence for the GPU build settings, not an OptiX test of
-every scene or this exact released digest. Its elapsed time includes kernel
-compilation and is not a useful GPU performance comparison.
+- [CPU/default attempt](https://github.com/nicolaspopravka/usd-render-benchmark/discussions/55#discussioncomment-18740786):
+  preparation completed in 6:33; the 40-minute deadline expired without an image.
+  Peak container memory was 105.7 GiB.
+- [XPU-requested A100 attempt](https://github.com/nicolaspopravka/usd-render-benchmark/discussions/55#discussioncomment-18740787):
+  the 20-minute deadline expired during preparation without an image.
+  Peak sampled container memory was 90.7 GiB.
+
+Each reply includes its configuration, differences from the earlier attempt,
+full logs and resource records. Neither recorded a sampled OOM kill. These
+remain incomplete attempts; they do not establish completion time, final memory
+demand or GPU engagement.
 
 There is no evidence yet that XPU reduces the Moana Island Scene's host-memory
 requirement. Please record both GPU and container memory. MoonRay's Arras worker
@@ -129,10 +132,13 @@ retained beneath `tmp/`; the stopped container is retained for investigation.
 After reviewing the output, remove it with the `docker rm` command printed by
 the helper. Rootful Docker can create root-owned output files.
 
-This helper has been checked with lifecycle fixtures and local container
-preflights. Its full GPU/Arras execution has not yet been validated on an NVIDIA
-host. A first community attempt should preserve setup failures as well as
-render failures.
+The Docker helper delegates rendering and resource sampling to
+`tools/moana_moonray_worker.sh`; the helper enforces the whole-container deadline
+and retains Docker state and logs.
+The shared worker was exercised in the two bounded attempts linked above using
+direct RunPod execution. Worker and Docker lifecycle fixtures also pass, but
+the refactored Docker helper has not been exercised on a real NVIDIA host.
+Preserve setup failures as well as render failures.
 
 ## Share the result
 
