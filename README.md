@@ -82,7 +82,7 @@ supplies the benchmark configuration and retains its outputs.
 | [CY2025](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/cy2025) | 25.05.01 | Storm, MoonRay 2026.29.1, Cycles 4.5.0 | 8 across McUsd, OpenChessSet and ALab |
 
 Each run README includes a render sheet, configuration and links to its
-summary, images and logs. Shared Docker instructions are below.
+summary, images and logs. Shared Docker instructions are in the [running guide](docs/RUNNING.md).
 Success means exit 0; nonzero exits are failures. Image presence and appearance
 are recorded separately. These three
 snapshots have no Moana Island Scene images; Cycles/ALab is also absent.
@@ -90,7 +90,7 @@ snapshots have no Moana Island Scene images; Cycles/ALab is also absent.
 CY2025 now uses the September 29 image with upstream default GPU support,
 including MoonRay XPU and Cycles OptiX, plus OSL support. NanoVDB,
 OpenImageDenoise and the precompiled dependency bundle remain disabled because
-of the available dependencies; the exceptions are listed below.
+of the available dependencies; the exceptions are listed in the [running guide](docs/RUNNING.md#limitations).
 The annual benchmark leaves device selection unchanged. Its results are not
 an all-GPU benchmark.
 
@@ -207,198 +207,13 @@ before being published as separate snapshots. Asset downloads remain with the
 original providers. External code submissions remain deferred pending the
 repository's contribution terms.
 
-## Run an annual benchmark locally
+## Running the benchmark
 
-The run READMEs use the names Storm, MoonRay, Cycles and
-Embree. Older Storm runs use the literal `GL` name in their harnesses,
-logs and output paths; those names remain unchanged. Recorded GPU hardware
-does not establish GPU computation by every delegate. The annual runs leave
-device selection at its default, and Cycles uses the CPU.
-
-The published results use a headless EGL wrapper in place of stock
-`usdrecord`'s Qt/PySide display context. The branch's Rez OpenUSD package
-redirects `usdrecord` to `tools/usdrecord_egl.py`, which initializes EGL via
-ctypes. This is an invocation adaptation, not a stock `usdrecord` reference
-run. A CPU-computing delegate still requires NVIDIA graphics access for this
-wrapper. The demo uses software rendering and has separate instructions.
-
-Use a Linux x86-64 host with Docker, a compatible NVIDIA driver and the
-[NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).
-Docker Desktop on macOS does not provide this NVIDIA setup. Use a fresh
-checkout: the harness overwrites logs and rendered images. Allow disk space
-for the image and expanded assets, and sufficient host memory for the scenes.
-
-Choose `aswf/cy2023`, `aswf/cy2024` or `aswf/cy2025`:
-
-```bash
-RUN_BRANCH=aswf/cy2025
-git lfs install
-git clone --branch "$RUN_BRANCH" --single-branch \
-  https://github.com/nicolaspopravka/usd-render-benchmark.git annual-run
-cd annual-run
-git submodule update --init --recursive
-git -C assets lfs pull
-git -C scenes/ALab lfs pull
-```
-
-The published result branches use `assets` revision
-`907d5f17bbe933fc14441a3f3ab69a5bd8abe32a` and ALab revision
-`20a3e1d5ea034072fc97d5fee04e51016c11218a`. ALab additionally requires the
-**v2.2.0 Techvar Assets** and **Baked Procedurals** from
-[ALab](https://dpel.aswf.io/alab/), merged according to its
-[pinned instructions](https://github.com/DigitalProductionExampleLibrary/ALab/blob/20a3e1d5ea034072fc97d5fee04e51016c11218a/README.md).
-The scene must be `scenes/ALab/ALab/entry.usda`. The recorded techvars archive
-SHA-256 is `d142891ed4ad2365f8dd6b583e9dac88982131d7709dd8e6f6bc0f1516007ec6`.
-No complete checksum manifest of the expanded payload was retained; record
-the packages used rather than assuming Git revisions establish identical assets.
-All three current annual harnesses skip Moana Island Scene, so its download
-is unnecessary for this rerun. The `problematic_combinations` entries in `render_script.sh` describe
-rerun behavior; they do not erase historical attempts preserved in a published snapshot.
-
-Set `RUNNABLE_IMAGE` to the full pinned Container value in the selected
-branch's README. The image supplies the renderer environment; the mounted
-branch supplies the harness, Rez packages and output directories.
-
-```bash
-RUNNABLE_IMAGE=$(sed -n 's/^- Container: `\([^`]*\)`.*/\1/p' README.md)
-case "$RUNNABLE_IMAGE" in
-  *@sha256:*) ;;
-  *) printf '%s\n' 'A pinned Container reference is required.' >&2; exit 1 ;;
-esac
-docker pull "$RUNNABLE_IMAGE"
-mkdir -p local-runs
-curl -fsSL https://raw.githubusercontent.com/nicolaspopravka/usd-render-benchmark/main/tools/system_specs.py \
-  -o local-runs/system_specs.py
-RUN_REVISION=$(git rev-parse HEAD)
-printf '%s\n' "$RUN_REVISION" > local-runs/checkout.txt
-git diff --binary > local-runs/checkout.patch
-git submodule status --recursive > local-runs/submodules.txt
-
-docker run --rm --gpus all \
-  --env NVIDIA_DRIVER_CAPABILITIES=compute,utility,graphics \
-  --env RUNNABLE_IMAGE="$RUNNABLE_IMAGE" --env RUN_REVISION="$RUN_REVISION" \
-  --ulimit nofile=65536:65536 \
-  --mount type=bind,source="$PWD",target=/benchmark \
-  --mount type=bind,source="$PWD/local-runs/system_specs.py",target=/tmp/system_specs.py,readonly \
-  --workdir /benchmark --entrypoint bash "$RUNNABLE_IMAGE" -c '
-    set -e
-    nvidia-smi > local-runs/nvidia-smi.txt
-    printf "image=%s\ncheckout=%s\nnofile=%s\n" \
-      "$RUNNABLE_IMAGE" "$RUN_REVISION" "$(ulimit -Sn)" > local-runs/run-details.txt
-    bash render_script.sh
-    python3 generate_render_summary.py --system-specs "$(python3 /tmp/system_specs.py)"
-  '
-```
-
-Keep the working directory and relative package paths shown above. Skips
-remain active. Inspect individual logs and images even if Docker returns 0.
-The command regenerates the summary.
-The helper tries to replicate the Yard-era Arnold-style system specs inside a
-Docker container.
-Rootful Docker may write root-owned files into the checkout.
-
-To regenerate the annual render sheet, use the same container and Rez environment
-as the renders. Pillow 10.1 or newer is required:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/nicolaspopravka/usd-render-benchmark/main/tools/generate_render_sheet.py \
-  -o local-runs/generate_render_sheet.py
-docker run --rm \
-  --mount type=bind,source="$PWD",target=/benchmark \
-  --workdir /benchmark --entrypoint bash "$RUNNABLE_IMAGE" -c '
-    set -e
-    python3 -m pip install "Pillow>=10.1"
-    rez env aswf -- python3 local-runs/generate_render_sheet.py
-  '
-```
-
-The sheet reads images from `renderers/` and versions from the resolved Rez
-packages. It can be generated independently of `render_summary.md`.
-Missing images are labeled Skipped.
-
-
-CY2023/CY2024 Cycles builds disable OSL and OpenVDB support because of the
-recorded dependency problems. CY2025 disables `WITH_CYCLES_NANOVDB`,
-`WITH_CYCLES_OPENIMAGEDENOISE` and `WITH_LIBS_PRECOMPILED`; it includes OSL
-and GPU-capable delegate builds. These are project-built ASWF-based images,
-not ASWF-published benchmark images. They do not establish equivalent
-three-delegate coverage on CY2026/CY2027.
-
-Image startup/Rez and recipe syntax were checked; a complete fresh-asset NVIDIA
-replay of these instructions has not been performed. CY2023 OpenUSD import
-failed with an illegal instruction in the local x86-64 Docker Desktop VM;
-the cause was not investigated. Check import on the intended host before a
-long run. Memory measurements may omit Arras worker memory; hardware and
-driver differences prevent a controlled performance comparison between years.
-Success/Failure records and image appearance must be read separately. MoonRay
-empty-token diagnostics also occur in successful CY2023 renders; diagnostics
-alone do not establish a nonzero exit. No-image historical logs excluded from
-the current publication remain in Git history.
-
-## Run the demo
-
-[`demo/run1`](https://github.com/nicolaspopravka/usd-render-benchmark/tree/demo/run1)
-demonstrates a benchmark branch mounted into a reusable image. Its harness
-requests `assets/full_assets/Teapot/Teapot.usd`, camera `main_cam`, with Hydra
-Storm under its historical `GL` command name. It uses Mesa software rendering
-under Xvfb and stock `usdrecord`; no NVIDIA GPU or EGL wrapper is required.
-It does not establish support for other delegates/scenes or a performance
-comparison. The retained summary contains this one execution's timings and
-memory measurements.
-
-The [recorded Actions run](https://github.com/nicolaspopravka/usd-render-benchmark-stack/actions/runs/34244241519)
-identifies the image digest and installed Mesa packages. The exact OpenUSD
-version was not recorded in the published outputs or workflow log. The
-image tag alone is not an OpenUSD version record. The base image is pinned
-below; additional distro packages are installed when running the demo.
-
-### Through GitHub Actions
-
-The `run-demo` workflow is maintained in
-[`usd-render-benchmark-stack`](https://github.com/nicolaspopravka/usd-render-benchmark-stack).
-It clones the selected branch and its submodules, mounts it into the image,
-runs the harness with software graphics, generates the summary separately,
-and uploads logs, rendered images and the summary. Workflow updates since
-the recorded run do not change that historical result.
-
-```bash
-DEMO_IMAGE='ghcr.io/nicolaspopravka/usd-render-benchmark:2026@sha256:6d35b1c7db7e04387b6999f0e688d8612f33fd6b6f3e1e0aaa202fe2f65dd4d5'
-gh workflow run run-demo.yml \
-  --repo nicolaspopravka/usd-render-benchmark-stack \
-  -f run_branch=demo/run1 \
-  -f runnable_image="$DEMO_IMAGE"
-```
-
-### Locally
-
-Use Docker with Linux x86-64 container support and Git LFS. Start with a fresh
-checkout; the command overwrites its logs, rendered image and summary.
-
-```bash
-git lfs install
-git clone --branch demo/run1 --single-branch --recurse-submodules \
-  https://github.com/nicolaspopravka/usd-render-benchmark.git run-branch
-git -C run-branch/assets lfs pull
-mkdir -p local-runs
-curl -fsSL https://raw.githubusercontent.com/nicolaspopravka/usd-render-benchmark/main/tools/system_specs.py \
-  -o local-runs/system_specs.py
-DEMO_IMAGE=$(sed -n 's/^- Container: `\([^`]*\)`.*/\1/p' run-branch/README.md)
-docker run --rm \
-  --platform linux/amd64 \
-  --mount type=bind,source="$PWD/run-branch",target=/usr/local/usd-render-benchmark \
-  --mount type=bind,source="$PWD/local-runs/system_specs.py",target=/tmp/system_specs.py,readonly \
-  --workdir /usr/local/usd-render-benchmark --entrypoint bash \
-  "$DEMO_IMAGE" -c '
-    set -e
-    dnf install -y mesa-dri-drivers mesa-libEGL libepoxy
-    LIBGL_ALWAYS_SOFTWARE=1 xvfb-run -a bash render_script.sh
-    python3 generate_render_summary.py --system-specs "$(python3 /tmp/system_specs.py)"
-  '
-```
-
-The outputs are `logs/GL_Teapot.log`, `renderers/GL/Teapot.jpg` and
-`render_summary.md`. Inspect the log and image even if the container exits 0.
-These relocated instructions have syntax checks, not a new render validation.
+Start with the [software demo](docs/RUNNING.md#software-demo) to render one
+Teapot scene without an NVIDIA GPU. The same guide covers
+[annual NVIDIA runs](docs/RUNNING.md#annual-nvidia-benchmark) and optional
+render-sheet generation. Annual instructions have not had a complete
+fresh-asset NVIDIA replay; published results are not a guarantee of exact replay.
 
 ## Reading the results
 
