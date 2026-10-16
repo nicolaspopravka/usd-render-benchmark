@@ -9,9 +9,9 @@ environment and OpenUSD 25.05.01. It is not a complete CY2025 rerun of the origi
 
 - Renderers: Storm
 - OpenUSD: 25.05.01
-- Container: `aswf/ci-vfxall:2025`
-- GPU: NVIDIA RTX PRO 4000 Blackwell, 24 GB
-- Driver: NVIDIA 580.159.04
+- Container: `ghcr.io/nicolaspopravka/usd-render-benchmark@sha256:adaca41a38a486b5876f3f7b11e25dcde100c7ede3f5e86b9fa85f0f80011415`
+- GPU: NVIDIA RTX PRO 4500 Blackwell, 32 GB
+- Driver: NVIDIA 580.126.20
 - OS: Rocky Linux 8.10
 
 ## Results
