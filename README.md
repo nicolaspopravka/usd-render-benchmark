@@ -13,7 +13,7 @@ This is an independent community project. It is not ASWF or OpenUSD
 certification, and it is not a renderer performance ranking.
 
 > [!NOTE]
-> **Results snapshot — 2026-09-29; build status updated 2026-10-02**
+> **Results snapshot — 2026-10-16; build status updated 2026-10-15**
 >
 > - **New annual runs:** CY2023, CY2024 and CY2025 each run GL/Storm, MoonRay
 >   and Cycles against one OpenUSD installation in one runnable image. Each
@@ -24,8 +24,9 @@ certification, and it is not a renderer performance ranking.
 >   including a four-scene patched CY2027 run; the MoonRay CY2025 result
 >   with focused texture and shading follow-ups; and five annual Embree
 >   results covering CY2023–CY2027 on ASWF prebuilt stacks, plus two
->   CY2027 variants demonstrating the AO-disabled and scene-lit paths. The
->   refreshed CY2027 image also has an updated three-scene Storm result.
+>   CY2027 variants demonstrating the AO-disabled and scene-lit paths. Refreshed
+>   CY2023–CY2027 images have updated three-scene Storm results. The October
+>   CY2023–CY2025 reference reruns retain grey OpenChessSet materials.
 > - **Run model demo:** [`demo/run1`](https://github.com/nicolaspopravka/usd-render-benchmark/tree/demo/run1)
 >   mounts a one-render Storm/Teapot branch into a published image on
 >   a GitHub-hosted runner. This demonstrates the branch/image split.
@@ -98,15 +99,16 @@ The published CY2023 and CY2024 results retain their recorded image digests.
 The [Python discovery fix](https://github.com/nicolaspopravka/usd-render-benchmark/issues/53)
 is now integrated into the stack build script through
 [PR #14](https://github.com/nicolaspopravka/usd-render-benchmark-stack/pull/14).
-The tested default bases still have separate
+The older published composite images retain their recorded
 [OSL/LLVM runtime](https://github.com/nicolaspopravka/usd-render-benchmark/issues/54)
-and [older-Cycles/OpenVDB compatibility](https://github.com/nicolaspopravka/usd-render-benchmark/issues/56)
-problems. The build script supports disabling those Cycles features explicitly;
-ASWF's delayed-loading default is being discussed in
-[#488](https://github.com/AcademySoftwareFoundation/aswf-docker/issues/488).
-Full builds and benchmark renders with refreshed bases are deferred until new
-upstream images are released. These build updates do not change the published
-results or establish restored OSL or volume support.
+and [Cycles/OpenVDB compatibility](https://github.com/nicolaspopravka/usd-render-benchmark/issues/56)
+limitations. ASWF's delayed-loading change is now merged in
+[PR #490](https://github.com/AcademySoftwareFoundation/aswf-docker/pull/490),
+closing [#488](https://github.com/AcademySoftwareFoundation/aswf-docker/issues/488).
+The October [stack refresh](https://github.com/nicolaspopravka/usd-render-benchmark-stack/pull/24)
+builds Cycles with OpenVDB enabled on CY2023–CY2025 and OSL enabled on
+CY2024/25; CY2023 retains OSL disabled. Those build checks do not change the
+published annual results or establish volume-rendering correctness.
 
 ### Remaining environment coverage
 
@@ -132,15 +134,20 @@ Each linked label reports successful process exits out of three scenes,
 followed by the observed OpenChessSet appearance. `Textured`, `black`, and
 `fallback` describe that image, not the other two scenes.
 
-Most links below point to runs published in July and August. The CY2027
-prebuilt Storm result was rerun after the September ASWF image refresh.
+The Pixar and ASWF build-script links retain their earlier runs. Prebuilt
+Storm results were refreshed for CY2027 in September and CY2023–CY2026 in October.
+The CY2023–CY2025 reference reruns preserve the original MaterialX search-path
+defaults: OpenChessSet remains grey fallback, pixel-identical to the earlier
+results. The previous OSL/OIIO plugin-loading errors are absent. CY2023 ALab
+lighting changed; CY2024/25 still fail at frame 1004 on a value-clip assertion.
+These runs do not establish a material fix or a speed improvement across hosts.
 
 | Cycle / renderer | Pixar `build_usd.py` | ASWF `build_usd.sh` | ASWF prebuilt `ci-vfxall` |
 | --- | --- | --- | --- |
-| CY2023 · GL | [3/3 textured](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/build_usd_pixar/cy2023-gl-only) | [3/3 textured](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/build_usd/cy2023-gl-only) | [3/3 fallback](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/cy2023-gl-only) |
-| CY2024 · GL | [2/3 textured](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/build_usd_pixar/cy2024-gl-only) | [2/3 black](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/build_usd/cy2024-gl-only) | [1/3 fallback](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/cy2024-gl-only) |
-| CY2025 · Storm | [2/3 textured](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/build_usd_pixar/cy2025-storm-only) | [2/3 textured](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/build_usd/cy2025-storm-only) | [1/3 fallback](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/cy2025-storm-only) |
-| CY2026 · Storm | [3/3 textured](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/build_usd_pixar/cy2026-storm-only) | [3/3 textured](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/build_usd/cy2026-storm-only) | [0/3 fallback](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/cy2026-storm-only) |
+| CY2023 · GL | [3/3 textured](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/build_usd_pixar/cy2023-gl-only) | [3/3 textured](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/build_usd/cy2023-gl-only) | [3/3 fallback — refreshed image](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/cy2023-gl-only) |
+| CY2024 · GL | [2/3 textured](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/build_usd_pixar/cy2024-gl-only) | [2/3 black](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/build_usd/cy2024-gl-only) | [2/3 fallback — refreshed image](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/cy2024-gl-only) |
+| CY2025 · Storm | [2/3 textured](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/build_usd_pixar/cy2025-storm-only) | [2/3 textured](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/build_usd/cy2025-storm-only) | [2/3 fallback — refreshed image](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/cy2025-storm-only) |
+| CY2026 · Storm | [3/3 textured](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/build_usd_pixar/cy2026-storm-only) | [3/3 textured](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/build_usd/cy2026-storm-only) | [3/3 textured — refreshed image](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/cy2026-storm-only) |
 | CY2027 · Storm | [3/3 textured](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/build_usd_pixar/cy2027-storm-only) | [3/3 fallback](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/build_usd/cy2027-storm-only) | [3/3 textured — refreshed image](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/cy2027-storm-only) |
 
 ## Delegate coverage
@@ -171,7 +178,7 @@ remains the historical mixed-result reference.
 | **Waiting upstream** | Cycles Hydra diagnostics, AOV reporting, unresolved asset paths, and deferred geometry deletion are under review. UDIM tile discovery remains separate. | Cycles [PR #78](https://projects.blender.org/blender/cycles/pulls/78) · [issue #77](https://projects.blender.org/blender/cycles/issues/77) · [patched CY2027 run](https://github.com/nicolaspopravka/usd-render-benchmark/tree/test/cy2027-cycles-only) |
 | **Waiting upstream** | MoonRay refinement-zero smoothing and missing light-link handling are awaiting upstream integration. | hdMoonray [#11](https://github.com/OpenMoonRay/hdMoonray/pull/11) and [#12](https://github.com/OpenMoonRay/hdMoonray/pull/12) are open |
 | **Released improvement** | In the refreshed ASWF images, the tested OSL and OIIO discovery plugins load without `LD_PRELOAD`. The benchmark finding and the ASWF tracking issue are closed. | [Fork issue #3](https://github.com/nicolaspopravka/usd-render-benchmark/issues/3) · [aswf-docker #450](https://github.com/AcademySoftwareFoundation/aswf-docker/issues/450) |
-| **Released improvement** | Refreshed CY2027 prebuilt Storm renders OpenChessSet with its textured materials on OpenUSD 26.08 / MaterialX 1.39.5, without preload or a MaterialX search-path override. Grey results from earlier VFX Platform years remain tracked separately. | [Refreshed CY2027 result](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/cy2027-storm-only) · [Fork issue #10](https://github.com/nicolaspopravka/usd-render-benchmark/issues/10) · [aswf-docker #454](https://github.com/AcademySoftwareFoundation/aswf-docker/issues/454) |
+| **Released improvement** | Refreshed CY2027 prebuilt Storm renders OpenChessSet with its textured materials on OpenUSD 26.08 / MaterialX 1.39.5, without preload or a MaterialX search-path override. The refreshed CY2026 result also renders textured materials on OpenUSD 26.03. Grey results from earlier VFX Platform years remain tracked separately. Issue #10 closed the investigation, not every affected image defect. | [Refreshed CY2026 result](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/cy2026-storm-only) · [Refreshed CY2027 result](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/cy2027-storm-only) · [Fork issue #10](https://github.com/nicolaspopravka/usd-render-benchmark/issues/10) · [aswf-docker #454](https://github.com/AcademySoftwareFoundation/aswf-docker/issues/454) |
 | **Released improvement** | The refreshed CY2027 ASWF `build_usd.sh` path was reported fixed by its maintainer. The benchmark did not independently rerun that build method. | [Fork issue #2](https://github.com/nicolaspopravka/usd-render-benchmark/issues/2) · [aswf-docker #455](https://github.com/AcademySoftwareFoundation/aswf-docker/issues/455) |
 | **Waiting upstream** | Storm fails in the Ptex mipmap-loader path on two Moana Island subtrees. | OpenUSD [#4168](https://github.com/PixarAnimationStudios/OpenUSD/issues/4168) and [#4169](https://github.com/PixarAnimationStudios/OpenUSD/issues/4169) are open; crash-prevention [PR #4176](https://github.com/PixarAnimationStudios/OpenUSD/pull/4176) is under review |
 
