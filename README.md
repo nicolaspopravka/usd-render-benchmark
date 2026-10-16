@@ -9,9 +9,9 @@ environment and OpenUSD 24.08. It is not a complete CY2024 rerun of the original
 
 - Renderers: Storm
 - OpenUSD: 24.08
-- Container: `aswf/ci-vfxall:2024`
-- GPU: NVIDIA RTX PRO 4000 Blackwell, 24 GB
-- Driver: NVIDIA 580.159.04
+- Container: `ghcr.io/nicolaspopravka/usd-render-benchmark@sha256:82a1f775c6914289271d125fec3db6e5f9154357826347be634468ae69456d92`
+- GPU: NVIDIA RTX PRO 4500 Blackwell, 32 GB
+- Driver: NVIDIA 580.167.08
 - OS: Rocky Linux 8.10
 
 ## Results
