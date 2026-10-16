@@ -9,9 +9,9 @@ environment and OpenUSD 26.03. It is not a complete CY2026 rerun of the original
 
 - Renderers: Storm
 - OpenUSD: 26.03
-- Container: `aswf/ci-vfxall:2026`
-- GPU: NVIDIA RTX PRO 4000 Blackwell, 24 GB
-- Driver: NVIDIA 580.167.08
+- Container: `ghcr.io/nicolaspopravka/usd-render-benchmark@sha256:7257aa81865b3d17d5f6a8ff64d9a376c7de5a44fdbdf8538e48a82aa397f6c0`
+- GPU: NVIDIA RTX 2000 Ada Generation, 16 GB
+- Driver: NVIDIA 570.172.08
 - OS: Rocky Linux 8.10
 
 ## Results
