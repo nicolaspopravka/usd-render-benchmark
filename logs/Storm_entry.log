@@ -1,0 +1,11 @@
+Running: rez env aswf -- usdrecord --camera /root/camera01/GEO/renderCam_hrc/renderCam_buffer/renderCam_srt/renderCam --renderer "Storm" --purposes render   scenes/ALab/ALab/entry.usda "renderers/Storm/entry.jpg"
+Warning: in Sync at line 171 of /opt/conan_home/d/b/openu9522667cffb24/b/src/pxr/imaging/hdx/simpleLightTask.cpp -- Hydra Storm supports up to 16 lights, truncating the 55 found lights to this max.
+[OpenColorIO Info]: Color management disabled. (Specify the $OCIO environment variable to enable.)
+EGL 1.5
+GL_VERSION: 4.6.0 NVIDIA 595.91.07
+GL_RENDERER: NVIDIA RTX 2000 Ada Generation/PCIe/SSE2
+Camera: /root/camera01/GEO/renderCam_hrc/renderCam_buffer/renderCam_srt/renderCam
+Renderer plugin: HdStormRendererPlugin
+Recording time code: 1004.000000
+Time: 1:17.89
+Memory: 6014672 KB

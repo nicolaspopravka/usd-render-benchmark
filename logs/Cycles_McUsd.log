@@ -1,7 +1,109 @@
-Running: rez env cycles -- usdrecord --camera /McUsd/Camera --renderer "Cycles" --purposes render   assets/full_assets/McUsd/McUsd.usda "renderers/Cycles/McUsd.jpg"
-QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-nico'
+Running: rez env aswf -- usdrecord --camera /McUsd/Camera --renderer "Cycles" --purposes render   assets/full_assets/McUsd/McUsd.usda "renderers/Cycles/McUsd.jpg"
+[OpenColorIO Info]: Color management disabled. (Specify the $OCIO environment variable to enable.)
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'useSpecularWorkflow' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'fallback' on node '/uv_reader' ('attribute'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'bias' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'scale' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateConnections at line 403 of /opt/build-cycles/cycles/src/hydra/material.cpp -- USD input 'emissiveColor' on node '/PreviewSurface' maps to unavailable Cycles input 'emission' on 'principled_bsdf'
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'useSpecularWorkflow' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'fallback' on node '/uv_reader' ('attribute'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'bias' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'scale' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'opacityThreshold' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'useSpecularWorkflow' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'fallback' on node '/uv_reader' ('attribute'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'bias' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'scale' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'opacityThreshold' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'useSpecularWorkflow' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'fallback' on node '/uv_reader' ('attribute'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'bias' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'scale' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'opacityThreshold' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'useSpecularWorkflow' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'fallback' on node '/uv_reader' ('attribute'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'bias' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'scale' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'opacityThreshold' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'useSpecularWorkflow' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'fallback' on node '/uv_reader' ('attribute'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'bias' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'scale' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'opacityThreshold' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'useSpecularWorkflow' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'fallback' on node '/uv_reader' ('attribute'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'bias' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'scale' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'useSpecularWorkflow' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'fallback' on node '/uv_reader' ('attribute'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'bias' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'scale' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'useSpecularWorkflow' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'fallback' on node '/uv_reader' ('attribute'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'bias' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'scale' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'useSpecularWorkflow' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'fallback' on node '/uv_reader' ('attribute'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'bias' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'scale' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'useSpecularWorkflow' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'fallback' on node '/uv_reader' ('attribute'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'bias' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'scale' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'useSpecularWorkflow' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'fallback' on node '/uv_reader' ('attribute'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'bias' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'scale' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'useSpecularWorkflow' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'fallback' on node '/uv_reader' ('attribute'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'bias' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'scale' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'useSpecularWorkflow' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'fallback' on node '/uv_reader' ('attribute'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'bias' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'scale' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'opacityThreshold' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'useSpecularWorkflow' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'fallback' on node '/uv_reader' ('attribute'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'useSpecularWorkflow' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'fallback' on node '/uv_reader' ('attribute'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'bias' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'scale' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'opacityThreshold' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'useSpecularWorkflow' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'fallback' on node '/uv_reader' ('attribute'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'bias' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'scale' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'opacityThreshold' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'useSpecularWorkflow' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'fallback' on node '/uv_reader' ('attribute'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'bias' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'scale' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'opacityThreshold' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'useSpecularWorkflow' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'fallback' on node '/uv_reader' ('attribute'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'bias' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'scale' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'useSpecularWorkflow' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'fallback' on node '/uv_reader' ('attribute'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'bias' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'scale' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'useSpecularWorkflow' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'fallback' on node '/uv_reader' ('attribute'); value ignored
+Warning: in UpdateConnections at line 403 of /opt/build-cycles/cycles/src/hydra/material.cpp -- USD input 'emissiveColor' on node '/PreviewSurface' maps to unavailable Cycles input 'emission' on 'principled_bsdf'
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'useSpecularWorkflow' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'fallback' on node '/uv_reader' ('attribute'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'bias' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'scale' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'useSpecularWorkflow' on node '/PreviewSurface' ('principled_bsdf'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'fallback' on node '/uv_reader' ('attribute'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'bias' on node '/normal_texture' ('image_texture'); value ignored
+Warning: in UpdateParameters at line 338 of /opt/build-cycles/cycles/src/hydra/material.cpp -- Unsupported USD input 'scale' on node '/normal_texture' ('image_texture'); value ignored
+EGL 1.5
+GL_VERSION: 4.6.0 NVIDIA 595.91.07
+GL_RENDERER: NVIDIA RTX 2000 Ada Generation/PCIe/SSE2
 Camera: /McUsd/Camera
 Renderer plugin: HdCyclesPlugin
-Recording time code: EARLIEST
-Time: 0:52.15
-Memory: 1148748 KB
+Recording time code: 0.000000
+Time: 4:40.84
+Memory: 733760 KB

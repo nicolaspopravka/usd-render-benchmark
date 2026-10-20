@@ -1,0 +1,10 @@
+Running: rez env aswf -- usdrecord --camera /McUsd/Camera --renderer "Storm" --purposes render   assets/full_assets/McUsd/McUsd.usda "renderers/Storm/McUsd.jpg"
+[OpenColorIO Info]: Color management disabled. (Specify the $OCIO environment variable to enable.)
+EGL 1.5
+GL_VERSION: 4.6.0 NVIDIA 595.91.07
+GL_RENDERER: NVIDIA RTX 2000 Ada Generation/PCIe/SSE2
+Camera: /McUsd/Camera
+Renderer plugin: HdStormRendererPlugin
+Recording time code: 0.000000
+Time: 0:05.26
+Memory: 500256 KB
