@@ -13,12 +13,13 @@ This is an independent community project. It is not ASWF or OpenUSD
 certification, and it is not a renderer performance ranking.
 
 > [!NOTE]
-> **Results snapshot — 2026-10-16; build status updated 2026-10-15**
+> **Results snapshot — 2026-10-20; build status updated 2026-10-20**
 >
 > - **New annual runs:** CY2023, CY2024 and CY2025 each run GL/Storm, MoonRay
 >   and Cycles against one OpenUSD installation in one runnable image. Each
->   snapshot retains eight images across three scenes; equivalent coverage
->   across CY2023–CY2027 remains unfinished.
+>   snapshot retains eight images across three scenes. CY2026 and CY2027
+>   add Storm and Cycles results, with six images each.
+>   MoonRay remains unavailable for these two years.
 > - **Published:** 15/15 OpenUSD delivery-path results; five annual Cycles
 >   results covering CY2023-CY2027 with patched CY2026/CY2027 follow-ups,
 >   including a four-scene patched CY2027 run; the MoonRay CY2025 result
@@ -81,12 +82,21 @@ supplies the benchmark configuration and retains its outputs.
 | [CY2023](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/cy2023) | 23.08 | GL, MoonRay 2026.29.1, Cycles 4.0.2 | 8 across McUsd, OpenChessSet and ALab |
 | [CY2024](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/cy2024) | 24.08 | GL, MoonRay 2026.29.1, Cycles 4.3.0 | 8 across McUsd, OpenChessSet and ALab |
 | [CY2025](https://github.com/nicolaspopravka/usd-render-benchmark/tree/aswf/cy2025) | 25.05.01 | Storm, MoonRay 2026.29.1, Cycles 4.5.0 | 8 across McUsd, OpenChessSet and ALab |
+| [CY2026](https://github.com/nicolaspopravka/usd-render-benchmark/tree/test/cy2026) | 26.03 | Storm, Cycles 5.3.0 dev | 6 across McUsd, OpenChessSet and ALab |
+| [CY2027](https://github.com/nicolaspopravka/usd-render-benchmark/tree/test/cy2027) | 26.08 | Storm, Cycles 5.3.0 dev | 6 across McUsd, OpenChessSet and ALab |
 
 Each run README includes a render sheet, configuration and links to its
 summary, images and logs. Shared Docker instructions are in the [running guide](docs/RUNNING.md).
 Success means exit 0; nonzero exits are failures. Image presence and appearance
-are recorded separately. These three
+are recorded separately. The CY2023–CY2025
 snapshots have no Moana Island Scene images; Cycles/ALab is also absent.
+
+The CY2026 and CY2027 runs use Cycles main plus selected PRs
+[#78](https://projects.blender.org/blender/cycles/pulls/78),
+[#86](https://projects.blender.org/blender/cycles/pulls/86) and
+[#87](https://projects.blender.org/blender/cycles/pulls/87).
+Both retain Cycles material, texture and exposure limitations.
+Neither run produced a Moana Island Scene image.
 
 CY2025 now uses the September 29 image with upstream default GPU support,
 including MoonRay XPU and Cycles OptiX, plus OSL support. NanoVDB,
@@ -115,13 +125,11 @@ published annual results or establish volume-rendering correctness.
 | Environment | GL/Storm | MoonRay | Cycles |
 | --- | --- | --- | --- |
 | CY2023–CY2025 | Included in the annual runs | Included in the annual runs | Included in the annual runs |
-| CY2026–CY2027 | Published separately | Tested build blocked by OpenUSD API changes and other integration failures ([#48](https://github.com/nicolaspopravka/usd-render-benchmark/issues/48)) | Tested released-tag builds blocked by Hydra API or dependency-target conflicts ([#50](https://github.com/nicolaspopravka/usd-render-benchmark/issues/50)) |
+| CY2026–CY2027 | Included in the annual runs | Tested build blocked by OpenUSD API changes and other integration failures ([#48](https://github.com/nicolaspopravka/usd-render-benchmark/issues/48)) | Main + PRs results published; released-tag build failures tracked in [#50](https://github.com/nicolaspopravka/usd-render-benchmark/issues/50) |
 
-Earlier CY2026/CY2027 Cycles results exist on different images, including patched
-follow-ups; they remain linked below. They do not establish equivalent delegate
-coverage in the annual runnable environments. Build fixes and small validation
-renders likewise need a released environment and scene runs before extending
-this table.
+Earlier CY2026/CY2027 Cycles results on different images remain linked below.
+The new runs do not establish released Cycles support or MoonRay coverage
+for these years.
 
 Embree remains useful as an example delegate and has its own historical results.
 It is not included in these three annual runs. Its Embree 3/4 packaging mismatch
