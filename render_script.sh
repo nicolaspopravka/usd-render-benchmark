@@ -3,7 +3,7 @@
 # Define arrays for renderers and their corresponding packages
 declare -A renderers
 renderers=(
-    ["GL"]="usd"
+    ["Storm"]="aswf"
 )
 
 # Define arrays for scenes, cameras and optional frame specifications

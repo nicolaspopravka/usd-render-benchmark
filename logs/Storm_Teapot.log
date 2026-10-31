@@ -1,0 +1,7 @@
+Running: rez env aswf -- usdrecord --camera main_cam --renderer "Storm" --purposes render   assets/full_assets/Teapot/Teapot.usd "renderers/Storm/Teapot.jpg"
+[OpenColorIO Info]: Color management disabled. (Specify the $OCIO environment variable to enable.)
+Camera: 
+Renderer plugin: HdStormRendererPlugin
+Recording time code: 1.000000
+Time: 0:01.69
+Memory: 411088 KB

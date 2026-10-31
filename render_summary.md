@@ -1,7 +1,7 @@
 # USD Render Benchmark
 
-| Scene \ Renderer | GL |
+| Scene \ Renderer | Storm |
 |---|---|
-| Teapot | Success<br>0:02.04<br>409740KB |
+| Teapot | Success<br>0:01.69<br>411088KB |
 ## System Specs
-Mesa driver version 23.1.4-4.el8_10 GPU: None (software rendering) Rocky Linux 8
+ghcr.io/nicolaspopravka/usd-render-benchmark:2026
