@@ -62,10 +62,9 @@ the image. Logs and renders remain in the mounted checkout; summary generation
 is a separate runner step.
 
 The [`demo/run1`](https://github.com/nicolaspopravka/usd-render-benchmark/tree/demo/run1)
-branch is the first published example of this model. Stack workflow
-[run 34144139279](https://github.com/nicolaspopravka/usd-render-benchmark-stack/actions/runs/34144139279)
-mounted the branch into the CY2027 runnable image and completed a Storm
-Teapot render on a headless GitHub runner.
+branch records the software-rendered Storm/Teapot demo. The October 31, 2026
+[run #119](https://github.com/nicolaspopravka/usd-render-benchmark-stack/actions/runs/41222067959)
+completed with OpenUSD 26.03 and the published `:2026` runnable image.
 
 ## ASWF environments by year
 

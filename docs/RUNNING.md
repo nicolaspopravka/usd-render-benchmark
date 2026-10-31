@@ -8,7 +8,7 @@ Rootful Docker may create root-owned files.
 
 ## Software demo
 
-This renders Teapot with Storm (the harness calls it `GL`), stock `usdrecord`
+This renders Teapot with Storm, stock `usdrecord`
 and Mesa under Xvfb. It needs Git and Docker with Linux x86-64 support,
 but no NVIDIA GPU. It demonstrates the run model, not renderer performance.
 
@@ -31,7 +31,6 @@ DEMO_IMAGE=ghcr.io/nicolaspopravka/usd-render-benchmark:2026
 docker pull "$DEMO_IMAGE"
 docker run --rm --platform linux/amd64 \
   --mount type=bind,source="$PWD",target=/benchmark \
-  --env REZ_PACKAGES_PATH=/benchmark/packages \
   --workdir /benchmark --entrypoint bash "$DEMO_IMAGE" -c '
     set -e
     dnf install -y --disablerepo=cuda mesa-dri-drivers
@@ -41,8 +40,11 @@ docker run --rm --platform linux/amd64 \
   '
 ```
 
-Open `renderers/GL/Teapot.jpg` and read `render_summary.md`. If the summary
-reports Failure, inspect `logs/GL_Teapot.log`; an old image may remain after a
+The runnable image sets `REZ_PACKAGES_PATH=./packages`, so it finds the mounted
+checkout’s packages from `/benchmark`.
+
+Open `renderers/Storm/Teapot.jpg` and read `render_summary.md`. If the summary
+reports Failure, inspect `logs/Storm_Teapot.log`; an old image may remain after a
 failed attempt. The harness itself can exit 0 after a renderer failure.
 
 The image tag can change. Mesa is installed at execution time. The summary's
@@ -85,7 +87,7 @@ Container value from the run README.
 
 ```bash
 RUN_BRANCH=aswf/cy2025
-RUNNABLE_IMAGE=ghcr.io/nicolaspopravka/usd-render-benchmark:2025.3
+RUNNABLE_IMAGE=ghcr.io/nicolaspopravka/usd-render-benchmark:2025.3@sha256:dc85819610d10b5d335a0c01e5bf80184ae42c9d07133f8c7be8ecce92e09032
 git lfs install
 git clone --branch "$RUN_BRANCH" --single-branch \
   https://github.com/nicolaspopravka/usd-render-benchmark.git annual-run
@@ -117,8 +119,8 @@ git show FETCH_HEAD:tools/system_specs.py > local-runs/system_specs.py
 Archive the checkout's published outputs so a failed attempt cannot reuse them:
 
 ```bash
-mkdir -p local-runs/published
-mv logs renderers render_summary.md local-runs/published/
+PUBLISHED_OUTPUTS=$(mktemp -d "$PWD/local-runs/published.XXXXXX")
+mv logs renderers render_summary.md "$PUBLISHED_OUTPUTS/"
 docker run --rm --gpus all \
   --env NVIDIA_DRIVER_CAPABILITIES=compute,utility,graphics \
   --ulimit nofile=65536:65536 \
@@ -131,8 +133,9 @@ docker run --rm --gpus all \
   '
 ```
 
-Keep this working directory: the Rez package redirects `usdrecord` using a
-relative path. The explicit Rez search path selects the mounted branch packages.
+Keep `/benchmark` as the working directory: the Rez package redirects
+`usdrecord` using a relative path. The explicit Rez search path selects the
+mounted branch’s packages, including when using older runnable images.
 Read each new log and inspect every image. Summary Success/Failure records
 process outcome, not visual correctness. Skipped renders should have no new
 outputs. The helper collects a compact hardware description inside the container.
@@ -156,8 +159,10 @@ git submodule status --recursive > local-runs/submodules.txt
 printf '%s\n' "$RUNNABLE_IMAGE" > local-runs/image.txt
 ```
 
-For an import check and extra driver/limit records, optionally insert these
-lines immediately after `set -e` in the container command:
+The following commands check OpenUSD’s Python import and record the visible
+NVIDIA devices and open-file limit. They do not verify Hydra plugin loading
+or successful rendering. Optionally insert them immediately after `set -e`
+in the container command:
 
 ```bash
 rez env aswf -- python3 -c "from pxr import Usd; print(Usd.GetVersion())"
@@ -183,14 +188,19 @@ docker run --rm \
   '
 ```
 
-The sheet reads images from `renderers/` and versions from resolved Rez packages.
-It needs neither README nor summary. Missing images are labeled Skipped.
+The sheet reads images from `renderers/` and version labels from resolved Rez
+packages. It does not read the README, summary or logs. Every missing image is
+labeled “Skipped,” including images absent because rendering failed; consult
+the logs and summary for the actual outcome.
 
 ## Limitations
 
-- **Only the small local demo was rerun.** Storm/Teapot completed on Docker
-  Desktop. The full annual NVIDIA commands and the GitHub Actions demo workflow
-  were not rerun during this instructions review.
+- **Validation is limited.** The software demo completed on Docker Desktop and
+  in GitHub Actions [run #119](https://github.com/nicolaspopravka/usd-render-benchmark-stack/actions/runs/41222067959).
+  The Actions image was visually inspected and matches the previous published
+  demo image byte-for-byte. The full annual NVIDIA commands were inspected
+  against the published branches but were not rerun during this documentation
+  review.
 - **Image tags can change.** A short tag selects the image carrying that tag
   when it is pulled. The Container value with a digest in a run README selects
   that run's recorded image.
