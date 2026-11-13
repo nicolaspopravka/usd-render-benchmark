@@ -16,7 +16,6 @@ scenes_and_cameras=(
 declare -A problematic_combinations
 problematic_combinations=(
     ["Storm,scenes/MoanaIsland/usd/island.usda"]="MemoryError"
-    ["Cycles,scenes/MoanaIsland/usd/island.usda"]="Killed"
 )
 
 for renderer in "${!renderers[@]}"; do

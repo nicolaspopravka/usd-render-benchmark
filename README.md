@@ -8,10 +8,10 @@ It is not a complete CY2027 rerun of the original benchmark.
 
 ## Run configuration
 
-- Renderers: Storm, Cycles 5.3.0 dev
+- Renderers: Storm, Cycles 5.4.0 dev
 - OpenUSD: 26.08
-- Container: `ghcr.io/nicolaspopravka/usd-render-benchmark@sha256:6548091513540c5afb0c3281f5c2b22ee8f790efc4016993c93ba8726b491986`
-- GPU: NVIDIA RTX 2000 Ada Generation, 16 GB
+- Container: `ghcr.io/nicolaspopravka/usd-render-benchmark@sha256:169bb3300d3c0ebe8bb383018c01346ebfddddc2baa3ba4fcc2a5970c2ce0223`
+- GPU: NVIDIA RTX PRO 6000 Blackwell Server Edition, 96 GB
 - Driver: NVIDIA 595.91.07
 - OS: Rocky Linux 9.8
 
