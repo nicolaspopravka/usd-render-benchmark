@@ -8,9 +8,9 @@ It is not a complete CY2026 rerun of the original benchmark.
 
 ## Run configuration
 
-- Renderers: Storm, Cycles 5.3.0 dev
+- Renderers: Storm, Cycles 5.4.0 dev
 - OpenUSD: 26.03
-- Container: `ghcr.io/nicolaspopravka/usd-render-benchmark@sha256:2beabfef0d378ba0064c5a623401aef707674d2ac992f2ea1bc7856886c9e43f`
+- Container: `ghcr.io/nicolaspopravka/usd-render-benchmark@sha256:4c515bf0aa8f07490d8879bc709389eaba0fb85b78167da09918a445b2a9ba2d`
 - GPU: NVIDIA RTX 2000 Ada Generation, 16 GB
 - Driver: NVIDIA 595.91.07
 - OS: Rocky Linux 8.10

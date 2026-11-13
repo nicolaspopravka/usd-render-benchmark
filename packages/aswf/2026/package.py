@@ -7,5 +7,5 @@ requires = [
 ]
 
 variants = [
-    ["cycles-5.3.0"],
+    ["cycles-5.4.0"],
 ]
